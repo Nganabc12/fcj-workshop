@@ -1,123 +1,86 @@
 ---
-title: "Blog 1"
+title: "Blog 1: Machine Learning Pipelines"
 weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
 ---
 
+# Understanding Machine Learning Pipelines: The Journey to Bring AI Models into Reality
 
-# Getting Started with Healthcare Data Lakes: Using Microservices
+While exploring AI/ML technical documents on AWS, I read a whitepaper about scaling Machine Learning models. What caught my attention wasn't the complex machine learning algorithms, but an extremely practical problem: **How do we bring an AI model from a personal computer to a production environment so millions of users can utilize it?**
 
-Data lakes can help hospitals and healthcare facilities turn data into business insights, maintain business continuity, and protect patient privacy. A **data lake** is a centralized, managed, and secure repository to store all your data, both in its raw and processed forms for analysis. Data lakes allow you to break down data silos and combine different types of analytics to gain insights and make better business decisions.
+Previously, when hearing about AI, I immediately thought of Data Scientists downloading data to their machines, writing Python code (like Jupyter Notebook) to train the AI to become smart, and that's it.
 
-This blog post is part of a larger series on getting started with setting up a healthcare data lake. In my final post of the series, *“Getting Started with Healthcare Data Lakes: Diving into Amazon Cognito”*, I focused on the specifics of using Amazon Cognito and Attribute Based Access Control (ABAC) to authenticate and authorize users in the healthcare data lake solution. In this blog, I detail how the solution evolved at a foundational level, including the design decisions I made and the additional features used. You can access the code samples for the solution in this Git repo for reference.
+However, the AWS article pointed out a harsh reality: Creating a high-quality AI model only accounts for about 20% of the workload. The remaining 80% of the effort lies in building an infrastructure system to maintain and operate that model. 
 
----
-
-## Architecture Guidance
-
-The main change since the last presentation of the overall architecture is the decomposition of a single service into a set of smaller services to improve maintainability and flexibility. Integrating a large volume of diverse healthcare data often requires specialized connectors for each format; by keeping them encapsulated separately as microservices, we can add, remove, and modify each connector without affecting the others. The microservices are loosely coupled via publish/subscribe messaging centered in what I call the “pub/sub hub.”
-
-This solution represents what I would consider another reasonable sprint iteration from my last post. The scope is still limited to the ingestion and basic parsing of **HL7v2 messages** formatted in **Encoding Rules 7 (ER7)** through a REST interface.
-
-**The solution architecture is now as follows:**
-
-> *Figure 1. Overall architecture; colored boxes represent distinct services.*
+That is why the concept of **Machine Learning Pipelines** was born.
 
 ---
 
-While the term *microservices* has some inherent ambiguity, certain traits are common:  
-- Small, autonomous, loosely coupled  
-- Reusable, communicating through well-defined interfaces  
-- Specialized to do one thing well  
-- Often implemented in an **event-driven architecture**
+## What problem does the Machine Learning Pipeline architecture solve?
 
-When determining where to draw boundaries between microservices, consider:  
-- **Intrinsic**: technology used, performance, reliability, scalability  
-- **Extrinsic**: dependent functionality, rate of change, reusability  
-- **Human**: team ownership, managing *cognitive load*
+According to the article, for an AI model to run smoothly in reality, it needs to go through an automated assembly line (pipeline). Instead of running each step manually, a good Pipeline will link all these tasks together into a fully automated loop.
 
----
+**Core steps in the Pipeline include:**
 
-## Technology Choices and Communication Scope
-
-| Communication scope                       | Technologies / patterns to consider                                                        |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Within a single microservice              | Amazon Simple Queue Service (Amazon SQS), AWS Step Functions                               |
-| Between microservices in a single service | AWS CloudFormation cross-stack references, Amazon Simple Notification Service (Amazon SNS) |
-| Between services                          | Amazon EventBridge, AWS Cloud Map, Amazon API Gateway                                      |
+- **Data Ingestion:** Automatically pull the latest raw data from massive storage repositories.
+- **Data Preprocessing:** Clean, standardize formatting, and perform Feature Engineering on the data.
+- **Training & Tuning:** Let the AI relearn from the new data to become smarter, while automatically performing Hyperparameter tuning.
+- **Deployment:** Bring the trained AI model to servers as Endpoints to serve users in real-time or via batch processing.
 
 ---
 
-## The Pub/Sub Hub
+## Technology Selection for Pipeline Stages
 
-Using a **hub-and-spoke** architecture (or message broker) works well with a small number of tightly related microservices.  
-- Each microservice depends only on the *hub*  
-- Inter-microservice connections are limited to the contents of the published message  
-- Reduces the number of synchronous calls since pub/sub is a one-way asynchronous *push*
+When applying this model on AWS, we need to map the above steps with corresponding Cloud services. Below is a summary table of commonly considered technologies:
 
-Drawback: **coordination and monitoring** are needed to avoid microservices processing the wrong message.
-
----
-
-## Core Microservice
-
-Provides foundational data and communication layer, including:  
-- **Amazon S3** bucket for data  
-- **Amazon DynamoDB** for data catalog  
-- **AWS Lambda** to write messages into the data lake and catalog  
-- **Amazon SNS** topic as the *hub*  
-- **Amazon S3** bucket for artifacts such as Lambda code
-
-> Only allow indirect write access to the data lake through a Lambda function → ensures consistency.
+| Pipeline Stage | Core AWS Services | Main Function in the System |
+| ----------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **Storage & Data Ingestion** | Amazon S3, AWS Lake Formation, Amazon RDS | Provides a centralized Data Lake, storing raw data and processed data. |
+| **Data Preprocessing** | AWS Glue, Amazon SageMaker Data Wrangler | Runs ETL (Extract, Transform, Load) jobs to clean data at scale. |
+| **Model Training** | Amazon SageMaker Training Instances, EC2 | Provisions server clusters with powerful GPUs to train AI, then automatically shuts them down when finished. |
+| **Deployment & Inference** | Amazon SageMaker Endpoints, API Gateway, AWS Lambda | Packages the model into a REST API for the application's Frontend/Backend to invoke. |
 
 ---
 
-## Front Door Microservice
+## Breaking Down Components in the MLOps System
 
-- Provides an API Gateway for external REST interaction  
-- Authentication & authorization based on **OIDC** via **Amazon Cognito**  
-- Self-managed *deduplication* mechanism using DynamoDB instead of SNS FIFO because:  
-  1. SNS deduplication TTL is only 5 minutes  
-  2. SNS FIFO requires SQS FIFO  
-  3. Ability to proactively notify the sender that the message is a duplicate  
+Similar to breaking down an application into Microservices, an AI system in Production is also divided into loosely coupled modules:
 
----
+### 1. Data Storage Hub
+Instead of using a regular relational database, the AI system utilizes **Amazon S3** as its foundation.
+- Stores terabytes of unstructured image, text, and CSV data.
+- Stores artifacts (the model's `.tar.gz` weight files) after the training process is completed.
 
-## Staging ER7 Microservice
+### 2. Orchestration Layer
+For the steps (Ingestion -> Processing -> Training) to run automatically, we need an orchestration tool like **AWS Step Functions** or **SageMaker Pipelines**. 
+- This system operates on an *event-driven* model. For example: When a new data file is uploaded to S3, it automatically triggers a Lambda function to initiate the entire model retraining workflow.
 
-- Lambda “trigger” subscribed to the pub/sub hub, filtering messages by attribute  
-- Step Functions Express Workflow to convert ER7 → JSON  
-- Two Lambdas:  
-  1. Fix ER7 formatting (newline, carriage return)  
-  2. Parsing logic  
-- Result or error is pushed back into the pub/sub hub  
+> *Only allow external applications to invoke the AI model through a single endpoint (API Gateway) → Ensures traffic control and strict security.*
 
 ---
 
-## New Features in the Solution
+## Automation and Infrastructure as Code
 
-### 1. AWS CloudFormation Cross-Stack References
-Example *outputs* in the core microservice:
+To manage AI infrastructure, Cloud engineers often use Infrastructure as Code (IaC) to define the Pipeline. Here is an example of an automated configuration creating an S3 Bucket to hold Training data using **AWS CloudFormation**:
+
 ```yaml
+Resources:
+  MLTrainingDataBucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: !Sub '${AWS::StackName}-ml-training-data'
+      VersioningConfiguration:
+        Status: Enabled
+      LifecycleConfiguration:
+        Rules:
+          - Id: TransitionToGlacier
+            Status: Enabled
+            Transitions:
+              - TransitionInDays: 90
+                StorageClass: GLACIER
 Outputs:
-  Bucket:
-    Value: !Ref Bucket
+  TrainingBucketName:
+    Value: !Ref MLTrainingDataBucket
     Export:
-      Name: !Sub ${AWS::StackName}-Bucket
-  ArtifactBucket:
-    Value: !Ref ArtifactBucket
-    Export:
-      Name: !Sub ${AWS::StackName}-ArtifactBucket
-  Topic:
-    Value: !Ref Topic
-    Export:
-      Name: !Sub ${AWS::StackName}-Topic
-  Catalog:
-    Value: !Ref Catalog
-    Export:
-      Name: !Sub ${AWS::StackName}-Catalog
-  CatalogArn:
-    Value: !GetAtt Catalog.Arn
-    Export:
-      Name: !Sub ${AWS::StackName}-CatalogArn
+      Name: !Sub '${AWS::StackName}-TrainingBucket'

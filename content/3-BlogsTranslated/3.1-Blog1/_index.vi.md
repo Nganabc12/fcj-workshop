@@ -1,123 +1,86 @@
 ---
-title: "Blog 1"
+title: "Blog 1: Machine Learning Pipelines"
 weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
 ---
 
+# Tìm Hiểu Về Machine Learning Pipelines: Hành Trình Đưa Mô Hình AI Vào Thực Tế
 
-# Bắt đầu với healthcare data lakes: Sử dụng microservices
+Trong quá trình tìm hiểu các tài liệu kỹ thuật về AI/ML trên AWS, mình có đọc một bài whitepaper nói về việc mở rộng quy mô (scaling) cho các mô hình Machine Learning. Điều làm mình chú ý không phải là những thuật toán học máy phức tạp, mà là một vấn đề cực kỳ thực tế: **Làm sao để đưa một mô hình AI từ máy tính cá nhân lên môi trường sản xuất (production) để hàng triệu người dùng có thể sử dụng?**
 
-Các data lake có thể giúp các bệnh viện và cơ sở y tế chuyển dữ liệu thành những thông tin chi tiết về doanh nghiệp và duy trì hoạt động kinh doanh liên tục, đồng thời bảo vệ quyền riêng tư của bệnh nhân. **Data lake** là một kho lưu trữ tập trung, được quản lý và bảo mật để lưu trữ tất cả dữ liệu của bạn, cả ở dạng ban đầu và đã xử lý để phân tích. data lake cho phép bạn chia nhỏ các kho chứa dữ liệu và kết hợp các loại phân tích khác nhau để có được thông tin chi tiết và đưa ra các quyết định kinh doanh tốt hơn.
+Trước đây, khi nghe đến AI, mình thường nghĩ ngay đến việc các Data Scientist tải dữ liệu về máy, viết code Python (như Jupyter Notebook) để huấn luyện cho AI thông minh lên là xong.
 
-Bài đăng trên blog này là một phần của loạt bài lớn hơn về việc bắt đầu cài đặt data lake dành cho lĩnh vực y tế. Trong bài đăng blog cuối cùng của tôi trong loạt bài, *“Bắt đầu với data lake dành cho lĩnh vực y tế: Đào sâu vào Amazon Cognito”*, tôi tập trung vào các chi tiết cụ thể của việc sử dụng Amazon Cognito và Attribute Based Access Control (ABAC) để xác thực và ủy quyền người dùng trong giải pháp data lake y tế. Trong blog này, tôi trình bày chi tiết cách giải pháp đã phát triển ở cấp độ cơ bản, bao gồm các quyết định thiết kế mà tôi đã đưa ra và các tính năng bổ sung được sử dụng. Bạn có thể truy cập các code samples cho giải pháp tại Git repo này để tham khảo.
+Tuy nhiên, bài viết của AWS đã chỉ ra một thực tế phũ phàng: Việc tạo ra một mô hình AI xịn xò chỉ chiếm khoảng 20% khối lượng công việc. 80% công sức còn lại nằm ở việc xây dựng một hệ thống cơ sở hạ tầng để duy trì và vận hành mô hình đó. 
 
----
-
-## Hướng dẫn kiến trúc
-
-Thay đổi chính kể từ lần trình bày cuối cùng của kiến trúc tổng thể là việc tách dịch vụ đơn lẻ thành một tập hợp các dịch vụ nhỏ để cải thiện khả năng bảo trì và tính linh hoạt. Việc tích hợp một lượng lớn dữ liệu y tế khác nhau thường yêu cầu các trình kết nối chuyên biệt cho từng định dạng; bằng cách giữ chúng được đóng gói riêng biệt với microservices, chúng ta có thể thêm, xóa và sửa đổi từng trình kết nối mà không ảnh hưởng đến những kết nối khác. Các microservices được kết nối rời thông qua tin nhắn publish/subscribe tập trung trong cái mà tôi gọi là “pub/sub hub”.
-
-Giải pháp này đại diện cho những gì tôi sẽ coi là một lần lặp nước rút hợp lý khác từ last post của tôi. Phạm vi vẫn được giới hạn trong việc nhập và phân tích cú pháp đơn giản của các **HL7v2 messages** được định dạng theo **Quy tắc mã hóa 7 (ER7)** thông qua giao diện REST.
-
-**Kiến trúc giải pháp bây giờ như sau:**
-
-> *Hình 1. Kiến trúc tổng thể; những ô màu thể hiện những dịch vụ riêng biệt.*
+Đó là lý do khái niệm **Machine Learning Pipelines** (Đường ống học máy) ra đời.
 
 ---
 
-Mặc dù thuật ngữ *microservices* có một số sự mơ hồ cố hữu, một số đặc điểm là chung:  
-- Chúng nhỏ, tự chủ, kết hợp rời rạc  
-- Có thể tái sử dụng, giao tiếp thông qua giao diện được xác định rõ  
-- Chuyên biệt để giải quyết một việc  
-- Thường được triển khai trong **event-driven architecture**
+## Kiến trúc Machine Learning Pipeline giải quyết vấn đề gì?
 
-Khi xác định vị trí tạo ranh giới giữa các microservices, cần cân nhắc:  
-- **Nội tại**: công nghệ được sử dụng, hiệu suất, độ tin cậy, khả năng mở rộng  
-- **Bên ngoài**: chức năng phụ thuộc, tần suất thay đổi, khả năng tái sử dụng  
-- **Con người**: quyền sở hữu nhóm, quản lý *cognitive load*
+Theo bài viết, để một mô hình AI hoạt động trơn tru trong thực tế, nó cần đi qua một dây chuyền tự động hóa (pipeline). Thay vì phải chạy bằng tay từng bước, một Pipeline tốt sẽ liên kết tất cả các tác vụ này lại với nhau thành một vòng lặp hoàn toàn tự động.
 
----
+**Các bước cốt lõi trong Pipeline bao gồm:**
 
-## Lựa chọn công nghệ và phạm vi giao tiếp
-
-| Phạm vi giao tiếp                        | Các công nghệ / mô hình cần xem xét                                                        |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Trong một microservice                   | Amazon Simple Queue Service (Amazon SQS), AWS Step Functions                               |
-| Giữa các microservices trong một dịch vụ | AWS CloudFormation cross-stack references, Amazon Simple Notification Service (Amazon SNS) |
-| Giữa các dịch vụ                         | Amazon EventBridge, AWS Cloud Map, Amazon API Gateway                                      |
+- **Thu thập dữ liệu (Data Ingestion):** Tự động kéo dữ liệu thô mới nhất từ các kho lưu trữ khổng lồ.
+- **Tiền xử lý (Data Preprocessing):** Làm sạch, chuẩn hóa định dạng và trích xuất đặc trưng (Feature Engineering) cho dữ liệu.
+- **Huấn luyện (Training & Tuning):** Cho AI học lại từ dữ liệu mới để thông minh hơn, đồng thời tự động tối ưu hóa siêu tham số (Hyperparameter tuning).
+- **Triển khai (Deployment):** Đưa mô hình AI đã học xong lên máy chủ thành các Endpoint (điểm cuối) để phục vụ người dùng theo thời gian thực hoặc xử lý hàng loạt.
 
 ---
 
-## The pub/sub hub
+## Lựa chọn công nghệ cho từng giai đoạn Pipeline
 
-Việc sử dụng kiến trúc **hub-and-spoke** (hay message broker) hoạt động tốt với một số lượng nhỏ các microservices liên quan chặt chẽ.  
-- Mỗi microservice chỉ phụ thuộc vào *hub*  
-- Kết nối giữa các microservice chỉ giới hạn ở nội dung của message được xuất  
-- Giảm số lượng synchronous calls vì pub/sub là *push* không đồng bộ một chiều
+Khi áp dụng mô hình này lên AWS, chúng ta cần map (ánh xạ) các bước trên với các dịch vụ Cloud tương ứng. Dưới đây là bảng tổng hợp các công nghệ thường được xem xét:
 
-Nhược điểm: cần **phối hợp và giám sát** để tránh microservice xử lý nhầm message.
-
----
-
-## Core microservice
-
-Cung cấp dữ liệu nền tảng và lớp truyền thông, gồm:  
-- **Amazon S3** bucket cho dữ liệu  
-- **Amazon DynamoDB** cho danh mục dữ liệu  
-- **AWS Lambda** để ghi message vào data lake và danh mục  
-- **Amazon SNS** topic làm *hub*  
-- **Amazon S3** bucket cho artifacts như mã Lambda
-
-> Chỉ cho phép truy cập ghi gián tiếp vào data lake qua hàm Lambda → đảm bảo nhất quán.
+| Giai đoạn Pipeline (Pipeline Stage) | Các dịch vụ AWS cốt lõi (AWS Services) | Chức năng chính trong hệ thống |
+| ----------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **Lưu trữ & Kéo dữ liệu** | Amazon S3, AWS Lake Formation, Amazon RDS | Cung cấp Data Lake tập trung, lưu trữ dữ liệu thô (raw data) và dữ liệu đã xử lý. |
+| **Tiền xử lý dữ liệu** | AWS Glue, Amazon SageMaker Data Wrangler | Chạy các job ETL (Extract, Transform, Load) để làm sạch dữ liệu ở quy mô lớn. |
+| **Huấn luyện mô hình** | Amazon SageMaker Training Instances, EC2 | Cấp phát các cụm máy chủ có GPU mạnh mẽ để train AI, sau đó tự động tắt khi train xong. |
+| **Triển khai & Suy luận** | Amazon SageMaker Endpoints, API Gateway, AWS Lambda | Đóng gói mô hình thành REST API để Frontend/Backend của ứng dụng gọi tới. |
 
 ---
 
-## Front door microservice
+## Phân rã các thành phần trong hệ thống MLOps
 
-- Cung cấp API Gateway để tương tác REST bên ngoài  
-- Xác thực & ủy quyền dựa trên **OIDC** thông qua **Amazon Cognito**  
-- Cơ chế *deduplication* tự quản lý bằng DynamoDB thay vì SNS FIFO vì:
-  1. SNS deduplication TTL chỉ 5 phút
-  2. SNS FIFO yêu cầu SQS FIFO
-  3. Chủ động báo cho sender biết message là bản sao
+Giống như việc chia nhỏ một ứng dụng thành các Microservices, một hệ thống AI trên Production cũng được chia thành các phân hệ kết hợp rời rạc (loosely coupled):
 
----
+### 1. Data Storage Hub (Kho lưu trữ tập trung)
+Thay vì dùng database quan hệ thông thường, hệ thống AI sử dụng **Amazon S3** làm nền tảng.
+- Lưu trữ hàng TB dữ liệu hình ảnh, văn bản, file CSV không cấu trúc.
+- Lưu trữ các artifact (file trọng số `.tar.gz` của mô hình) sau khi quá trình huấn luyện hoàn tất.
 
-## Staging ER7 microservice
+### 2. Orchestration Layer (Lớp điều phối)
+Để các bước (Ingestion -> Processing -> Training) chạy tự động, chúng ta cần một công cụ điều phối như **AWS Step Functions** hoặc **SageMaker Pipelines**. 
+- Hệ thống này hoạt động theo mô hình *event-driven* (hướng sự kiện). Ví dụ: Khi có 1 file dữ liệu mới được upload lên S3, nó sẽ tự động kích hoạt Lambda để khởi chạy toàn bộ quy trình huấn luyện lại mô hình.
 
-- Lambda “trigger” đăng ký với pub/sub hub, lọc message theo attribute  
-- Step Functions Express Workflow để chuyển ER7 → JSON  
-- Hai Lambda:
-  1. Sửa format ER7 (newline, carriage return)
-  2. Parsing logic  
-- Kết quả hoặc lỗi được đẩy lại vào pub/sub hub
+> *Chỉ cho phép ứng dụng bên ngoài gọi đến mô hình AI thông qua một điểm cuối duy nhất (API Gateway) → Đảm bảo khả năng kiểm soát lưu lượng và bảo mật.*
 
 ---
 
-## Tính năng mới trong giải pháp
+## Tính năng tự động hóa và Infrastructure as Code
 
-### 1. AWS CloudFormation cross-stack references
-Ví dụ *outputs* trong core microservice:
+Để quản lý hạ tầng AI, các kỹ sư Cloud thường sử dụng mã hóa hạ tầng (IaC) để định nghĩa Pipeline. Dưới đây là một ví dụ về cấu hình tự động tạo S3 Bucket để chứa dữ liệu Training bằng **AWS CloudFormation**:
+
 ```yaml
+Resources:
+  MLTrainingDataBucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: !Sub '${AWS::StackName}-ml-training-data'
+      VersioningConfiguration:
+        Status: Enabled
+      LifecycleConfiguration:
+        Rules:
+          - Id: TransitionToGlacier
+            Status: Enabled
+            Transitions:
+              - TransitionInDays: 90
+                StorageClass: GLACIER
 Outputs:
-  Bucket:
-    Value: !Ref Bucket
+  TrainingBucketName:
+    Value: !Ref MLTrainingDataBucket
     Export:
-      Name: !Sub ${AWS::StackName}-Bucket
-  ArtifactBucket:
-    Value: !Ref ArtifactBucket
-    Export:
-      Name: !Sub ${AWS::StackName}-ArtifactBucket
-  Topic:
-    Value: !Ref Topic
-    Export:
-      Name: !Sub ${AWS::StackName}-Topic
-  Catalog:
-    Value: !Ref Catalog
-    Export:
-      Name: !Sub ${AWS::StackName}-Catalog
-  CatalogArn:
-    Value: !GetAtt Catalog.Arn
-    Export:
-      Name: !Sub ${AWS::StackName}-CatalogArn
+      Name: !Sub '${AWS::StackName}-TrainingBucket'

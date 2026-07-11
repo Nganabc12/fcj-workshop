@@ -1,124 +1,79 @@
 ---
-title: "Blog 3"
-weight: 1
+title: "Blog 3: S3 Files System"
+weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
 
+# Tìm hiểu tính năng S3 Files: Biến Amazon S3 Bucket thành hệ thống lưu trữ tệp tin (File System) trên AWS
 
+## Giới thiệu
 
-# Bắt đầu với healthcare data lakes: Sử dụng microservices
+Trong quá trình tìm hiểu về các giải pháp lưu trữ trên AWS, mình khá ấn tượng với bài viết giới thiệu tính năng **S3 Files**[cite: 5]. Đây là một giải pháp mới giúp người dùng có thể gắn (mount) các Amazon S3 Bucket trực tiếp vào hệ điều hành hoặc ứng dụng như một ổ đĩa/thư mục cục bộ (File System) thông thường[cite: 5].
 
-Các data lake có thể giúp các bệnh viện và cơ sở y tế chuyển dữ liệu thành những thông tin chi tiết về doanh nghiệp và duy trì hoạt động kinh doanh liên tục, đồng thời bảo vệ quyền riêng tư của bệnh nhân. **Data lake** là một kho lưu trữ tập trung, được quản lý và bảo mật để lưu trữ tất cả dữ liệu của bạn, cả ở dạng ban đầu và đã xử lý để phân tích. data lake cho phép bạn chia nhỏ các kho chứa dữ liệu và kết hợp các loại phân tích khác nhau để có được thông tin chi tiết và đưa ra các quyết định kinh doanh tốt hơn.
-
-Bài đăng trên blog này là một phần của loạt bài lớn hơn về việc bắt đầu cài đặt data lake dành cho lĩnh vực y tế. Trong bài đăng blog cuối cùng của tôi trong loạt bài, *“Bắt đầu với data lake dành cho lĩnh vực y tế: Đào sâu vào Amazon Cognito”*, tôi tập trung vào các chi tiết cụ thể của việc sử dụng Amazon Cognito và Attribute Based Access Control (ABAC) để xác thực và ủy quyền người dùng trong giải pháp data lake y tế. Trong blog này, tôi trình bày chi tiết cách giải pháp đã phát triển ở cấp độ cơ bản, bao gồm các quyết định thiết kế mà tôi đã đưa ra và các tính năng bổ sung được sử dụng. Bạn có thể truy cập các code samples cho giải pháp tại Git repo này để tham khảo.
-
----
-
-## Hướng dẫn kiến trúc
-
-Thay đổi chính kể từ lần trình bày cuối cùng của kiến trúc tổng thể là việc tách dịch vụ đơn lẻ thành một tập hợp các dịch vụ nhỏ để cải thiện khả năng bảo trì và tính linh hoạt. Việc tích hợp một lượng lớn dữ liệu y tế khác nhau thường yêu cầu các trình kết nối chuyên biệt cho từng định dạng; bằng cách giữ chúng được đóng gói riêng biệt với microservices, chúng ta có thể thêm, xóa và sửa đổi từng trình kết nối mà không ảnh hưởng đến những kết nối khác. Các microservices được kết nối rời thông qua tin nhắn publish/subscribe tập trung trong cái mà tôi gọi là “pub/sub hub”.
-
-Giải pháp này đại diện cho những gì tôi sẽ coi là một lần lặp nước rút hợp lý khác từ last post của tôi. Phạm vi vẫn được giới hạn trong việc nhập và phân tích cú pháp đơn giản của các **HL7v2 messages** được định dạng theo **Quy tắc mã hóa 7 (ER7)** thông qua giao diện REST.
-
-**Kiến trúc giải pháp bây giờ như sau:**
-
-> *Hình 1. Kiến trúc tổng thể; những ô màu thể hiện những dịch vụ riêng biệt.*
+Thay vì phải viết code sử dụng AWS SDK hoặc API phức tạp để tải lên/tải xuống dữ liệu, giờ đây các ứng dụng truyền thống có thể đọc và ghi dữ liệu thẳng vào S3 thông qua các lệnh quản lý tệp tiêu chuẩn của hệ điều hành[cite: 5].
 
 ---
 
-Mặc dù thuật ngữ *microservices* có một số sự mơ hồ cố hữu, một số đặc điểm là chung:  
-- Chúng nhỏ, tự chủ, kết hợp rời rạc  
-- Có thể tái sử dụng, giao tiếp thông qua giao diện được xác định rõ  
-- Chuyên biệt để giải quyết một việc  
-- Thường được triển khai trong **event-driven architecture**
+## Bài toán đặt ra
 
-Khi xác định vị trí tạo ranh giới giữa các microservices, cần cân nhắc:  
-- **Nội tại**: công nghệ được sử dụng, hiệu suất, độ tin cậy, khả năng mở rộng  
-- **Bên ngoài**: chức năng phụ thuộc, tần suất thay đổi, khả năng tái sử dụng  
-- **Con người**: quyền sở hữu nhóm, quản lý *cognitive load*
+**Amazon S3** là một kho lưu trữ đối tượng (Object Storage) tuyệt vời với dung lượng không giới hạn và chi phí rẻ[cite: 5]. Tuy nhiên, S3 không phải là một hệ thống tệp (File System) truyền thống[cite: 5]. 
 
----
+Nhiều ứng dụng cũ (Legacy Apps), công cụ phân tích dữ liệu hoặc các đoạn script tự động hóa được thiết kế chỉ để đọc/ghi tệp cục bộ (*POSIX file interface*)[cite: 5]. Để các ứng dụng này chạy được với S3, các lập trình viên thường phải:
+* Sửa đổi lại toàn bộ mã nguồn để tích hợp API của S3[cite: 5].
+* Tốn chi phí cho các dịch vụ trung gian như AWS Storage Gateway[cite: 5]. 
 
-## Lựa chọn công nghệ và phạm vi giao tiếp
-
-| Phạm vi giao tiếp                        | Các công nghệ / mô hình cần xem xét                                                        |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Trong một microservice                   | Amazon Simple Queue Service (Amazon SQS), AWS Step Functions                               |
-| Giữa các microservices trong một dịch vụ | AWS CloudFormation cross-stack references, Amazon Simple Notification Service (Amazon SNS) |
-| Giữa các dịch vụ                         | Amazon EventBridge, AWS Cloud Map, Amazon API Gateway                                      |
+Điều này gây tốn thời gian, chi phí và làm phức tạp hóa kiến trúc hệ thống[cite: 5].
 
 ---
 
-## The pub/sub hub
+## Cách tiếp cận của AWS
 
-Việc sử dụng kiến trúc **hub-and-spoke** (hay message broker) hoạt động tốt với một số lượng nhỏ các microservices liên quan chặt chẽ.  
-- Mỗi microservice chỉ phụ thuộc vào *hub*  
-- Kết nối giữa các microservice chỉ giới hạn ở nội dung của message được xuất  
-- Giảm số lượng synchronous calls vì pub/sub là *push* không đồng bộ một chiều
+Để giải quyết bài toán này một cách tối ưu, AWS đã cho ra mắt **S3 Files** (dựa trên công nghệ mã nguồn mở *Mountpoint for Amazon S3*)[cite: 5].
 
-Nhược điểm: cần **phối hợp và giám sát** để tránh microservice xử lý nhầm message.
+Khi tính năng này được kích hoạt, AWS sẽ tạo ra một "cây cầu" dịch thuật tự động: Ứng dụng của bạn cứ ghi tệp vào thư mục như bình thường, còn S3 Files sẽ âm thầm chuyển đổi các lệnh đó thành API `GetObject` hoặc `PutObject` để đẩy thẳng lên S3 Bucket[cite: 5]. Nhờ đó, bạn vừa tận dụng được giao diện tệp quen thuộc, vừa hưởng trọn lợi thế về dung lượng khổng lồ và độ bền dữ liệu của Amazon S3[cite: 5].
 
 ---
 
-## Core microservice
+## Các dịch vụ và thành phần AWS được sử dụng
 
-Cung cấp dữ liệu nền tảng và lớp truyền thông, gồm:  
-- **Amazon S3** bucket cho dữ liệu  
-- **Amazon DynamoDB** cho danh mục dữ liệu  
-- **AWS Lambda** để ghi message vào data lake và danh mục  
-- **Amazon SNS** topic làm *hub*  
-- **Amazon S3** bucket cho artifacts như mã Lambda
+Kiến trúc vận hành của tính năng này xoay quanh các thành phần cốt lõi[cite: 5]:
 
-> Chỉ cho phép truy cập ghi gián tiếp vào data lake qua hàm Lambda → đảm bảo nhất quán.
+| Thành phần AWS | Vai trò trong hệ thống |
+| :--- | :--- |
+| **Amazon S3** | Đóng vai trò là kho lưu trữ gốc, chứa toàn bộ dữ liệu đối tượng (Simple Storage Service) ở phía sau[cite: 5]. |
+| **Mountpoint for Amazon S3** | Trình dịch mã nguồn mở (S3 Files Client) được cài đặt trên các máy chủ tính toán, chịu trách nhiệm chuyển đổi các lệnh tệp (POSIX) thành lời gọi API S3[cite: 5]. |
+| **Amazon EC2 / AWS Fargate** | Các môi trường máy chủ hoặc container chạy ứng dụng thực tế – nơi thư mục S3 được gắn vào để sử dụng[cite: 5]. |
+| **AWS IAM** | Kiểm soát và phân quyền bảo mật (Identity and Access Management), đảm bảo máy chủ chỉ có quyền đọc/ghi đúng các thư mục được phép trên S3[cite: 5]. |
 
----
+Sự kết hợp này giúp hệ thống hoạt động với hiệu suất cực cao (High throughput), giảm thiểu độ trễ khi xử lý dữ liệu lớn mà không cần quản lý phần cứng lưu trữ phức tạp[cite: 5].
 
-## Front door microservice
-
-- Cung cấp API Gateway để tương tác REST bên ngoài  
-- Xác thực & ủy quyền dựa trên **OIDC** thông qua **Amazon Cognito**  
-- Cơ chế *deduplication* tự quản lý bằng DynamoDB thay vì SNS FIFO vì:
-  1. SNS deduplication TTL chỉ 5 phút
-  2. SNS FIFO yêu cầu SQS FIFO
-  3. Chủ động báo cho sender biết message là bản sao
+> *Hình 1. Kiến trúc tổng quan mô tả các EC2 Instances kết nối qua cổng TCP 2049 (NFS) đến S3 Files Mount Target để đọc/ghi trực tiếp vào S3 Bucket.*
 
 ---
 
-## Staging ER7 microservice
+## Trải nghiệm thiết lập thực tế trên AWS Console
 
-- Lambda “trigger” đăng ký với pub/sub hub, lọc message theo attribute  
-- Step Functions Express Workflow để chuyển ER7 → JSON  
-- Hai Lambda:
-  1. Sửa format ER7 (newline, carriage return)
-  2. Parsing logic  
-- Kết quả hoặc lỗi được đẩy lại vào pub/sub hub
+Việc thiết lập S3 Files giờ đây cực kỳ trực quan thông qua giao diện quản lý của AWS:
+
+1. **Khởi tạo File System:** Người dùng có thể bắt đầu tạo hệ thống tệp trực tiếp từ giao diện Amazon S3 thông qua các bước Create, Mount và Access.
+> *Hình 2. Giao diện "Getting started with S3 Files" trên AWS Console hướng dẫn 3 bước thiết lập cơ bản.*
+
+2. **Cấu hình Mount Targets:** Đây là các điểm cuối mạng nội bộ nằm trong các Availability Zone (AZ) của Virtual Private Cloud (VPC).
+> *Hình 3. Giao diện quản lý Mount targets hiển thị danh sách các IP nội bộ và trạng thái kết nối "Available" cho phép các tài nguyên tính toán truy cập hệ thống tệp.*
 
 ---
 
-## Tính năng mới trong giải pháp
+## Điều mình học được
 
-### 1. AWS CloudFormation cross-stack references
-Ví dụ *outputs* trong core microservice:
-```yaml
-Outputs:
-  Bucket:
-    Value: !Ref Bucket
-    Export:
-      Name: !Sub ${AWS::StackName}-Bucket
-  ArtifactBucket:
-    Value: !Ref ArtifactBucket
-    Export:
-      Name: !Sub ${AWS::StackName}-ArtifactBucket
-  Topic:
-    Value: !Ref Topic
-    Export:
-      Name: !Sub ${AWS::StackName}-Topic
-  Catalog:
-    Value: !Ref Catalog
-    Export:
-      Name: !Sub ${AWS::StackName}-Catalog
-  CatalogArn:
-    Value: !GetAtt Catalog.Arn
-    Export:
-      Name: !Sub ${AWS::StackName}-CatalogArn
+Qua bài viết, mình hiểu rõ hơn cách AWS xóa nhòa ranh giới giữa *Object Storage* và *File Storage*[cite: 5].
+
+Điểm thú vị nhất là cơ chế tối ưu hiệu suất của Mountpoint cho các tác vụ đọc/ghi tuần tự quy mô lớn (như dữ liệu Machine Learning, xử lý Video, Big Data)[cite: 5]. Thay vì cố gắng giả lập 100% tất cả các tính năng phức tạp của hệ thống tệp (điều dễ gây thắt nút cổ chai), AWS tập trung tối ưu hóa các lệnh cơ bản nhất (Đọc, Ghi, Liệt kê) để đạt tốc độ truyền tải dữ liệu tối đa ra vào S3[cite: 5].
+
+## Kết luận
+
+Tính năng **S3 Files** là một bước đi thực tế và vô cùng giá trị của AWS nhằm đơn giản hóa việc dịch chuyển ứng dụng lên đám mây[cite: 5]. Bằng cách biến S3 thành một hệ thống tệp cục bộ một cách miễn phí và hiệu suất cao, AWS đã giúp các kỹ sư tiết kiệm hàng tuần liền viết code cấu hình[cite: 5].
+
+Đây là một giải pháp rất đáng tham khảo cho các dự án xử lý dữ liệu lớn, các hệ thống chạy AI/ML cần nạp dữ liệu liên tục từ S3, hoặc bất kỳ hệ thống lưu trữ hóa đơn, hình ảnh nào muốn tối ưu chi phí vận hành mà không muốn sửa đổi mã nguồn backend phức tạp[cite: 5].
+
+* **Nguồn tham khảo gốc:** [AWS News Blog - Launching S3 Files](https://aws.amazon.com/vi/blogs/aws/launching-s3-files-making-s3-buckets-accessible-as-file-systems/)[cite: 5]
