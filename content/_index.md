@@ -10,23 +10,23 @@ chapter: false
 
 
 ### Student Information:
-&emsp; **Họ và tên:** Huỳnh Minh Tâm
+&emsp; **Họ và tên:** Lê Thảo Ngân
 
-&emsp; **Số điện thoại:** 0914209673
+&emsp; **Số điện thoại:** 0934583018
 
-&emsp; **Email:** tamhmse182722@fpt.edu.vn
+&emsp; **Email:** lethaongantb.2020@gmail.com
 
-&emsp; **Trường:** Đại học FPT TP.HCM
+&emsp; **Trường:** Đại học Công nghệ Thành phố Hồ Chí Minh
 
 &emsp; **Ngành:** Công nghệ thông tin
 
-&emsp; **Mã sinh viên:** SE182722
+&emsp; **Mã sinh viên:** 2280602051
 
 &emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Vietnam
 
 &emsp; **Vị trí thực tập:** FCJ Cloud Intern
 
-&emsp; **Thời gian thực tập:** Từ ngày 08/09/2025 đến ngày 12/11/2025
+&emsp; **Thời gian thực tập:** Từ ngày 17/04/2026 đến ngày 30/07/2026
 
 ![Ảnh đại diện của bạn](/images/avatar1.jpg)
 
