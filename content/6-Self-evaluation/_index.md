@@ -5,66 +5,98 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-During my internship at **AWS First Cloud Journey** from **08/09** to **24/12**, I had the opportunity to learn, practice, and apply cloud computing knowledge to real-world scenarios while developing a comprehensive understanding of AWS services.
+During my 12-week internship at **AWS First Cloud Journey**, from April 2026 to July 2026, I had the opportunity to apply the knowledge gained at university to a practical cloud computing project. This internship helped me improve not only my technical knowledge but also my teamwork, communication, documentation, and problem-solving skills.
 
-I participated in **developing the Coffee Cloud – Coffee Shop Order Platform project**, a full-stack serverless application using ReactJS, C#/.NET Lambda, and multiple AWS services including Amplify, DynamoDB, Cognito, API Gateway, SNS, and SES. Through this project, I improved my skills in **cloud architecture design, full-stack development, project documentation, technical presentation, and AWS service integration**.
+During the internship, I worked with four other members to develop the **Pet Resort & Care System**. This web application supports pet product management, customer accounts, online orders, pet care service booking, and appointment management. The frontend was developed using ReactJS, while the backend was built with Java and Spring Boot.
 
-Additionally, I actively participated in **4 major AWS technical events** including AI-Driven Development, AI/ML workshops, DevOps practices, and AWS Security best practices, which significantly enhanced my knowledge of cutting-edge cloud technologies and industry trends.
+The application was deployed on AWS following a **3-Tier Architecture**. The project used services such as Amazon VPC, Amazon EC2, Application Load Balancer, Amazon RDS, Amazon ElastiCache, NAT Gateway, IAM, and Amazon CloudWatch. Through the project, I gained practical experience in cloud networking, application deployment, database connectivity, access control, system monitoring, and cloud cost management.
 
-In terms of work ethic, I demonstrated strong self-direction in learning complex AWS services, maintained detailed weekly work logs, created comprehensive project documentation, and consistently engaged with the AWS community through events and workshops.
+In addition to project development, I participated in AWS workshops and community events related to Cloud Computing, artificial intelligence, DevOps, security, and career development. These activities helped me expand my technical knowledge and better understand the requirements of a professional working environment.
 
-To objectively reflect on my internship period, I would like to evaluate myself based on the following criteria:
+Although the main functions of the project were completed, I realize that my knowledge and practical experience still need further improvement. The following table presents my self-assessment during the internship.
 
-| No. | Criteria                            | Description                                                                                      | Good | Fair | Average |
-| --- | ----------------------------------- | ------------------------------------------------------------------------------------------------ | ---- | ---- | ------- |
-| 1   | **Professional knowledge & skills** | Mastered AWS serverless architecture, full-stack development with ReactJS/.NET, database design with DynamoDB | ✅    | ☐    | ☐       |
-| 2   | **Ability to learn**                | Rapidly acquired knowledge of 10+ AWS services, attended 4 technical workshops, self-directed learning | ✅    | ☐    | ☐       |
-| 3   | **Proactiveness**                   | Initiated comprehensive project documentation, actively participated in AWS community events    | ✅    | ☐    | ☐       |
-| 4   | **Sense of responsibility**         | Maintained detailed 12-week work logs, delivered complete project proposal and architecture design | ✅    | ☐    | ☐       |
-| 5   | **Discipline**                      | Consistent documentation habits, regular attendance at workshops, systematic project approach   | ☐    | ✅    | ☐       |
-| 6   | **Progressive mindset**             | Continuously learned new AWS services, incorporated workshop learnings into project design      | ✅    | ☐    | ☐       |
-| 7   | **Communication**                   | Created detailed technical documentation, comprehensive event reports, clear project presentations | ☐    | ✅    | ☐       |
-| 8   | **Teamwork**                        | Collaborated effectively in 5-person team structure, engaged with AWS community and experts     | ✅    | ☐    | ☐       |
-| 9   | **Professional conduct**            | Demonstrated respect in all AWS events, maintained professional documentation standards          | ✅    | ☐    | ☐       |
-| 10  | **Problem-solving skills**          | Designed complex serverless architecture, addressed real business problems with Coffee Cloud platform | ☐    | ✅    | ☐       |
-| 11  | **Contribution to project/team**    | Delivered complete end-to-end project design, comprehensive documentation, innovative AWS service integration | ✅    | ☐    | ☐       |
-| 12  | **Overall**                         | Successfully completed comprehensive AWS cloud development internship with practical deliverables | ✅    | ☐    | ☐       |
+| No. | Criteria | Self-Assessment | Good | Fair | Average |
+| --- | --- | --- | --- | --- | --- |
+| 1 | **Technical Knowledge** | I understand the basic flow of a 3-Tier Architecture and can configure several AWS services, but I still need to learn more about advanced architecture and performance optimization. | ☐ | ✅ | ☐ |
+| 2 | **Learning Ability** | I can independently search for documentation, learn unfamiliar services, and apply newly acquired knowledge to assigned tasks. | ✅ | ☐ | ☐ |
+| 3 | **Initiative** | I actively searched for solutions when technical problems occurred and asked for support when the issue exceeded my current ability. | ✅ | ☐ | ☐ |
+| 4 | **Responsibility** | I maintained weekly worklogs, followed assigned tasks, and tried to complete my work according to the team schedule. | ✅ | ☐ | ☐ |
+| 5 | **Discipline** | I attended meetings, workshops, and technical activities regularly while following the requirements of the internship program. | ✅ | ☐ | ☐ |
+| 6 | **Ability to Receive Feedback** | I listened to suggestions from mentors and team members and revised my work when weaknesses or mistakes were identified. | ✅ | ☐ | ☐ |
+| 7 | **Communication Skills** | I could communicate with team members during the project, but I still lacked confidence when explaining technical ideas or presenting in front of others. | ☐ | ✅ | ☐ |
+| 8 | **Teamwork** | I coordinated with other members, shared project information, and supported the team during implementation, testing, and deployment. | ✅ | ☐ | ☐ |
+| 9 | **Problem-Solving Ability** | I could solve common deployment and configuration errors, but I still needed guidance when dealing with complex system issues. | ☐ | ✅ | ☐ |
+| 10 | **Time Management** | I completed most tasks within the expected period, but I sometimes underestimated the time required for debugging and documentation. | ☐ | ✅ | ☐ |
+| 11 | **Patience and Carefulness** | I tried to check errors step by step, although I occasionally became impatient when a problem took too long to resolve. | ☐ | ✅ | ☐ |
+| 12 | **Project Contribution** | I participated in system development, AWS deployment, functional testing, architecture documentation, and weekly worklog preparation. | ✅ | ☐ | ☐ |
+| 13 | **Professional Attitude** | I maintained a serious learning attitude, respected other members, and accepted responsibility for my assigned work. | ✅ | ☐ | ☐ |
+| 14 | **Overall Performance** | I completed the internship successfully and gained valuable practical experience, but I still need further practice to work more independently. | ☐ | ✅ | ☐ |
 
-### What I Accomplished During Internship
+---
 
-**Technical Learning:**
-* **Learned about Coffee Cloud project** - Got hands-on experience with AWS services like Amplify, Lambda, and DynamoDB
-* **Basic AWS understanding** - Gradually learned how different services work together in a serverless architecture
-* **Improved coding skills** - Practiced with ReactJS and C#/.NET, though still have much to learn
-* **Cost awareness** - Learned to be mindful of AWS costs and how Free Tier works
+## Achievements During the Internship
 
-**Learning Attitude:**
-* **Attended AWS workshops** - Participated in 4 events to learn about AI, DevOps, and Security (still processing a lot of the information)
-* **Kept work records** - Maintained weekly logs and documented what I learned from events
-* **Tried to document properly** - Created project documentation, though it took me longer than expected
-* **Asked questions** - When I didn't understand something, I tried to research and ask for help
+### Technical Learning
 
-**Personal Growth:**
-* **Stepped out of comfort zone** - Attended community events even though I was nervous about networking
-* **Persistence** - Kept working on tasks even when they seemed challenging at first
-* **Responsibility** - Tried my best to complete assignments and meet deadlines
-* **Honest about limitations** - Acknowledged when I needed more time to understand concepts
+- **Understanding the Pet Resort & Care System:** I gained practical experience in developing and deploying a system that manages pet products, customer orders, accounts, services, and pet care appointments.
+- **Understanding AWS Architecture:** I learned how Amazon VPC, EC2, Application Load Balancer, RDS, and ElastiCache work together within a 3-Tier Architecture.
+- **Improving Application Deployment Skills:** I practiced deploying ReactJS and Spring Boot applications from a local development environment to AWS.
+- **Learning Cloud Networking:** I became familiar with public subnets, private subnets, route tables, Internet Gateway, NAT Gateway, and Security Groups.
+- **Connecting the Application to the Database:** I learned how to configure the backend application to communicate securely with Amazon RDS.
+- **Understanding Load Balancing:** I gained a basic understanding of how an Application Load Balancer receives traffic and forwards requests to application servers.
+- **Monitoring the System:** I practiced checking application logs and monitoring basic system activities using Amazon CloudWatch.
+- **Developing Cost Awareness:** I learned to monitor, stop, and remove unused AWS resources to avoid unnecessary charges.
 
-### Areas I Need to Improve
+### Learning Attitude
 
-**Technical Skills:**
-* **Problem-solving approach** - Need to develop better systematic thinking when facing technical challenges
-* **AWS service integration** - Still learning how to properly connect different services together
-* **Code quality** - Need more practice to write cleaner, more efficient code
-* **Understanding architecture** - Basic knowledge is there, but need deeper understanding of design principles
+- **Participating in Technical Activities:** I attended workshops and community events related to AWS, Cloud Computing, AI, DevOps, security, and career orientation.
+- **Maintaining Weekly Worklogs:** I recorded completed tasks, technical difficulties, solutions, and newly acquired knowledge every week.
+- **Searching for Documentation:** I actively used AWS documentation and technical references when encountering deployment or configuration problems.
+- **Receiving Feedback:** I listened to suggestions from mentors and team members and revised my work based on their feedback.
+- **Asking Questions:** When I could not clearly understand a problem, I tried to identify the unclear part and asked for assistance instead of ignoring it.
 
-**Professional Skills:**
-* **Communication** - Need to get better at explaining technical concepts clearly, especially when presenting
-* **Time management** - Sometimes take longer than expected to complete tasks
-* **Confidence** - Working on being more confident when discussing technical topics or asking questions
+### Personal Development
 
-**Work Habits:**
-* **Consistency** - Need to maintain steady progress rather than rushing at deadlines
-* **Detail orientation** - Sometimes miss small but important details in documentation or code
-* **Initiative** - Could be more proactive in seeking additional learning opportunities
-* **Efficiency** - Learning to work smarter, not just harder
+- **Improving Teamwork:** I learned how to coordinate with frontend, backend, and infrastructure members throughout the project.
+- **Developing Responsibility:** I made an effort to complete assigned tasks without negatively affecting the team's overall progress.
+- **Becoming More Persistent:** I continued investigating errors and testing possible solutions when the application did not work as expected.
+- **Improving Confidence:** I gradually became more comfortable participating in technical discussions and explaining the work I had completed.
+- **Recognizing Personal Limitations:** I learned to honestly identify my weaknesses and use them as a basis for future improvement.
+
+---
+
+## Areas for Improvement
+
+### Technical Skills
+
+- **Problem-Solving Method:** I need to develop a clearer and more systematic troubleshooting process when the system encounters an error.
+- **Programming Skills:** I need to improve my knowledge of ReactJS, Java, and Spring Boot to understand and modify the project source code more effectively.
+- **Database Knowledge:** I need to study database design, indexing, query optimization, and data synchronization in greater depth.
+- **AWS Service Integration:** I need more practice combining multiple AWS services accurately within one architecture.
+- **Cloud Architecture Knowledge:** I need to learn more about scalability, high availability, fault tolerance, backup, and disaster recovery.
+- **Security Knowledge:** I need to understand IAM permissions, Secrets Manager, Security Groups, and the Least Privilege principle more thoroughly.
+- **CI/CD and Automation:** I need to learn GitHub Actions, Jenkins, Docker, and automated deployment processes.
+- **Monitoring and Logging:** I need more experience using CloudWatch and centralized logging to locate application problems efficiently.
+
+### Professional Skills
+
+- **Communication Skills:** I need to explain technical concepts more clearly, briefly, and confidently, especially during presentations.
+- **Presentation Skills:** I need to practice presenting architecture diagrams and explaining why a particular AWS service was selected.
+- **Time Management:** I need to divide work into smaller tasks and avoid completing assignments too close to the deadline.
+- **Confidence:** I need to participate more actively in discussions and feel more comfortable asking technical questions.
+- **Task Estimation:** I need to estimate the time required for implementation, debugging, testing, and documentation more accurately.
+
+### Working Habits
+
+- **Consistency:** I need to maintain stable progress throughout the project instead of allowing tasks to accumulate near the deadline.
+- **Carefulness:** I need to check source code, configurations, image paths, and documentation more carefully before completing a task.
+- **Patience:** I need to remain calm and test one solution at a time instead of changing many configurations simultaneously.
+- **Initiative:** I need to explore additional knowledge and solutions beyond the minimum requirements of assigned tasks.
+- **Work Efficiency:** I need to select more appropriate methods and tools to complete tasks accurately and efficiently.
+- **Documentation Habit:** I need to record configuration changes and troubleshooting results immediately instead of waiting until the end of the week.
+
+---
+
+#
+
+> **Conclusion:** The internship at AWS First Cloud Journey gave me the opportunity to transform theoretical knowledge into practical experience through the Pet Resort & Care System project. I gained a better understanding of cloud infrastructure, application deployment, database connectivity, teamwork, documentation, system monitoring, and cloud cost management. At the same time, I recognized that I still need to improve my programming skills, troubleshooting methods, communication, time management, patience, and confidence. The experience gained during this internship will be an important foundation for my future development in Cloud Computing, DevOps, and software engineering.
