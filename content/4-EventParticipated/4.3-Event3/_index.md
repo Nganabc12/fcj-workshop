@@ -1,164 +1,209 @@
 ---
-title: "Event 3"
+title: "AWS GameDay - 8-Team Challenge"
 weight: 1
 chapter: false
 pre: " <b> 4.3. </b> "
 ---
 
-# Summary Report: "DevOps on AWS Workshop"
+# AWS GameDay - 8-Team Challenge
 
-### Event Details
-- **Date**: Monday, November 17, 2025
-- **Time**: 8:30 AM - 5:00 PM  
-- **Location**: AWS Vietnam Office
-- **Event Type**: Full-day DevOps Training Workshop
+## Event Details
 
-### Event Objectives
+- **Date:** Saturday, June 20, 2026
+- **Time:** 9:00 AM - 12:00 PM
+- **Location:** Saigon Campus - Level 26, Bitexco Financial Tower
+- **Event Type:** AWS GameDay - AWS Knowledge Competition Featuring 8 Teams
 
-- Understand DevOps culture and principles for modern software development
-- Learn AWS DevOps services for CI/CD pipeline implementation
-- Hands-on experience with Infrastructure as Code (IaC)
-- Implement container services and monitoring solutions
-- Apply DevOps best practices for enterprise environments
+---
 
-### Morning Session (8:30 AM - 12:00 PM)
+## Event Introduction
 
-#### Welcome & DevOps Mindset (8:30 - 9:00 AM)
-- Recap of previous AI/ML session
-- DevOps culture and principles introduction
-- Benefits and key metrics (DORA, MTTR, deployment frequency)
+AWS GameDay was a team-based knowledge competition featuring eight pre-registered teams.
 
-#### AWS DevOps Services - CI/CD Pipeline (9:00 - 10:30 AM)
-- **Source Control**: AWS CodeCommit, Git strategies (GitFlow, Trunk-based)
-- **Build & Test**: CodeBuild configuration, testing pipelines
-- **Deployment**: CodeDeploy with Blue/Green, Canary, and Rolling updates
-- **Orchestration**: CodePipeline automation
-- **Demo**: Full CI/CD pipeline walkthrough
+During each match, two teams competed directly against each other by answering question sets related to AWS services and cloud computing. Team members discussed, analyzed, and submitted their answers within the given time limit.
 
-#### Infrastructure as Code (IaC) (10:45 AM - 12:00 PM)
-- **AWS CloudFormation**: Templates, stacks, and drift detection
-- **AWS CDK (Cloud Development Kit)**: Constructs, reusable patterns, and language support
-- **Demo**: Deploying with CloudFormation and CDK
-- **Discussion**: Choosing between IaC tools
+The team with the better result advanced to the next round. The knockout format created an exciting atmosphere and encouraged participants to review and apply their AWS knowledge.
 
-### Afternoon Session (1:00 - 5:00 PM)
+---
 
-#### Container Services on AWS (1:00 - 2:30 PM)
-- **Docker Fundamentals**: Microservices and containerization
-- **Amazon ECR**: Image storage, scanning, lifecycle policies
-- **Amazon ECS & EKS**: Deployment strategies, scaling, and orchestration
-- **AWS App Runner**: Simplified container deployment
-- **Demo & Case Study**: Microservices deployment comparison
+## Event Objectives
 
-#### Monitoring & Observability (2:45 - 4:00 PM)
-- **CloudWatch**: Metrics, logs, alarms, and dashboards
-- **AWS X-Ray**: Distributed tracing and performance insights
-- **Demo**: Full-stack observability setup
-- **Best Practices**: Alerting, dashboards, and on-call processes
+The event aimed to:
 
-#### DevOps Best Practices & Case Studies (4:00 - 4:45 PM)
-- **Deployment strategies**: Feature flags, A/B testing
-- **Automated testing and CI/CD integration**
-- **Incident management and postmortems**
-- **Case Studies**: Startups and enterprise DevOps transformations
+- Review and strengthen knowledge of AWS services.
+- Help participants apply AWS concepts to practical questions.
+- Create opportunities for communication and knowledge sharing among teams.
+- Encourage active learning in cloud computing.
+- Provide an engaging learning environment through competition.
+- Help participants identify AWS topics that required further study.
 
-#### Q&A & Wrap-up (4:45 - 5:00 PM)
-- DevOps career pathways
-- AWS certification roadmap
-- Networking and final discussions
+---
 
-### Key Highlights
+## Event Schedule
 
-#### DevOps Culture Transformation
-- **Cultural shift**: Breaking down silos between development and operations teams
-- **Automation-first mindset**: Reducing manual processes and human error
-- **Continuous improvement**: Metrics-driven optimization of development lifecycle
-- **Shared responsibility**: Everyone accountable for code quality and system reliability
+### 09:00 - 09:15 | Opening Session
 
-#### CI/CD Pipeline Mastery
-- **Source control strategies**: Understanding GitFlow vs trunk-based development
-- **Automated testing**: Unit, integration, and end-to-end testing in pipelines
-- **Deployment automation**: Blue/green, canary, and rolling deployment patterns
-- **Pipeline orchestration**: Connecting build, test, and deploy stages seamlessly
+- Welcome the participating teams to AWS GameDay.
+- Introduce the objectives and main agenda of the event.
+- Present the eight pre-registered teams.
+- Explain the competition rules and scoring system.
+- Explain how teams could select question sets.
+- Introduce the answer time and regulations for each match.
 
-#### Infrastructure as Code Benefits
-- **Version control for infrastructure**: Tracking changes and rollback capabilities
-- **Consistent environments**: Eliminating configuration drift between stages
-- **Scalable provisioning**: Programmatic resource management
-- **Cost optimization**: Template reusability and resource lifecycle management
+---
 
-#### Container Orchestration
-- **Microservices architecture**: Breaking monoliths into manageable services
-- **Container benefits**: Portability, scalability, and resource efficiency
-- **ECS vs EKS decision**: Understanding trade-offs between managed services
-- **Service mesh**: Advanced traffic management and security
+### 09:15 - 09:30 | Competition Preparation
 
-#### Observability Strategy
-- **Three pillars**: Metrics, logs, and traces for complete system visibility
-- **Proactive monitoring**: Preventing issues before they impact users
-- **Performance optimization**: Using data to identify bottlenecks
-- **Incident response**: Automated alerting and escalation procedures
+- The organizers announced the order of the scheduled matches.
+- Teams prepared their positions and participating members.
+- The available question sets were introduced.
+- The organizers reviewed the competition rules before the first match began.
 
-### Key Takeaways
+---
 
-#### Technical Skills Gained
-- **CI/CD pipeline design**: End-to-end automation from code commit to production
-- **Infrastructure as Code**: CloudFormation templates and CDK constructs
-- **Container deployment**: Docker, ECR, ECS, and EKS hands-on experience
-- **Monitoring setup**: CloudWatch dashboards and X-Ray distributed tracing
-- **Best practices**: Security, scaling, and cost optimization patterns
+### 09:30 - 09:45 | Match 1
 
-#### Strategic Understanding
-- **DevOps ROI**: Measuring success through DORA metrics and business impact
-- **Cultural transformation**: Leading organizational change toward DevOps adoption
-- **Technology selection**: Choosing right tools based on team size and requirements
-- **Career development**: DevOps skills roadmap and certification paths
+- Team 1 competed against Team 2.
+- Both teams selected question sets.
+- Team members discussed the questions and submitted their answers.
+- The organizers recorded the score of each team.
+- The team with the better result advanced to the next round.
 
-### Applying to Work
+---
 
-#### Immediate Implementation
-- **Set up CI/CD pipelines** for current projects using CodePipeline
-- **Implement Infrastructure as Code** for environment consistency
-- **Containerize applications** using Docker and deploy via ECS
-- **Establish monitoring** with CloudWatch and X-Ray for better observability
-- **Adopt Git strategies** appropriate for team size and workflow
+### 09:45 - 10:00 | Match 2
 
-#### Long-term Strategy
-- **Lead DevOps transformation** initiatives within organization
-- **Mentor teams** on DevOps best practices and cultural change
-- **Design scalable architectures** using learned container orchestration patterns
-- **Implement robust incident management** procedures and postmortem processes
-- **Pursue AWS certifications** in DevOps and Solutions Architecture
+- Team 3 competed against Team 4.
+- The teams answered AWS-related questions.
+- Each team had to complete its questions within the given time.
+- The organizers reviewed the results and announced the winning team.
 
-### Event Experience
+---
 
-Attending the **"DevOps on AWS"** full-day workshop provided comprehensive exposure to modern software development and operations practices. The experience was transformative in several key areas:
+### 10:00 - 10:15 | Match 3
 
-#### Comprehensive Learning Journey
-- **Morning sessions** built solid foundations in DevOps culture and CI/CD principles
-- **Hands-on labs** provided practical experience with AWS DevOps tools
-- **Afternoon deep-dives** covered advanced topics like container orchestration and observability
-- **Real-world case studies** demonstrated successful DevOps transformations
+- Team 5 competed against Team 6.
+- Team members analyzed the questions and agreed on their answers.
+- The competition focused on cloud computing concepts and AWS services.
+- The team with the higher result advanced to the next round.
 
-#### Practical Skills Development
-- **Built complete CI/CD pipelines** from source control to production deployment
-- **Deployed infrastructure** using both CloudFormation and CDK approaches  
-- **Containerized applications** and orchestrated them using ECS and EKS
-- **Implemented monitoring solutions** with comprehensive dashboards and alerting
+---
 
-#### Strategic Insights
-- **Cultural transformation** understanding beyond just technical implementation
-- **Metrics-driven approach** to measuring DevOps success and ROI
-- **Enterprise considerations** for scaling DevOps across large organizations
-- **Career pathway clarity** for DevOps specialization and growth
+### 10:15 - 10:30 | Match 4
 
-#### Networking and Community
-- **Connected with DevOps practitioners** from various industries and backgrounds
-- **Learned from AWS experts** about upcoming service features and roadmaps
-- **Participated in discussions** about real-world challenges and solutions
-- **Built professional network** for future collaboration and knowledge sharing
+- Team 7 competed against Team 8.
+- This was the final match of the first round.
+- Both teams completed their selected question sets.
+- After the match, four winning teams were confirmed for the next round.
 
-#### Some workshop photos
-*Add your workshop photos here*  
+---
 
-> This intensive workshop not only provided technical skills but also strategic thinking about DevOps transformation, making it invaluable for both current projects and career development in cloud-native software development.
+### 10:30 - 11:00 | Next Round - Match 1
+
+- The winner of Match 1 competed against the winner of Match 2.
+- The questions became more challenging than those in the first round.
+- Teams needed to apply AWS knowledge to analyze and select suitable answers.
+- The organizers recorded the results to determine the first finalist.
+
+---
+
+### 11:00 - 11:30 | Next Round - Match 2
+
+- The winner of Match 3 competed against the winner of Match 4.
+- The teams selected question sets and completed the competition.
+- Team members discussed each question before submitting the final answer.
+- The team with the better result qualified for the final match.
+
+---
+
+### 11:30 - 12:00 | Closing Session
+
+- The organizers reviewed the performances of the teams.
+- Selected questions and answers were explained.
+- Teams discussed questions that had been answered incorrectly.
+- The two best-performing teams were identified.
+- Due to the limited event duration, the final match was not held.
+- Participants networked and took group photos.
+- The event concluded at 12:00 PM.
+
+---
+
+## Knowledge Gained
+
+Participating in AWS GameDay gave me an opportunity to review and strengthen many important AWS concepts.
+
+Some of the main points I learned included:
+
+- Improved my understanding of the roles of AWS services in cloud systems.
+- Reviewed Amazon EC2 and its use for virtual servers.
+- Strengthened my knowledge of Amazon S3 and object storage.
+- Learned more about Amazon RDS for managed database deployment.
+- Reviewed the role of AWS Lambda in serverless architectures.
+- Strengthened my understanding of Amazon VPC, Subnets, and Route Tables.
+- Improved my knowledge of AWS IAM for identity and access management.
+- Reviewed the role of Security Groups in controlling network traffic.
+- Understood that each AWS service is suitable for different requirements.
+- Learned to analyze technical requirements before selecting an AWS service.
+
+The event also helped me realize that understanding the purpose of each service is more important than only memorizing its name or definition.
+
+---
+
+## Key Lessons
+
+After participating in the event, I remembered several important points:
+
+- Amazon EC2 is used to deploy virtual servers on AWS.
+- Amazon S3 is suitable for object storage.
+- Amazon RDS supports managed database deployment.
+- AWS Lambda is suitable for serverless and event-driven tasks.
+- Amazon VPC is used to build a private network environment on AWS.
+- IAM is used to manage identities and access permissions.
+- Security Groups act as virtual firewalls for AWS resources.
+- Cost, security, performance, and scalability should be considered when selecting a service.
+- Scenario-based questions require an understanding of the service rather than memorized theory.
+- Discussion among team members can help produce more suitable answers.
+
+---
+
+## Event Experience
+
+AWS GameDay provided an engaging learning experience that was different from a traditional seminar. Instead of only listening to presentations, I was able to observe and participate in AWS-related competition activities.
+
+The event atmosphere was exciting as the teams competed one after another. Each team selected a question set and completed the challenge within the given time. The direct competition created an active and enjoyable learning environment.
+
+Through the questions presented during the event, I had the opportunity to review many cloud computing concepts. Some topics that I had previously understood only in theory became clearer when presented through practical situations.
+
+I also realized that when answering an AWS question, it is important to read the requirements carefully and identify the main problem before selecting an answer. Several AWS services may appear similar, but each service is designed for different use cases.
+
+The event also allowed me to observe how teams discussed questions and made decisions. Each member could contribute different knowledge to support the team during the competition.
+
+Although the final match was not held because of the limited event duration, AWS GameDay still provided valuable knowledge and experience. It was a memorable activity during my internship program.
+
+---
+
+## Event Highlights
+
+- Eight teams registered for the competition.
+- Teams competed using a knockout format.
+- Two teams competed directly in each match.
+- Each team selected a question set for its challenge.
+- The competition focused on AWS and cloud computing.
+- Matches were held continuously throughout the event.
+- The event created an exciting and competitive atmosphere.
+- Teams had opportunities to communicate and learn from each other.
+- The two best-performing teams qualified for the final match.
+- The final match was not held because of limited time.
+
+---
+
+## Event Photos
+
+
+![AWS GameDay Event](/images/4-EventParticipated/event3-1.png)
+
+![AWS GameDay Event](/images/4-EventParticipated/event3-2.png)
+
+![AWS GameDay Event](/images/4-EventParticipated/event3-3.png)
+
+> AWS GameDay helped me strengthen my AWS knowledge, better understand how to select suitable services, and gain valuable experience through a competitive learning activity.
