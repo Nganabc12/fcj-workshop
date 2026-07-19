@@ -1,24 +1,24 @@
 ---
-title: "AWS GameDay - 8-Team Challenge"
-weight: 1
+title: "Event 3"
+weight: 3
 chapter: false
 pre: " <b> 4.3. </b> "
 ---
 
-# AWS GameDay - 8-Team Challenge
+# Event GameDay - 8-Team Challenge
 
 ## Event Details
 
 - **Date:** Saturday, June 20, 2026
 - **Time:** 9:00 AM - 12:00 PM
 - **Location:** Saigon Campus - Level 26, Bitexco Financial Tower
-- **Event Type:** AWS GameDay - AWS Knowledge Competition Featuring 8 Teams
+- **Event Type:** Event GameDay - AWS Knowledge Competition Featuring 8 Teams
 
 ---
 
 ## Event Introduction
 
-AWS GameDay was a team-based knowledge competition featuring eight pre-registered teams.
+Event GameDay was a team-based knowledge competition featuring eight pre-registered teams.
 
 During each match, two teams competed directly against each other by answering question sets related to AWS services and cloud computing. Team members discussed, analyzed, and submitted their answers within the given time limit.
 
@@ -199,11 +199,10 @@ Although the final match was not held because of the limited event duration, AWS
 
 ## Event Photos
 
+![AWS GameDay Event](/fcj-workshop/images/4-EventParticipated/event3-1.jpg)
 
-![AWS GameDay Event](/images/4-EventParticipated/event3-1.png)
+![AWS GameDay Event](/fcj-workshop/images/4-EventParticipated/event3-2.jpg)
 
-![AWS GameDay Event](/images/4-EventParticipated/event3-2.png)
-
-![AWS GameDay Event](/images/4-EventParticipated/event3-3.png)
+![AWS GameDay Event](/fcj-workshop/images/4-EventParticipated/event3-3.jpg)
 
 > AWS GameDay helped me strengthen my AWS knowledge, better understand how to select suitable services, and gain valuable experience through a competitive learning activity.

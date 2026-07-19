@@ -1,109 +1,208 @@
 ---
 title: "Sự kiện 3"
-weight: 1
+weight: 3
 chapter: false
 pre: " <b> 4.3. </b> "
 ---
 
-# Báo cáo Tóm tắt: "Hội thảo DevOps trên AWS"
+# AWS GameDay - 8 Đội Tranh Hùng
 
-### Chi tiết Sự kiện
-- **Ngày**: Thứ Hai, 17 tháng 11, 2025
-- **Thời gian**: 8:30 AM - 5:00 PM  
-- **Địa điểm**: Văn phòng AWS Việt Nam
-- **Loại sự kiện**: Hội thảo đào tạo DevOps cả ngày
+## Chi tiết sự kiện
 
-### Mục tiêu Sự kiện
+- **Ngày:** Thứ Bảy, ngày 20 tháng 06 năm 2026
+- **Thời gian:** 9:00 AM - 12:00 PM
+- **Địa điểm:** Saigon Campus - Tầng 26, Bitexco Financial Tower
+- **Loại sự kiện:** AWS GameDay - Cuộc thi kiến thức AWS giữa 08 đội
 
-- Hiểu văn hóa và nguyên tắc DevOps cho phát triển phần mềm hiện đại
-- Học các dịch vụ AWS DevOps để triển khai CI/CD pipeline
-- Trải nghiệm thực hành với Infrastructure as Code (IaC)
-- Triển khai dịch vụ container và giải pháp monitoring
-- Áp dụng các thực hành DevOps tốt nhất cho môi trường doanh nghiệp
+---
 
-### Phiên Sáng (8:30 AM - 12:00 PM)
+## Giới thiệu sự kiện
 
-#### Chào mừng & Tư duy DevOps (8:30 - 9:00 AM)
-- Nhắc lại phiên AI/ML trước đó
-- Giới thiệu văn hóa và nguyên tắc DevOps
-- Lợi ích và các chỉ số chính (DORA, MTTR, tần suất triển khai)
+AWS GameDay là một sự kiện thi đấu kiến thức được tổ chức theo hình thức đội nhóm. Chương trình có sự tham gia của 08 đội đã đăng ký trước.
 
-#### Dịch vụ AWS DevOps - CI/CD Pipeline (9:00 - 10:30 AM)
-- **Source Control**: AWS CodeCommit, chiến lược Git (GitFlow, Trunk-based)
-- **Build & Test**: Cấu hình CodeBuild, pipeline testing
-- **Deployment**: CodeDeploy với Blue/Green, Canary, và Rolling updates
-- **Orchestration**: Tự động hóa CodePipeline
-- **Demo**: Walkthrough CI/CD pipeline đầy đủ
+Trong mỗi lượt thi, hai đội sẽ thi đấu trực tiếp với nhau thông qua các bộ câu hỏi liên quan đến AWS và điện toán đám mây. Các thành viên trong đội cùng trao đổi, phân tích và đưa ra đáp án trong thời gian quy định.
 
-#### Infrastructure as Code (IaC) (10:45 AM - 12:00 PM)
-- **AWS CloudFormation**: Templates, stacks, và drift detection
-- **AWS CDK (Cloud Development Kit)**: Constructs, patterns tái sử dụng, và hỗ trợ ngôn ngữ
-- **Demo**: Triển khai với CloudFormation và CDK
-- **Thảo luận**: Lựa chọn giữa các công cụ IaC
+Đội có kết quả tốt hơn sẽ giành quyền bước vào vòng tiếp theo. Hình thức thi đấu loại trực tiếp giúp chương trình diễn ra sôi nổi và tạo động lực cho người tham gia ôn tập kiến thức AWS.
 
-### Phiên Chiều (1:00 - 5:00 PM)
+---
 
-#### Dịch vụ Container trên AWS (1:00 - 2:30 PM)
-- **Docker Fundamentals**: Microservices và containerization
-- **Amazon ECR**: Lưu trữ image, scanning, lifecycle policies
-- **Amazon ECS & EKS**: Chiến lược triển khai, scaling, và orchestration
-- **AWS App Runner**: Triển khai container đơn giản
-- **Demo & Case Study**: So sánh triển khai microservices
+## Mục tiêu sự kiện
 
-#### Monitoring & Observability (2:45 - 4:00 PM)
-- **CloudWatch**: Metrics, logs, alarms, và dashboards
-- **AWS X-Ray**: Distributed tracing và performance insights
-- **Demo**: Thiết lập observability full-stack
-- **Best Practices**: Alerting, dashboards, và quy trình on-call
+Sự kiện được tổ chức nhằm:
 
-#### DevOps Best Practices & Case Studies (4:00 - 4:45 PM)
-- **Chiến lược triển khai**: Feature flags, A/B testing
-- **Automated testing và CI/CD integration**
-- **Quản lý sự cố và postmortems**
-- **Case Studies**: Chuyển đổi DevOps của startups và doanh nghiệp
+- Ôn tập và củng cố kiến thức về các dịch vụ AWS.
+- Giúp người tham gia vận dụng kiến thức AWS vào các câu hỏi thực tế.
+- Tạo cơ hội giao lưu và học hỏi giữa các đội tham gia.
+- Khuyến khích tinh thần chủ động trong quá trình học điện toán đám mây.
+- Tạo môi trường học tập năng động thông qua hình thức thi đấu.
+- Giúp người tham gia nhận ra những kiến thức AWS cần tiếp tục bổ sung.
 
-#### Q&A & Tổng kết (4:45 - 5:00 PM)
-- Con đường sự nghiệp DevOps
-- Lộ trình chứng chỉ AWS
-- Networking và thảo luận cuối
+---
 
-### Điểm nổi bật chính
+## Nội dung chương trình
 
-#### Chuyển đổi Văn hóa DevOps
-- **Thay đổi văn hóa**: Phá vỡ rào cản giữa team phát triển và vận hành
-- **Tư duy automation-first**: Giảm quy trình thủ công và lỗi con người
-- **Cải tiến liên tục**: Tối ưu hóa lifecycle phát triển dựa trên metrics
-- **Trách nhiệm chia sẻ**: Mọi người đều chịu trách nhiệm về chất lượng code và độ tin cậy hệ thống
+### 09:00 - 09:15 | Khai mạc
 
-#### Thành thạo CI/CD Pipeline
-- **Chiến lược source control**: Hiểu GitFlow vs trunk-based development
-- **Automated testing**: Unit, integration, và end-to-end testing trong pipelines
-- **Deployment automation**: Blue/green, canary, và rolling deployment patterns
-- **Pipeline orchestration**: Kết nối các giai đoạn build, test, và deploy một cách liền mạch
+- Chào mừng các đội tham gia AWS GameDay.
+- Giới thiệu mục tiêu và nội dung chính của chương trình.
+- Giới thiệu 08 đội đã đăng ký tham gia.
+- Phổ biến thể lệ thi đấu và cách tính điểm.
+- Hướng dẫn cách lựa chọn bộ câu hỏi.
+- Giải thích thời gian trả lời và các quy định trong từng trận đấu.
 
-### Kinh nghiệm Sự kiện
+---
 
-Tham gia hội thảo **"DevOps trên AWS"** cả ngày đã mang lại cho tôi cái nhìn toàn diện về các thực hành phát triển và vận hành phần mềm hiện đại. Trải nghiệm này có tính chuyển đổi trong nhiều lĩnh vực quan trọng:
+### 09:15 - 09:30 | Chuẩn bị thi đấu
 
-#### Hành trình Học tập Toàn diện
-- **Các phiên sáng** xây dựng nền tảng vững chắc về văn hóa DevOps và nguyên tắc CI/CD
-- **Các bài lab thực hành** cung cấp kinh nghiệm thực tế với các công cụ AWS DevOps
-- **Các phiên chiều chuyên sâu** đề cập đến các chủ đề nâng cao như container orchestration và observability
-- **Case studies thực tế** minh họa các chuyển đổi DevOps thành công
+- Ban tổ chức thông báo thứ tự các cặp đấu.
+- Các đội chuẩn bị vị trí và thành viên tham gia.
+- Bộ câu hỏi được giới thiệu để các đội lựa chọn.
+- Ban tổ chức kiểm tra lại các quy định trước khi bắt đầu phần thi.
 
-#### Phát triển Kỹ năng Thực tế
-- **Xây dựng CI/CD pipelines hoàn chỉnh** từ source control đến production deployment
-- **Triển khai infrastructure** sử dụng cả CloudFormation và CDK
-- **Containerize applications** và orchestrate chúng bằng ECS và EKS
-- **Triển khai monitoring solutions** với dashboards và alerting toàn diện
+---
 
-#### Hiểu biết Chiến lược
-- **Chuyển đổi văn hóa** hiểu biết vượt ra ngoài việc triển khai kỹ thuật
-- **Phương pháp metrics-driven** để đo lường thành công DevOps và ROI
-- **Cân nhắc doanh nghiệp** để scale DevOps trên các tổ chức lớn
-- **Sự rõ ràng về con đường sự nghiệp** cho chuyên môn hóa và phát triển DevOps
+### 09:30 - 09:45 | Trận đấu 1
 
-#### Một số hình ảnh workshop
-*Thêm hình ảnh workshop của bạn tại đây*
+- Đội 1 thi đấu với Đội 2.
+- Hai đội lần lượt lựa chọn bộ câu hỏi.
+- Các thành viên cùng trao đổi để đưa ra đáp án.
+- Ban tổ chức ghi nhận điểm số của từng đội.
+- Đội có kết quả tốt hơn giành quyền bước vào vòng tiếp theo.
 
-> Hội thảo chuyên sâu này không chỉ cung cấp kỹ năng kỹ thuật mà còn tư duy chiến lược về chuyển đổi DevOps, làm cho nó vô cùng có giá trị cho cả các dự án hiện tại và phát triển sự nghiệp trong phát triển phần mềm cloud-native.
+---
+
+### 09:45 - 10:00 | Trận đấu 2
+
+- Đội 3 thi đấu với Đội 4.
+- Các đội trả lời các câu hỏi liên quan đến AWS.
+- Mỗi đội phải hoàn thành phần thi trong thời gian quy định.
+- Ban tổ chức tổng hợp kết quả và công bố đội đi tiếp.
+
+---
+
+### 10:00 - 10:15 | Trận đấu 3
+
+- Đội 5 thi đấu với Đội 6.
+- Các thành viên cùng phân tích câu hỏi và thống nhất đáp án.
+- Nội dung phần thi xoay quanh kiến thức điện toán đám mây và các dịch vụ AWS.
+- Đội đạt kết quả cao hơn giành quyền vào vòng tiếp theo.
+
+---
+
+### 10:15 - 10:30 | Trận đấu 4
+
+- Đội 7 thi đấu với Đội 8.
+- Đây là trận đấu cuối cùng của vòng thi đầu tiên.
+- Hai đội lần lượt hoàn thành bộ câu hỏi đã lựa chọn.
+- Sau trận đấu, bốn đội chiến thắng được xác định để tiếp tục tranh tài.
+
+---
+
+### 10:30 - 11:00 | Vòng tiếp theo - Trận 1
+
+- Đội chiến thắng của Trận 1 thi đấu với đội chiến thắng của Trận 2.
+- Các câu hỏi có mức độ khó cao hơn vòng đầu tiên.
+- Các đội cần vận dụng kiến thức AWS để phân tích và lựa chọn đáp án phù hợp.
+- Ban tổ chức ghi nhận kết quả để xác định đội giành quyền vào trận chung kết.
+
+---
+
+### 11:00 - 11:30 | Vòng tiếp theo - Trận 2
+
+- Đội chiến thắng của Trận 3 thi đấu với đội chiến thắng của Trận 4.
+- Các đội tiếp tục lựa chọn bộ câu hỏi và hoàn thành phần thi.
+- Thành viên trong đội cùng trao đổi trước khi đưa ra đáp án cuối cùng.
+- Đội có kết quả tốt hơn giành quyền bước vào trận chung kết.
+
+---
+
+### 11:30 - 12:00 | Tổng kết chương trình
+
+- Ban tổ chức nhận xét về phần thể hiện của các đội.
+- Một số câu hỏi nổi bật được giải thích lại.
+- Các đội cùng trao đổi về những đáp án chưa chính xác.
+- Hai đội có kết quả tốt nhất được xác định.
+- Do thời lượng chương trình có hạn nên trận chung kết chưa được tổ chức.
+- Người tham gia giao lưu và chụp ảnh lưu niệm.
+- Chương trình kết thúc vào lúc 12:00 PM.
+
+---
+
+## Kiến thức tiếp thu
+
+Thông qua AWS GameDay, tôi đã có cơ hội ôn tập và củng cố lại nhiều nội dung về AWS.
+
+Một số kiến thức tôi ghi nhớ được bao gồm:
+
+- Hiểu rõ hơn vai trò của các dịch vụ AWS trong hệ thống điện toán đám mây.
+- Ôn tập chức năng của Amazon EC2 trong việc cung cấp máy chủ ảo.
+- Củng cố kiến thức về Amazon S3 và hình thức lưu trữ đối tượng.
+- Hiểu thêm về Amazon RDS trong việc triển khai và quản lý cơ sở dữ liệu.
+- Ôn tập vai trò của AWS Lambda trong kiến trúc serverless.
+- Củng cố kiến thức về Amazon VPC, Subnet và Route Table.
+- Hiểu rõ hơn cách AWS IAM quản lý người dùng và quyền truy cập.
+- Nhớ lại vai trò của Security Group trong việc kiểm soát lưu lượng mạng.
+- Hiểu rằng mỗi dịch vụ AWS phù hợp với một nhóm yêu cầu khác nhau.
+- Biết cách phân tích yêu cầu trước khi lựa chọn dịch vụ AWS.
+
+Sự kiện cũng giúp tôi nhận ra rằng việc hiểu mục đích sử dụng của từng dịch vụ quan trọng hơn việc chỉ ghi nhớ tên hoặc định nghĩa.
+
+---
+
+## Những điều ghi nhớ
+
+Sau khi tham gia chương trình, tôi ghi nhớ được một số nội dung quan trọng:
+
+- Amazon EC2 được sử dụng để triển khai máy chủ ảo trên AWS.
+- Amazon S3 phù hợp với việc lưu trữ dữ liệu dạng object.
+- Amazon RDS hỗ trợ triển khai cơ sở dữ liệu được AWS quản lý.
+- AWS Lambda phù hợp với các tác vụ serverless và được kích hoạt theo sự kiện.
+- Amazon VPC giúp xây dựng môi trường mạng riêng trên AWS.
+- IAM được sử dụng để quản lý danh tính và quyền truy cập.
+- Security Group hoạt động như một lớp tường lửa cho tài nguyên AWS.
+- Khi lựa chọn dịch vụ cần cân nhắc về chi phí, bảo mật, hiệu suất và khả năng mở rộng.
+- Các câu hỏi tình huống yêu cầu hiểu rõ bản chất của dịch vụ thay vì chỉ học thuộc lý thuyết.
+- Việc trao đổi giữa các thành viên giúp đội đưa ra đáp án phù hợp hơn.
+
+---
+
+## Trải nghiệm tham gia
+
+AWS GameDay mang đến cho tôi một trải nghiệm học tập thú vị và khác biệt so với các buổi hội thảo thông thường. Thay vì chỉ ngồi nghe nội dung trình bày, tôi được trực tiếp theo dõi và tham gia vào các phần thi liên quan đến AWS.
+
+Không khí của sự kiện diễn ra sôi nổi khi các đội lần lượt thi đấu với nhau. Mỗi đội được lựa chọn bộ câu hỏi và phải hoàn thành phần thi trong thời gian quy định. Việc các đội cạnh tranh trực tiếp đã tạo nên một môi trường học tập năng động và hấp dẫn.
+
+Thông qua các câu hỏi trong chương trình, tôi có cơ hội ôn tập lại nhiều kiến thức về điện toán đám mây. Một số nội dung trước đây tôi chỉ biết về mặt lý thuyết đã trở nên dễ hiểu hơn khi được đặt trong các tình huống cụ thể.
+
+Tôi cũng nhận ra rằng khi gặp một câu hỏi AWS, cần đọc kỹ yêu cầu và xác định vấn đề chính trước khi lựa chọn đáp án. Có nhiều dịch vụ có chức năng gần giống nhau nhưng được thiết kế cho các nhu cầu khác nhau.
+
+Sự kiện còn là cơ hội để tôi quan sát cách các đội trao đổi và đưa ra quyết định. Mỗi thành viên có thể đóng góp một phần kiến thức khác nhau để hỗ trợ đội hoàn thành phần thi.
+
+Mặc dù trận chung kết chưa được tổ chức do thời gian chương trình có hạn, AWS GameDay vẫn mang lại nhiều kiến thức và trải nghiệm hữu ích. Đây là một hoạt động đáng nhớ trong quá trình tham gia chương trình thực tập.
+
+---
+
+## Điểm nổi bật của sự kiện
+
+- Có 08 đội đăng ký tham gia.
+- Các đội thi đấu theo hình thức loại trực tiếp.
+- Hai đội thi đấu trực tiếp trong mỗi trận.
+- Mỗi đội được lựa chọn bộ câu hỏi cho phần thi.
+- Nội dung tập trung vào AWS và điện toán đám mây.
+- Các trận đấu diễn ra liên tục trong suốt chương trình.
+- Không khí thi đấu sôi nổi và có tính cạnh tranh.
+- Các đội có cơ hội giao lưu và học hỏi lẫn nhau.
+- Hai đội có kết quả tốt nhất giành quyền vào trận chung kết.
+- Trận chung kết chưa được tổ chức do giới hạn thời gian.
+
+---
+
+## Một số hình ảnh sự kiện
+
+![AWS GameDay Event](/fcj-workshop/images/4-EventParticipated/event3-1.jpg)
+
+![AWS GameDay Event](/fcj-workshop/images/4-EventParticipated/event3-2.jpg)
+
+![AWS GameDay Event](/fcj-workshop/images/4-EventParticipated/event3-3.jpg)
+
+> AWS GameDay giúp tôi củng cố kiến thức về AWS, hiểu rõ hơn cách lựa chọn dịch vụ phù hợp và có thêm trải nghiệm học tập thông qua hình thức thi đấu.
