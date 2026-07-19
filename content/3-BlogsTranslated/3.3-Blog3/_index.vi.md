@@ -7,6 +7,9 @@ pre: " <b> 3.3. </b> "
 
 # Tìm hiểu tính năng S3 Files: Biến Amazon S3 Bucket thành hệ thống lưu trữ tệp tin (File System) trên AWS
 
+*Link bài viết gốc: [AWS Study Group Facebook Group](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2195923967839230)*
+
+
 ## Giới thiệu
 
 Trong quá trình tìm hiểu về các giải pháp lưu trữ trên AWS, mình khá ấn tượng với bài viết giới thiệu tính năng **S3 Files**[cite: 5]. Đây là một giải pháp mới giúp người dùng có thể gắn (mount) các Amazon S3 Bucket trực tiếp vào hệ điều hành hoặc ứng dụng như một ổ đĩa/thư mục cục bộ (File System) thông thường[cite: 5].
@@ -50,6 +53,8 @@ Sự kết hợp này giúp hệ thống hoạt động với hiệu suất cự
 
 > *Hình 1. Kiến trúc tổng quan mô tả các EC2 Instances kết nối qua cổng TCP 2049 (NFS) đến S3 Files Mount Target để đọc/ghi trực tiếp vào S3 Bucket.*
 
+![Kiến trúc tổng quan các EC2 Instances kết nối qua cổng TCP 2049 (NFS) đến S3 Files Mount Target](/images/3-BlogsTranslated/blog3-1.png)
+
 ---
 
 ## Trải nghiệm thiết lập thực tế trên AWS Console
@@ -61,6 +66,8 @@ Việc thiết lập S3 Files giờ đây cực kỳ trực quan thông qua giao
 
 2. **Cấu hình Mount Targets:** Đây là các điểm cuối mạng nội bộ nằm trong các Availability Zone (AZ) của Virtual Private Cloud (VPC).
 > *Hình 3. Giao diện quản lý Mount targets hiển thị danh sách các IP nội bộ và trạng thái kết nối "Available" cho phép các tài nguyên tính toán truy cập hệ thống tệp.*
+
+![Giao diện quản lý Mount targets hiển thị danh sách các IP nội bộ và trạng thái kết nối Available](/images/3-BlogsTranslated/blog3-2.png)
 
 ---
 

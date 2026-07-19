@@ -52,6 +52,13 @@ Deploy the backend code to EC2 virtual servers, connect to a relational database
 
 ---
 
+#### 3. [Video Demo & References](5.3-demo/)
+⏱️ **5 - 10 minutes** | 🎯 **General**
+
+Watch the live system demo running on AWS and access reference links and learning resources.
+
+---
+
 ## 📋 Prerequisites
 
 Before you begin, ensure you have the following:

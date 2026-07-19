@@ -16,8 +16,6 @@ Sử dụng tổ hợp phím `` Ctrl + ` `` (hoặc vào menu **Terminal** → *
 
 Đảm bảo terminal đang trỏ đúng vào thư mục gốc của dự án (nơi chứa file `pom.xml`).
 
-![Mở Terminal trong VS Code](/images/5-Workshop/build-backend-1.png)
-
 #### Bước 2: Build dự án bằng Maven
 
 Tại màn hình Terminal của VS Code, gõ lệnh sau để dọn dẹp các bản build cũ, biên dịch mã nguồn mới và đóng gói. Chúng ta sử dụng cờ `-DskipTests` để bỏ qua các bài test cục bộ, giúp quá trình build diễn ra nhanh chóng hơn:
@@ -34,7 +32,7 @@ Sau khi nhấn Enter, Maven sẽ tải các thư viện cần thiết và tiến
 
 Lệnh trên đã tự động tạo ra một thư mục có tên là `target` nằm trong cây thư mục bên trái của VS Code. Trong hệ sinh thái Spring Boot, bạn chỉ cần quan tâm đến file quan trọng nhất:
 
-- ✅ `petshop-api-0.0.1-SNAPSHOT.jar` - File Fat JAR đã sẵn sàng để upload lên máy chủ EC2.
+- ✅ `petshop-backend-1.0.0.jar` - File Fat JAR đã sẵn sàng để upload lên máy chủ EC2.
 - ✅ Tích hợp sẵn máy chủ Web (Embedded Tomcat).
 - ✅ Tất cả dependencies (thư viện) đã được bao gồm đầy đủ bên trong.
 - ✅ Cấu hình từ `application.properties` đã được ánh xạ chuẩn xác.

@@ -7,6 +7,9 @@ pre: " <b> 3.1. </b> "
 
 # Understanding Machine Learning Pipelines: The Journey to Bring AI Models into Reality
 
+*Original post link: [AWS Study Group Facebook Group](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2178072669624360/?rdid=xF88278FD6QFnlfz#)*
+
+
 While exploring AI/ML technical documents on AWS, I read a whitepaper about scaling Machine Learning models. What caught my attention wasn't the complex machine learning algorithms, but an extremely practical problem: **How do we bring an AI model from a personal computer to a production environment so millions of users can utilize it?**
 
 Previously, when hearing about AI, I immediately thought of Data Scientists downloading data to their machines, writing Python code (like Jupyter Notebook) to train the AI to become smart, and that's it.
@@ -28,6 +31,8 @@ According to the article, for an AI model to run smoothly in reality, it needs t
 - **Training & Tuning:** Let the AI relearn from the new data to become smarter, while automatically performing Hyperparameter tuning.
 - **Deployment:** Bring the trained AI model to servers as Endpoints to serve users in real-time or via batch processing.
 
+![Machine Learning Process](/images/3-BlogsTranslated/blog1-1.png)
+
 ---
 
 ## Technology Selection for Pipeline Stages
@@ -40,6 +45,8 @@ When applying this model on AWS, we need to map the above steps with correspondi
 | **Data Preprocessing** | AWS Glue, Amazon SageMaker Data Wrangler | Runs ETL (Extract, Transform, Load) jobs to clean data at scale. |
 | **Model Training** | Amazon SageMaker Training Instances, EC2 | Provisions server clusters with powerful GPUs to train AI, then automatically shuts them down when finished. |
 | **Deployment & Inference** | Amazon SageMaker Endpoints, API Gateway, AWS Lambda | Packages the model into a REST API for the application's Frontend/Backend to invoke. |
+
+![Machine Learning Engineering](/images/3-BlogsTranslated/blog1-2.png)
 
 ---
 

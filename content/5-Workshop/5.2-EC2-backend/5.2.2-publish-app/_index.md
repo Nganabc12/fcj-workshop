@@ -16,8 +16,6 @@ Press `` Ctrl + ` `` (or navigate to **Terminal** → **New Terminal** in the to
 
 Ensure the terminal is pointing to the root directory of your project (where the `pom.xml` file is located).
 
-![Open Terminal in VS Code](/images/5-Workshop/build-backend-1.png)
-
 #### Step 2: Build the project using Maven
 
 In the VS Code Terminal, enter the following command to clean old builds, compile new source code, and package the application. We use the `-DskipTests` flag to bypass local testing, significantly speeding up the build process:
@@ -34,7 +32,7 @@ After pressing Enter, Maven will download necessary dependencies and package the
 
 The execution of the command automatically generates a folder named `target`, visible in the left Explorer pane of VS Code. In the Spring Boot ecosystem, your primary focus is this single file:
 
-- ✅ `pet-resort-api-0.0.1-SNAPSHOT.jar` - The Fat JAR file ready to be uploaded to your EC2 server.
+- ✅ `petshop-backend-1.0.0.jar` - The Fat JAR file ready to be uploaded to your EC2 server.
 - ✅ Includes an Embedded Web Server (Tomcat).
 - ✅ All necessary dependencies are bundled inside.
 - ✅ Configurations from `application.properties` are accurately mapped.

@@ -72,8 +72,6 @@ Now, update the new Backend URL in your Frontend application.
 VITE_API_URL=http://petshop-alb-123456789.ap-southeast-1.elb.amazonaws.com/api
 ```
 
-![Update React Environment](/images/5-Workshop/frontend-env.png)
-
 4. Save the file, commit the changes, and push to GitHub to trigger your CI/CD pipeline and update the S3/CloudFront deployment.
 
 ## Step 5: Troubleshoot CORS & Mixed Content
@@ -85,9 +83,28 @@ Open your CloudFront-hosted Frontend website, press `F12`, and check the **Netwo
 - ❌ **Mixed Content Error (HTTP/HTTPS):** CloudFront runs on `HTTPS`, but your ALB is running on `HTTP`.
   - **Production Fix:** Configure an `HTTPS (443)` Listener on the ALB and attach a free SSL certificate from AWS Certificate Manager (ACM).
 
-## Monitor Application via CloudWatch
+## Incident Monitoring & Alerting with CloudWatch & SNS
 
-If the API becomes unresponsive, check the logs:
+To monitor system health in real time and receive instant alerts when anomalies occur, we configure a CloudWatch Dashboard and Amazon SNS (Simple Notification Service) topics.
+
+### 1. Configure CloudWatch Dashboard
+- Go to **CloudWatch** → **Dashboards** → **Create dashboard**.
+- Dashboard name: `petshop-cloudwatch`.
+- Add widgets to monitor critical metrics:
+  - **CPUUtilization** & **CPUCreditUsage** of the EC2 instances in the Auto Scaling Group.
+  - **ActiveConnectionCount** & **RequestCount** on the Application Load Balancer (ALB).
+  - **HTTPCode_Target_5XX_Count** to detect any system errors originating from the Backend.
+
+![CloudWatch Dashboard](/images/5-Workshop/cloudwatch-dashboard.png)
+
+### 2. Create Amazon SNS Topic for Notifications
+- Go to **Amazon SNS** → **Topics** → **Create topic**.
+- Type: **Standard** | Name: `petshop-Order-Notifications`.
+- Create **Subscriptions** (using Email or SMS) pointing to the administrator's endpoints to receive urgent alerts when CloudWatch metrics exceed threshold limits (e.g., CPU utilization exceeds 80%).
+
+![Amazon SNS Topic](/images/5-Workshop/sns-topic.png)
+
+### 3. Read Logs if the API becomes unresponsive
 1. Go to **AWS Console** → **CloudWatch** → **Log groups**.
 2. Locate the EC2 Log Group (if CloudWatch Agent is installed) or SSH into the EC2 instance to read `app.log`.
 3. Check for OutOfMemory exceptions or RDS/ElastiCache connection timeouts caused by misconfigured Security Groups.

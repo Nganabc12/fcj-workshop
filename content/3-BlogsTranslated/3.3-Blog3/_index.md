@@ -7,6 +7,9 @@ pre: " <b> 3.3. </b> "
 
 # Exploring S3 Files: Turning Amazon S3 Buckets into Local File Systems on AWS
 
+*Original post link: [AWS Study Group Facebook Group](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2195923967839230)*
+
+
 ## Introduction
 
 While researching storage solutions on AWS, I was quite impressed by an article introducing the **S3 Files** feature[cite: 5]. This is a novel solution that allows users to mount Amazon S3 Buckets directly into operating systems or applications as standard local drives/directories (File Systems)[cite: 5].
@@ -50,6 +53,8 @@ This combination enables the system to operate with extreme high throughput, min
 
 > *Figure 1. Architectural overview illustrating EC2 Instances connecting via TCP 2049 (NFS) to an S3 Files Mount Target to read/write directly into an S3 Bucket.*
 
+![Architectural overview illustrating EC2 Instances connecting via TCP 2049 (NFS) to an S3 Files Mount Target](/images/3-BlogsTranslated/blog3-1.png)
+
 ---
 
 ## Practical Setup on the AWS Console
@@ -61,6 +66,8 @@ Setting up S3 Files is incredibly intuitive via the AWS management console:
 
 2. **Configure Mount Targets:** These are internal network endpoints located within Virtual Private Cloud (VPC) Availability Zones (AZ).
 > *Figure 3. The Mount targets management interface displaying internal IPs and the "Available" connection status allowing compute resources to access the file system.*
+
+![Mount targets management interface displaying internal IPs and "Available" status](/images/3-BlogsTranslated/blog3-2.png)
 
 ---
 

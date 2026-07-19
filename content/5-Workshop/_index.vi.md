@@ -52,6 +52,13 @@ Triển khai mã nguồn Backend lên máy chủ ảo EC2, kết nối với cơ
 
 ---
 
+#### 3. [Video Demo & Tài liệu Tham khảo](5.3-demo/)
+⏱️ **5 - 10 phút** | 🎯 **General**
+
+Xem video chạy thử demo thực tế trên AWS và truy cập các liên kết tham khảo, tài liệu học tập của AWS.
+
+---
+
 ## 📋 Yêu cầu Trước khi Bắt đầu
 
 Trước khi thực hành, hãy đảm bảo bạn có:

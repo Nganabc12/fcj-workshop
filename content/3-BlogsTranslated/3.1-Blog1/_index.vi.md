@@ -7,6 +7,9 @@ pre: " <b> 3.1. </b> "
 
 # Tìm Hiểu Về Machine Learning Pipelines: Hành Trình Đưa Mô Hình AI Vào Thực Tế
 
+*Link bài viết gốc: [AWS Study Group Facebook Group](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2178072669624360/?rdid=xF88278FD6QFnlfz#)*
+
+
 Trong quá trình tìm hiểu các tài liệu kỹ thuật về AI/ML trên AWS, mình có đọc một bài whitepaper nói về việc mở rộng quy mô (scaling) cho các mô hình Machine Learning. Điều làm mình chú ý không phải là những thuật toán học máy phức tạp, mà là một vấn đề cực kỳ thực tế: **Làm sao để đưa một mô hình AI từ máy tính cá nhân lên môi trường sản xuất (production) để hàng triệu người dùng có thể sử dụng?**
 
 Trước đây, khi nghe đến AI, mình thường nghĩ ngay đến việc các Data Scientist tải dữ liệu về máy, viết code Python (như Jupyter Notebook) để huấn luyện cho AI thông minh lên là xong.
@@ -28,6 +31,8 @@ Theo bài viết, để một mô hình AI hoạt động trơn tru trong thực
 - **Huấn luyện (Training & Tuning):** Cho AI học lại từ dữ liệu mới để thông minh hơn, đồng thời tự động tối ưu hóa siêu tham số (Hyperparameter tuning).
 - **Triển khai (Deployment):** Đưa mô hình AI đã học xong lên máy chủ thành các Endpoint (điểm cuối) để phục vụ người dùng theo thời gian thực hoặc xử lý hàng loạt.
 
+![Quy trình Machine Learning](/images/3-BlogsTranslated/blog1-1.png)
+
 ---
 
 ## Lựa chọn công nghệ cho từng giai đoạn Pipeline
@@ -40,6 +45,8 @@ Khi áp dụng mô hình này lên AWS, chúng ta cần map (ánh xạ) các bư
 | **Tiền xử lý dữ liệu** | AWS Glue, Amazon SageMaker Data Wrangler | Chạy các job ETL (Extract, Transform, Load) để làm sạch dữ liệu ở quy mô lớn. |
 | **Huấn luyện mô hình** | Amazon SageMaker Training Instances, EC2 | Cấp phát các cụm máy chủ có GPU mạnh mẽ để train AI, sau đó tự động tắt khi train xong. |
 | **Triển khai & Suy luận** | Amazon SageMaker Endpoints, API Gateway, AWS Lambda | Đóng gói mô hình thành REST API để Frontend/Backend của ứng dụng gọi tới. |
+
+![Kiến trúc Machine Learning Engineering](/images/3-BlogsTranslated/blog1-2.png)
 
 ---
 

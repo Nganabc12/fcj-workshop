@@ -5,7 +5,10 @@ chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-# Chia sẻ bài viết AWS: Giảm gian lận SMS OTP với Vonage và Amazon Cognito
+# Chia sẻ bài viết AWS: Giảm gian lận SMS OTP với Vonage và Amazon Cognito 
+
+*Link bài viết gốc: [AWS Study Group Facebook Group](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2195923967839230)*
+
 
 Gần đây mình có đọc một bài viết khá thú vị trên AWS Architecture Blog về cách giảm gian lận liên quan đến SMS OTP bằng cách kết hợp giữa **Amazon Cognito** và các giải pháp xác thực của **Vonage**[cite: 4]. Sau khi tìm hiểu, mình muốn chia sẻ lại theo cách dễ hiểu hơn để mọi người có thể hình dung được vấn đề cũng như giải pháp mà AWS đang đề xuất[cite: 4].
 
@@ -65,6 +68,8 @@ Quy trình xác thực tổng quát diễn ra như sau[cite: 4]:
 4.  **Vonage** kiểm tra mức độ rủi ro của số điện thoại[cite: 4].
     *   **Nếu an toàn:** Cho phép đăng nhập (có thể dùng Silent Authentication)[cite: 4].
     *   **Nếu phát hiện rủi ro:** Yêu cầu thêm bước xác minh hoặc chặn giao dịch đáng ngờ[cite: 4].
+
+![Kiến trúc Xác thực thích ứng rủi ro](/images/3-BlogsTranslated/blog2-1.png)
 
 ---
 

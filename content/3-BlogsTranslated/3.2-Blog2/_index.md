@@ -7,6 +7,9 @@ pre: " <b> 3.2. </b> "
 
 # AWS Article Share: Reducing SMS OTP Fraud with Vonage and Amazon Cognito
 
+*Original post link: [AWS Study Group Facebook Group](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2195923967839230)*
+
+
 I recently read a fascinating article on the AWS Architecture Blog about mitigating SMS OTP-related fraud by combining **Amazon Cognito** with **Vonage** authentication solutions[cite: 4]. After studying it, I wanted to break it down into simpler terms so everyone can grasp both the challenges and the solutions proposed by AWS[cite: 4].
 
 ## What is SMS OTP and What are the Current Problems?
@@ -65,6 +68,8 @@ The general authentication workflow is as follows[cite: 4]:
 4.  **Vonage** evaluates the risk level of the user's phone number[cite: 4].
     *   **If Safe:** Allows login (potentially utilizing Silent Authentication)[cite: 4].
     *   **If Risky:** Demands supplementary verification steps or halts the suspicious transaction[cite: 4].
+
+![Risk-Adaptive Customer Sign-In](/images/3-BlogsTranslated/blog2-1.png)
 
 ---
 

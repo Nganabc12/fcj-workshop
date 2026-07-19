@@ -68,20 +68,40 @@ Khởi chạy ứng dụng chạy ngầm trên máy chủ bằng lệnh `nohup`:
 nohup java -jar pet-resort-api.jar > app.log 2>&1 &
 ```
 Lúc này, API của bạn đã chạy trên cổng `8080` của địa chỉ Private IP (Ví dụ: `10.0.1.15:8080`).
+ 
+Bạn có thể kiểm tra xem ứng dụng đã khởi chạy thành công hay chưa bằng cách kiểm tra log (ví dụ: chạy lệnh `cat app.log` hoặc chạy trực tiếp lệnh Java để quan sát log xuất ra màn hình console):
 
-#### Bước 6: Cấu hình Application Load Balancer (ALB)
+![Ứng dụng Spring Boot khởi chạy thành công trên cổng 8080](/images/5-Workshop/backend-run.png)
 
-Vì EC2 nằm ở Private Subnet không ai truy cập được, chúng ta dùng ALB đặt ở Public Subnet để "đứng mũi chịu sào" nhận request từ Frontend rồi đẩy vào EC2.
+#### Bước 6: Tạo Target Group (Nhóm đối tượng đích)
+
+Trước khi cấu hình bộ cân bằng tải Application Load Balancer, chúng ta cần định nghĩa nhóm đối tượng đích nhận traffic backend.
+
+1. Truy cập **EC2 Console** → Chọn **Target Groups** ở menu trái → Click **Create target group**.
+2. **Target type**: Chọn **Instances**.
+3. **Target group name**: `ALB-target-group`.
+4. **Protocol**: `HTTP` | **Port**: `80` (Nếu cấu hình port 80, đảm bảo rằng bạn override port nhận traffic của EC2 backend thành `8080` nơi Spring Boot đang chạy khi đăng ký target).
+5. **VPC**: Chọn `Pet-Shop-vpc`.
+6. Click **Next** → Chọn EC2 `petshop-backend-server` và đăng ký nó → Click **Create target group**.
+
+![Cấu hình Target Group](/images/5-Workshop/target-group.png)
+
+#### Bước 7: Cấu hình Application Load Balancer (ALB)
+
+Vì EC2 Backend nằm ở Private Subnet không ai truy cập được, chúng ta dùng ALB đặt ở Public Subnet để "đứng mũi chịu sào" nhận request công khai từ Frontend rồi đẩy an toàn vào EC2 ở subnet nội bộ.
 
 1. Vào EC2 Console → Kéo xuống mục **Load Balancers** → **Create Load Balancer**.
 2. Chọn **Application Load Balancer**.
 3. Scheme: **Internet-facing**
 4. Mapping: Chọn VPC `Pet-Shop-vpc` và ít nhất 2 Public Subnets.
-5. **Listeners and routing:** 
-   - HTTP: 80 hoặc HTTPS: 443
-   - Chuyển tiếp (Forward to) tới Target Group chứa EC2 `petshop-backend-server` cổng `8080`.
+5. **Listeners and routing**:
+   - HTTP: 80 hoặc HTTPS: 443.
+   - **Default action**: Chọn **Forward to** và trỏ tới Target Group `ALB-target-group` vừa tạo ở bước trên.
+6. Click **Create load balancer**.
 
-#### Bước 7: Cấu hình CORS cho Frontend
+![Cấu hình Load Balancer](/images/5-Workshop/alb-dns.png)
+
+#### Bước 8: Cấu hình CORS cho Frontend
 
 Để Frontend (ReactJS) có thể gọi được API mà không bị chặn, cần cấu hình CORS trong mã nguồn Spring Boot (thường nằm ở class `WebConfig` hoặc `SecurityConfig`):
 
@@ -93,7 +113,7 @@ public class CorsConfig implements WebMvcConfigurer {
         registry.addMapping("/**")
                 .allowedOrigins(
                     "http://localhost:3000", 
-                    "https://d1x2y3z4.cloudfront.net" // Domain thật của CloudFront Frontend
+                    "https://d3uvhesft661gl.cloudfront.net" // Domain thật của CloudFront Frontend
                 )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
@@ -102,6 +122,38 @@ public class CorsConfig implements WebMvcConfigurer {
 }
 ```
 *(Nếu cập nhật, bạn cần build lại file `.jar` và deploy lại).*
+
+#### Bước 9: Thiết lập Launch Template & Auto Scaling Group cho Backend (Tối ưu hóa khả dụng)
+
+Để hệ thống hoạt động ổn định ở quy mô lớn, tự động phục hồi khi máy chủ gặp sự cố và phân phối tải đều giữa các Private Subnets, chúng ta tạo bản sao hình ảnh máy ảo (AMI) từ EC2 Backend hiện tại, sau đó tạo Launch Template và thiết lập Auto Scaling Group.
+
+1. **Tạo Amazon Machine Image (AMI) từ EC2 Backend:**
+   - Vào **EC2 Console** → Chọn **Instances** → Tích chọn instance `petshop-backend-server`.
+   - Chọn **Actions** → **Image and templates** → **Create image**.
+   - **Image name**: `pet-shop-backend-AMI`.
+   - Click **Create image**. Trạng thái của AMI sẽ chuyển sang `Available` sau khi quá trình tạo hoàn tất.
+   
+   ![Tạo Amazon Machine Image](/images/5-Workshop/backend-ami.png)
+
+2. **Tạo Launch Template (Bản mẫu cấu hình khởi chạy):**
+   - Vào **EC2 Console** → Chọn **Launch Templates** ở menu trái → Click **Create launch template**.
+   - **Launch template name**: `petshop-launch-template`.
+   - **Application and OS Images (Amazon Machine Image)**: Ở mục **My AMIs**, chọn `pet-shop-backend-AMI` vừa tạo ở trên.
+   - Chọn Instance type (`t3.micro`), Key pair, và Security Group `SG_Backend` giống như đã thiết lập thủ công ở Bước 2.
+   - Nhấp **Create launch template**.
+   
+   ![Cấu hình Launch Template](/images/5-Workshop/launch-template.png)
+
+3. **Cấu hình Auto Scaling Group (ASG):**
+   - Vào **EC2 Console** → Chọn **Auto Scaling Groups** ở menu trái → Click **Create Auto Scaling group**.
+   - **Auto Scaling group name**: `petshop-backend-autoscaling`.
+   - **Launch template**: Chọn `petshop-launch-template` vừa tạo.
+   - **Network**: Chọn VPC `Pet-Shop-vpc` và chỉ chọn các **Private Subnets** (Private Subnet 1 & Private Subnet 2) để đảm bảo máy chủ không bị lộ ra ngoài Internet.
+   - **Load balancing**: Tích hợp với Load Balancer hiện tại, chọn Target Group `ALB-target-group` để tự động đăng ký các instance mới tạo.
+   - **Group size (Kích thước nhóm)**: Cấu hình tải cơ bản với **Desired capacity: 2**, **Minimum capacity: 2**, và **Maximum capacity: 4** nhằm đảm bảo luôn duy trì tối thiểu 2 máy chủ chạy song song.
+   - Hoàn tất các bước và chọn **Create Auto Scaling group**.
+
+   ![Cấu hình Auto Scaling Group](/images/5-Workshop/auto-scaling.png)
 
 #### Các Vấn đề Thường gặp
 
