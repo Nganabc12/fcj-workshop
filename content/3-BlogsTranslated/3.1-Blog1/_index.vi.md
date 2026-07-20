@@ -5,16 +5,36 @@ chapter: false
 pre: " <b> 3.1. </b> "
 ---
 
-# Tìm Hiểu Về Machine Learning Pipelines: Hành Trình Đưa Mô Hình AI Vào Thực Tế
+# Understanding Machine Learning Pipelines: The Journey to Bring AI Models into Reality
 
-*Link bài viết gốc: [AWS Study Group Facebook Group](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2178072669624360/?rdid=xF88278FD6QFnlfz#)*
+## Thông tin bài viết
 
+| Mục | Nội dung |
+|-----|----------|
+| **Tiêu đề bài viết** | Machine Learning Pipelines |
+| **Tác giả** | Accenture |
+| **Ngày xuất bản** | 27/07/2022 |
+| **Nguồn bài viết** | https://docs.aws.amazon.com/whitepapers/latest/accenture-ai-scaling-ml-and-deep-learning-models/machine-learning-pipelines.html |
+| **Người dịch** | Nguyễn Hoàng Sơn |
+| **Ngày đăng bản dịch** | 09/06/2026 |
+| **Bài viết đã dịch** | https://www.facebook.com/share/p/18qaf9Rky8/ |
 
-Trong quá trình tìm hiểu các tài liệu kỹ thuật về AI/ML trên AWS, mình có đọc một bài whitepaper nói về việc mở rộng quy mô (scaling) cho các mô hình Machine Learning. Điều làm mình chú ý không phải là những thuật toán học máy phức tạp, mà là một vấn đề cực kỳ thực tế: **Làm sao để đưa một mô hình AI từ máy tính cá nhân lên môi trường sản xuất (production) để hàng triệu người dùng có thể sử dụng?**
+---
 
-Trước đây, khi nghe đến AI, mình thường nghĩ ngay đến việc các Data Scientist tải dữ liệu về máy, viết code Python (như Jupyter Notebook) để huấn luyện cho AI thông minh lên là xong.
+## Giới thiệu
 
-Tuy nhiên, bài viết của AWS đã chỉ ra một thực tế phũ phàng: Việc tạo ra một mô hình AI xịn xò chỉ chiếm khoảng 20% khối lượng công việc. 80% công sức còn lại nằm ở việc xây dựng một hệ thống cơ sở hạ tầng để duy trì và vận hành mô hình đó. 
+Trong quá trình tìm hiểu về AI/ML trên AWS, tôi đã đọc một tài liệu kỹ thuật (AWS Whitepaper) trình bày về cách xây dựng và triển khai các mô hình Machine Learning ở quy mô doanh nghiệp. Điều khiến tôi ấn tượng không phải là các thuật toán Machine Learning phức tạp mà là một câu hỏi rất thực tế:
+
+**Làm thế nào để đưa một mô hình AI từ máy tính cá nhân lên môi trường Production để có thể phục vụ hàng triệu người dùng?**
+
+Trước đây, khi nhắc đến AI, tôi thường nghĩ rằng chỉ cần thu thập dữ liệu, huấn luyện mô hình bằng Python hoặc Jupyter Notebook là đã hoàn thành. Tuy nhiên, tài liệu của AWS chỉ ra rằng việc xây dựng mô hình chỉ là một phần nhỏ của toàn bộ quá trình. Phần lớn công việc còn lại nằm ở việc xây dựng hạ tầng, tự động hóa quy trình, giám sát và vận hành hệ thống để mô hình có thể hoạt động ổn định trong môi trường thực tế.
+
+Chính vì vậy, **Machine Learning Pipeline** được xem là một thành phần quan trọng trong MLOps, giúp tự động hóa toàn bộ vòng đời của mô hình Machine Learning, từ thu thập dữ liệu, xử lý dữ liệu, huấn luyện, triển khai cho đến theo dõi và cập nhật mô hình.
+
+---
+
+> **Lưu ý:** Bài viết này được dịch và tổng hợp từ **AWS Whitepaper – Accenture Enterprise AI: Scaling Machine Learning and Deep Learning Models** nhằm phục vụ mục đích học tập và nghiên cứu. Mọi bản quyền nội dung thuộc về **Amazon Web Services (AWS)** và **Accenture**. :contentReference[oaicite:0]{index=0}
+
 
 Đó là lý do khái niệm **Machine Learning Pipelines** (Đường ống học máy) ra đời.
 

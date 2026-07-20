@@ -1,41 +1,40 @@
 ---
-title: "Worklog Tuần 11"
-weight: 11
+title: "Nhật ký công việc Tuần 11"
+weight: 1
 chapter: false
-pre: "<b>11. </b>"
+pre: " <b> 1.11. </b> "
 ---
 
 
-## Mục tiêu tuần 11
 
-- Triển khai Pet Resort & Care System lên môi trường AWS.
-- Hoàn thiện kết nối giữa Frontend và Backend.
-- Kiểm tra hệ thống sau khi triển khai và xử lý các lỗi phát sinh.
+### Mục tiêu tuần 11
 
----
+- Kiểm thử tổng thể các chức năng của Pet Resort & Care System sau khi hoàn thiện tích hợp.
+- Theo dõi trạng thái hoạt động và mức sử dụng tài nguyên bằng Amazon CloudWatch.
+- Phân tích các chỉ số hệ thống để xác định những vấn đề ảnh hưởng đến hiệu năng.
+- Thiết lập AWS Budgets nhằm theo dõi và kiểm soát chi phí sử dụng dịch vụ AWS.
+- Phát hiện, khắc phục các lỗi còn tồn tại và nâng cao tính ổn định của hệ thống.
 
-## Các công việc cần triển khai trong tuần này
+### Nhiệm vụ thực hiện trong tuần
 
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-|------|-----------|--------------|-----------------|----------------|
-| **2** | - Chuẩn bị môi trường triển khai Backend trên Amazon EC2.<br>- Build ứng dụng Spring Boot thành file `.jar`, cài đặt Java và cập nhật các biến môi trường cần thiết trên máy chủ. | 29/06/2026 | 29/06/2026 | AWS Documentation (EC2) |
-| **3** | - Khởi tạo Amazon RDS MySQL và cập nhật thông tin kết nối trong Backend.<br>- Thiết lập Security Group cho EC2 và RDS, kiểm tra khả năng truy cập cơ sở dữ liệu từ ứng dụng. | 30/06/2026 | 30/06/2026 | AWS Documentation (RDS) |
-| **4** | - Cấu hình Application Load Balancer và Target Group cho Backend.<br>- Kiểm tra Health Check, điều chỉnh cổng dịch vụ và xác nhận ứng dụng hoạt động thông qua ALB. | 01/07/2026 | 01/07/2026 | AWS Documentation (ALB) |
-| **5** | - Triển khai Frontend ReactJS lên Amazon S3.<br>- Thiết lập Amazon CloudFront để phân phối giao diện và các tài nguyên tĩnh của hệ thống. | 02/07/2026 | 03/07/2026 | AWS Documentation (S3, CloudFront) |
-| **7** | - Kiểm tra kết nối giữa Frontend và Backend trên môi trường AWS.<br>- Khắc phục các lỗi liên quan đến CORS, API Endpoint, đường dẫn hình ảnh và xác nhận các chức năng chính của hệ thống hoạt động ổn định. | 04/07/2026 | 04/07/2026 | Project Documentation |
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày kết thúc | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 1 | Xây dựng danh sách kiểm thử và tiến hành kiểm tra các chức năng chính của hệ thống như đăng nhập, quản lý thông tin thú cưng, đặt lịch dịch vụ và quản lý dữ liệu. | 29/06/2026 | 29/06/2026 | Kế hoạch kiểm thử hệ thống |
+| 2 | Kiểm tra luồng dữ liệu giữa giao diện người dùng, ứng dụng Spring Boot và Amazon RDS; ghi nhận các lỗi về kết nối, xử lý dữ liệu và hiển thị kết quả. | 30/06/2026 | 30/06/2026 | Tài liệu dự án |
+| 3 | Theo dõi các chỉ số hoạt động của tài nguyên AWS bằng Amazon CloudWatch, kiểm tra mức sử dụng CPU, trạng thái dịch vụ, log ứng dụng và các thông tin liên quan đến lỗi hệ thống. | 01/07/2026 | 01/07/2026 | Amazon CloudWatch Documentation |
+| 4 | Rà soát các truy vấn dữ liệu, thời gian phản hồi của ứng dụng và cấu hình triển khai; điều chỉnh một số thiết lập nhằm cải thiện hiệu năng và độ ổn định. | 02/07/2026 | 02/07/2026 | AWS Well-Architected Framework |
+| 5 | Thiết lập AWS Budgets để theo dõi chi phí sử dụng tài nguyên, cấu hình ngưỡng cảnh báo và kiểm tra các dịch vụ có khả năng phát sinh chi phí không cần thiết. | 03/07/2026 | 03/07/2026 | AWS Budgets User Guide |
 
----
+### Tổng kết tuần
 
-## Kết quả đạt được tuần 11
+Trong tuần 11, tôi tập trung kiểm thử tổng thể **Pet Resort & Care System** sau khi hoàn thiện quá trình tích hợp và cấu hình kiến trúc triển khai. Tôi xây dựng danh sách các chức năng cần kiểm tra, thực hiện kiểm thử từng luồng nghiệp vụ và đánh giá khả năng giao tiếp giữa giao diện người dùng, ứng dụng Spring Boot và cơ sở dữ liệu Amazon RDS.
 
-- Hoàn thành triển khai Backend Spring Boot lên Amazon EC2 và kết nối thành công với cơ sở dữ liệu Amazon RDS MySQL.
+Quá trình kiểm thử giúp tôi phát hiện một số vấn đề liên quan đến kết nối, xử lý dữ liệu, thời gian phản hồi và cấu hình môi trường. Tôi tiến hành kiểm tra nguyên nhân, điều chỉnh các thiết lập chưa phù hợp và thực hiện kiểm thử lại để đảm bảo các chức năng hoạt động đúng theo yêu cầu.
 
-- Thiết lập Security Group, Target Group và Application Load Balancer để hệ thống có thể tiếp nhận và xử lý các yêu cầu từ người dùng.
+Bên cạnh việc kiểm thử, tôi sử dụng **Amazon CloudWatch** để theo dõi trạng thái tài nguyên, mức sử dụng CPU, log ứng dụng và các thông tin lỗi trong quá trình hệ thống hoạt động. Việc phân tích các chỉ số và nhật ký giúp tôi hiểu rõ hơn tình trạng vận hành của ứng dụng, đồng thời hỗ trợ xác định nhanh các vấn đề có thể ảnh hưởng đến hiệu năng và tính ổn định.
 
-- Hoàn thành triển khai Frontend ReactJS lên Amazon S3 và cấu hình Amazon CloudFront để phân phối giao diện và các tài nguyên tĩnh.
+Tôi cũng thực hiện rà soát cấu hình triển khai, truy vấn cơ sở dữ liệu và thời gian phản hồi của hệ thống. Một số thiết lập được điều chỉnh để hạn chế việc sử dụng tài nguyên không cần thiết, cải thiện khả năng xử lý yêu cầu và giúp hệ thống vận hành ổn định hơn.
 
-- Kiểm tra quá trình giao tiếp giữa Frontend và Backend, xác nhận các API đăng nhập, quản lý thú cưng, quản lý dịch vụ và đặt lịch hoạt động đúng trên môi trường AWS.
+Ngoài ra, tôi thiết lập **AWS Budgets** để theo dõi chi phí sử dụng các dịch vụ AWS và cấu hình ngưỡng cảnh báo ngân sách. Qua đó, tôi có thể kiểm soát tốt hơn các tài nguyên đang sử dụng, phát hiện những dịch vụ có khả năng phát sinh chi phí và chủ động điều chỉnh khi cần thiết.
 
-- Khắc phục các lỗi phát sinh trong quá trình triển khai như cấu hình CORS, API Endpoint, Security Group, Health Check của Target Group và đường dẫn truy cập tài nguyên.
-
-- Hoàn thiện môi trường triển khai của Pet Resort & Care System, tạo nền tảng cho quá trình kiểm thử, tối ưu và hoàn thiện báo cáo thực tập ở tuần tiếp theo.
+Kết thúc tuần 11, hệ thống đã được kiểm tra tương đối đầy đủ, các lỗi chính được khắc phục và cấu hình vận hành được tối ưu thêm. Thông qua các công việc trong tuần, tôi nâng cao kỹ năng kiểm thử hệ thống, phân tích log, giám sát tài nguyên bằng Amazon CloudWatch, quản lý chi phí với AWS Budgets, tối ưu hiệu năng và xử lý sự cố trong môi trường điện toán đám mây.

@@ -1,20 +1,40 @@
 ---
-title: "Blog 3: S3 Files System"
+title: "Blog 3: Hệ thống tệp S3 Files"
 weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
 
-# Exploring S3 Files: Turning Amazon S3 Buckets into Local File Systems on AWS
+# Khám phá S3 Files: Biến Amazon S3 Bucket thành hệ thống tệp cục bộ trên AWS
 
-*Original post link: [AWS Study Group Facebook Group](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2195923967839230)*
+## Thông tin bài viết gốc
 
+| Mục | Nội dung |
+|-----|----------|
+| **Tiêu đề bài viết** | Launching S3 Files: Making S3 Buckets Accessible as File Systems |
+| **Tác giả** | Antje Barth |
+| **Ngày đăng** | 25/06/2026 |
+| **Nguồn bài viết** | https://aws.amazon.com/blogs/aws/launching-s3-files-making-s3-buckets-accessible-as-file-systems/ |
+| **Người dịch** | Hồ Đình Vinh |
+| **Ngày đăng bản dịch** | 28/06/2026 |
+| **Bài viết đã dịch** | https://www.facebook.com/share/p/14htFzwDeXv/ |
 
-## Introduction
+---
 
-While researching storage solutions on AWS, I was quite impressed by an article introducing the **S3 Files** feature[cite: 5]. This is a novel solution that allows users to mount Amazon S3 Buckets directly into operating systems or applications as standard local drives/directories (File Systems)[cite: 5].
+## Giới thiệu
 
-Instead of writing complex code using AWS SDKs or APIs to upload/download data, traditional applications can now read and write data directly to S3 via standard operating system file management commands[cite: 5].
+Trong quá trình tìm hiểu các giải pháp lưu trữ dữ liệu trên AWS, tôi đã đọc được một bài viết giới thiệu về **S3 Files** – một tính năng mới cho phép người dùng truy cập trực tiếp các **Amazon S3 Bucket** như một hệ thống tệp (File System) quen thuộc trên máy tính hoặc máy chủ.
+
+Thông thường, để làm việc với Amazon S3, các ứng dụng cần sử dụng AWS SDK hoặc gọi trực tiếp các API như `PutObject`, `GetObject` hay `ListObjects`. Điều này khiến nhiều ứng dụng cũ (Legacy Applications) hoặc các phần mềm chỉ hỗ trợ thao tác với tệp cục bộ gặp nhiều khó khăn khi chuyển sang sử dụng S3.
+
+Với **S3 Files**, AWS đã giải quyết vấn đề này bằng cách cung cấp một lớp trung gian giúp chuyển đổi các thao tác đọc và ghi tệp thông thường thành các lời gọi API đến Amazon S3 một cách tự động. Nhờ đó, các ứng dụng có thể tiếp tục hoạt động như đang sử dụng ổ đĩa cục bộ mà không cần chỉnh sửa hoặc viết lại mã nguồn.
+
+Trong bài viết này, tôi tổng hợp và dịch lại những nội dung chính từ bài viết gốc của AWS, bao gồm nguyên lý hoạt động của S3 Files, kiến trúc triển khai, các thành phần AWS liên quan cũng như những lợi ích mà giải pháp này mang lại đối với các hệ thống Big Data, AI/ML và các ứng dụng doanh nghiệp.
+
+---
+
+> **Lưu ý:** Bài viết này được dịch và tổng hợp từ bài viết gốc trên **AWS News Blog** nhằm phục vụ mục đích học tập và nghiên cứu. Mọi bản quyền nội dung thuộc về tác giả và Amazon Web Services (AWS).
+
 
 ---
 

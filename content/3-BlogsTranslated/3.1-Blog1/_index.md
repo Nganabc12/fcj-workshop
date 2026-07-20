@@ -7,14 +7,34 @@ pre: " <b> 3.1. </b> "
 
 # Understanding Machine Learning Pipelines: The Journey to Bring AI Models into Reality
 
-*Original post link: [AWS Study Group Facebook Group](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2178072669624360/?rdid=xF88278FD6QFnlfz#)*
+## Original Article Information
 
+| Item | Details |
+|------|---------|
+| **Original Title** | Machine Learning Pipelines |
+| **Original Author** | Accenture |
+| **Published Date** | July 27, 2022 |
+| **Original Source** | https://docs.aws.amazon.com/whitepapers/latest/accenture-ai-scaling-ml-and-deep-learning-models/machine-learning-pipelines.html |
+| **Translated by** | Nguyễn Hoàng Sơn |
+| **Translation Published** | June 9, 2026 |
+| **Translated Blog** | https://www.facebook.com/share/p/18qaf9Rky8/ |
 
-While exploring AI/ML technical documents on AWS, I read a whitepaper about scaling Machine Learning models. What caught my attention wasn't the complex machine learning algorithms, but an extremely practical problem: **How do we bring an AI model from a personal computer to a production environment so millions of users can utilize it?**
+---
 
-Previously, when hearing about AI, I immediately thought of Data Scientists downloading data to their machines, writing Python code (like Jupyter Notebook) to train the AI to become smart, and that's it.
+## Introduction
 
-However, the AWS article pointed out a harsh reality: Creating a high-quality AI model only accounts for about 20% of the workload. The remaining 80% of the effort lies in building an infrastructure system to maintain and operate that model. 
+While exploring AI and Machine Learning technologies on AWS, I came across an AWS Whitepaper that explains how Machine Learning models are developed and deployed at an enterprise scale. What impressed me most was not the complexity of Machine Learning algorithms, but a practical question:
+
+**How can an AI model be moved from a personal computer to a production environment where it can serve millions of users?**
+
+Previously, I believed that building an AI application mainly involved collecting data, training a model with Python or Jupyter Notebook, and completing the project. However, the AWS Whitepaper highlights that developing the model itself is only a small part of the entire process. Most of the work lies in designing the infrastructure, automating workflows, deploying the model, and maintaining a reliable production environment.
+
+This is why **Machine Learning Pipelines** play a critical role in modern MLOps. They automate the entire Machine Learning lifecycle, from data collection and preprocessing to model training, deployment, monitoring, and continuous improvement.
+
+---
+
+> **Note:** This article is translated and summarized from the AWS Whitepaper **"Accenture Enterprise AI: Scaling Machine Learning and Deep Learning Models"** for educational and learning purposes only. All copyrights belong to **Amazon Web Services (AWS)** and **Accenture**.
+
 
 That is why the concept of **Machine Learning Pipelines** was born.
 

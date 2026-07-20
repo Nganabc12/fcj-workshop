@@ -1,42 +1,36 @@
 ---
-title: "Week 12 Worklog"
-weight: 12
+title: "Worklog Week 12"
+weight: 1
 chapter: false
-pre: "<b>12. </b>"
+pre: " <b> 1.12. </b> "
 ---
 
 
-## Week 12 Objectives
+### Week 12 Objectives
 
-- Test and finalize the Pet Resort & Care System in the AWS environment.
-- Resolve issues identified after deployment.
-- Complete the project documentation and internship report.
+- Finalize the Pet Resort & Care System before completing the internship.
+- Perform final testing and optimize system performance.
+- Monitor AWS resources and review cloud service costs.
+- Complete the workshop materials, technical documentation, and internship report.
 
----
+### Tasks Completed
 
-## Tasks Performed During the Week
+| No. | Tasks | Start Date | End Date | Reference |
+| --- | --- | --- | --- | --- |
+| 1 | Performed comprehensive system testing, evaluated application workflows, verified data processing, and optimized overall system performance. | 03/07/2026 | 08/07/2026 | System Testing Plan |
+| 2 | Monitored system status using Amazon CloudWatch, reviewed application logs, analyzed resource metrics, and investigated operational alerts. | 09/07/2026 | 14/07/2026 | Amazon CloudWatch Documentation |
+| 3 | Reviewed AWS Budgets, analyzed AWS service costs, optimized resource usage, and removed unnecessary cloud resources to reduce operating expenses. | 15/07/2026 | 19/07/2026 | AWS Billing & Cost Management |
+| 4 | Resolved the remaining issues after testing, verified DNS, SSL, CloudFront configurations, and confirmed stable communication between AWS services. | 20/07/2026 | 24/07/2026 | AWS Documentation |
+| 5 | Completed the workshop materials, finalized the technical documentation, summarized the internship outcomes, completed the internship report, and reviewed all deliverables before submission. | 25/07/2026 | 30/07/2026 | Internship Report Template |
 
-| Day | Tasks | Start Date | Completion Date | Reference |
-|-----|-------|------------|-----------------|-----------|
-| **Mon** | - Perform a full system review after deployment.<br>- Check issues related to CORS, API connectivity, database access and image resource paths. | 13/07/2026 | 13/07/2026 | EC2 Logs, ALB Logs, RDS Logs |
-| **Tue** | - Review the Amazon CloudFront distribution and optimize content delivery settings.<br>- Verify HTTPS certificates and confirm stable access to the application over the Internet. | 14/07/2026 | 14/07/2026 | AWS Documentation (CloudFront, ACM) |
-| **Wed** | - Test the main system functions, including user authentication, pet management, service management and appointment booking.<br>- Verify data consistency between the ReactJS Frontend, Spring Boot Backend and Amazon RDS. | 15/07/2026 | 15/07/2026 | Test Cases, Project Documentation |
-| **Thu** | - Review the user interface and improve several features based on testing results.<br>- Perform a final verification of the complete application workflow before project completion. | 16/07/2026 | 16/07/2026 | Project Documentation |
-| **Fri** | - Complete the technical documentation, update project screenshots and finalize the internship report.<br>- Prepare presentation materials and review the deployment process for the final evaluation. | 17/07/2026 | 17/07/2026 | Internship Report |
-| **Mon** | - Perform a final review of AWS resources.<br>- Remove unused cloud resources, finalize the report and prepare the required internship submission documents. | 20/07/2026 | 20/07/2026 | AWS Billing Console |
+### Weekly Summary
 
----
+During the final week of my internship, I focused on completing the **Pet Resort & Care System** before the end of the internship program. I performed comprehensive system testing, evaluated the overall application workflow, verified data processing, and optimized several configurations to improve the application's stability and performance.
 
-## Week 12 Achievements
+I also used **Amazon CloudWatch** to monitor system activities, review application logs, analyze resource metrics, and identify operational issues. In addition, I reviewed **AWS Budgets**, evaluated AWS service costs, optimized resource utilization, and removed unnecessary cloud resources to improve cost efficiency.
 
-- Completed end-to-end testing of the Pet Resort & Care System and confirmed that all major features operated correctly in the AWS environment.
+After completing the testing phase, I resolved the remaining issues, verified DNS, SSL, and CloudFront configurations, and confirmed that all AWS services communicated correctly to ensure stable system operation.
 
-- Resolved issues related to API communication, CORS configuration, CloudFront distribution and image resource access after deployment.
+During the final days of the internship, I completed the workshop materials, finalized the technical documentation, summarized the internship outcomes, and prepared the internship report together with all required project deliverables.
 
-- Verified data consistency between the ReactJS Frontend, Spring Boot Backend and Amazon RDS MySQL.
-
-- Improved the user interface and refined several system functions based on testing results before finalizing the project.
-
-- Completed the deployment documentation, internship report and supporting project materials for the final presentation.
-
-- Reviewed and cleaned up unused AWS resources to avoid unnecessary costs and completed all required preparations for the internship evaluation.
+This final week allowed me to review the complete project lifecycle, from cloud deployment and system testing to monitoring, cost optimization, troubleshooting, and documentation. It also strengthened my practical experience with AWS Cloud services and improved my understanding of real-world cloud application deployment and operations.

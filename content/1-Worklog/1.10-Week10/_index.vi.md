@@ -1,41 +1,33 @@
 ---
-title: "Worklog Tuần 10"
-weight: 10
+title: "Nhật ký công việc Tuần 10"
+weight: 1
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
 
 
-## Mục tiêu tuần 10
 
-- Tích hợp Frontend với Backend đã triển khai trên AWS.
-- Cấu hình Amazon CloudFront để phân phối nội dung.
-- Kiểm thử các API sau khi tích hợp.
-- Phân tích log và xử lý các lỗi phát sinh trong quá trình vận hành.
+### Mục tiêu tuần 10
 
-## Nhiệm vụ thực hiện trong tuần
+- Hoàn thiện kiến trúc triển khai của hệ thống Pet Resort & Care System.
+- Tích hợp các thành phần của hệ thống và rà soát luồng hoạt động.
+- Tối ưu cấu hình các dịch vụ AWS để đảm bảo hiệu năng và tính ổn định.
+- Kiểm tra, phát hiện và xử lý các lỗi phát sinh trong quá trình tích hợp.
 
-| Ngày | Nhiệm vụ chi tiết | Ngày bắt đầu | Ngày kết thúc | Tài liệu tham khảo |
-|------|-------------------|--------------|---------------|--------------------|
-| 1 | Cập nhật địa chỉ API của Backend trên Frontend và kiểm tra kết nối giữa hai thành phần của hệ thống. | 22/06/2026 | 22/06/2026 | AWS EC2 Documentation |
-| 2 | Kiểm thử các chức năng chính của Pet Resort & Care System như đăng nhập, quản lý thú cưng, đặt lịch và sử dụng dịch vụ sau khi tích hợp Frontend và Backend. | 23/06/2026 | 23/06/2026 | Spring Boot REST Documentation |
-| 3 | Tìm hiểu và cấu hình Amazon CloudFront để phân phối nội dung tĩnh và tối ưu tốc độ truy cập ứng dụng. | 24/06/2026 | 24/06/2026 | Amazon CloudFront Documentation |
-| 4 | Kiểm tra log của ứng dụng, xác định nguyên nhân các lỗi phát sinh trong quá trình tích hợp và điều chỉnh cấu hình nếu cần. | 25/06/2026 | 25/06/2026 | Amazon CloudWatch Documentation |
-| 5 | Kiểm thử lại toàn bộ hệ thống sau khi khắc phục lỗi; kiểm tra khả năng truy cập và phản hồi của các API trên môi trường AWS. | 26/06/2026 | 26/06/2026 | AWS Well-Architected Framework |
+### Nhiệm vụ thực hiện trong tuần
 
-## Kết quả đạt được tuần 10
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày kết thúc | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 1 | Rà soát sơ đồ kiến trúc triển khai, kiểm tra mối liên kết giữa các thành phần của hệ thống và cập nhật lại sơ đồ nếu cần. | 19/06/2026 | 19/06/2026 | AWS Architecture Center |
+| 2 | Kiểm tra luồng kết nối giữa Frontend, Backend và cơ sở dữ liệu, đảm bảo dữ liệu được xử lý chính xác. | 20/06/2026 | 20/06/2026 | Tài liệu dự án |
+| 3 | Điều chỉnh cấu hình các dịch vụ AWS, tối ưu Security Group, Load Balancer và các thiết lập mạng. | 21/06/2026 | 21/06/2026 | AWS Well-Architected Framework |
+| 4 | Kiểm tra các chức năng của hệ thống sau khi tích hợp, phát hiện và khắc phục các lỗi phát sinh. | 22/06/2026 | 22/06/2026 | Test Plan |
+| 5 | Tối ưu hiệu năng của ứng dụng, kiểm tra khả năng xử lý yêu cầu và cập nhật tài liệu kỹ thuật. | 23/06/2026 | 23/06/2026 | Project Documentation |
 
-- **Tích hợp Frontend và Backend:**
-  - Kết nối thành công Frontend với Backend đang chạy trên Amazon EC2.
-  - Kiểm tra hoạt động của các API sau khi tích hợp.
-  - Đảm bảo dữ liệu được trao đổi chính xác giữa giao diện và hệ thống Backend.
+### Tổng kết tuần
 
-- **Triển khai và tối ưu truy cập:**
-  - Cấu hình Amazon CloudFront để phân phối nội dung.
-  - Kiểm tra khả năng truy cập ứng dụng thông qua CloudFront.
-  - Đánh giá tốc độ phản hồi của hệ thống sau khi cấu hình.
+Trong tuần 10, tôi tập trung hoàn thiện kiến trúc triển khai của **Pet Resort & Care System** và kiểm tra sự liên kết giữa các thành phần trong hệ thống. Tôi rà soát lại sơ đồ kiến trúc, đánh giá luồng xử lý dữ liệu giữa Frontend, Backend và cơ sở dữ liệu nhằm đảm bảo các thành phần có thể giao tiếp ổn định và đáp ứng đúng yêu cầu thiết kế.
 
-- **Kiểm thử và xử lý lỗi:**
-  - Kiểm thử các chức năng chính của hệ thống.
-  - Phân tích log để xác định và khắc phục một số lỗi phát sinh.
-  - Cập nhật cấu hình nhằm nâng cao tính ổn định của ứng dụng.
+Bên cạnh đó, tôi tiến hành tối ưu cấu hình các dịch vụ AWS như Security Group, Load Balancer và các thiết lập mạng để nâng cao tính ổn định và khả năng mở rộng của hệ thống. Sau khi hoàn thành việc tích hợp, tôi thực hiện kiểm thử các chức năng, theo dõi quá trình xử lý dữ liệu và khắc phục các lỗi phát sinh trong quá trình vận hành.
+
+Kết thúc tuần, tôi cập nhật lại tài liệu kỹ thuật, hoàn thiện sơ đồ kiến trúc triển khai và đánh giá lại toàn bộ hệ thống sau khi tích hợp. Qua các công việc này, tôi nâng cao kỹ năng thiết kế kiến trúc trên AWS, tối ưu cấu hình dịch vụ, tích hợp hệ thống và xử lý các vấn đề phát sinh trong quá trình triển khai ứng dụng thực tế.

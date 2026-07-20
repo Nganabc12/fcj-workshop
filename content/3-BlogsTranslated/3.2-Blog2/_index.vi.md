@@ -1,16 +1,41 @@
 ---
-title: "Blog 2: AWS Cognito & Vonage"
+title: "Blog 2: Giảm gian lận SMS OTP với Vonage và Amazon Cognito"
 weight: 2
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-# Chia sẻ bài viết AWS: Giảm gian lận SMS OTP với Vonage và Amazon Cognito 
+# Giảm gian lận SMS OTP với Vonage và Amazon Cognito
 
-*Link bài viết gốc: [AWS Study Group Facebook Group](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2195923967839230)*
+## Thông tin bài viết gốc
+
+| Mục | Nội dung |
+|-----|----------|
+| **Tiêu đề bài viết** | Reducing SMS OTP Fraud with Vonage Network Powered Solutions and Amazon Cognito |
+| **Tác giả** | Tito Milla, Niv Raz |
+| **Ngày đăng** | 17/06/2026 |
+| **Nguồn bài viết** | https://aws.amazon.com/blogs/architecture/reducing-sms-otp-fraud-with-vonage-network-powered-solutions-and-amazon-cognito/ |
+| **Người dịch** | Lê Thảo Ngân |
+| **Ngày đăng bản dịch** | 24/06/2026 |
+| **Bài viết đã dịch** | https://www.facebook.com/share/p/1JFcoqp6Cn/ |
+
+---
+
+## Giới thiệu
+
+Trong quá trình tìm hiểu về các giải pháp xác thực và bảo mật trên nền tảng AWS, tôi đã đọc được một bài viết trên **AWS Architecture Blog** giới thiệu cách giảm thiểu các hình thức gian lận liên quan đến xác thực bằng **SMS One-Time Password (OTP)**. Bài viết trình bày giải pháp kết hợp giữa **Amazon Cognito** và **Vonage Network APIs** nhằm nâng cao tính bảo mật, đồng thời mang lại trải nghiệm đăng nhập thuận tiện hơn cho người dùng.
+
+Hiện nay, SMS OTP vẫn là phương thức xác thực phổ biến nhờ tính đơn giản và dễ triển khai. Tuy nhiên, phương pháp này đang phải đối mặt với nhiều hình thức tấn công như **SIM Swapping**, **SMS Pumping** và **Phishing**, gây ra nguy cơ chiếm đoạt tài khoản cũng như làm tăng chi phí vận hành cho doanh nghiệp.
+
+Để giải quyết những vấn đề trên, AWS đề xuất kết hợp **Amazon Cognito** với **Vonage Silent Authentication**. Thay vì chỉ dựa vào mã OTP được gửi qua tin nhắn SMS, hệ thống có thể xác minh người dùng thông qua thông tin từ mạng di động, từ đó giảm thiểu nguy cơ gian lận, nâng cao tỷ lệ xác thực thành công và cải thiện trải nghiệm đăng nhập.
+
+Trong bài viết này, tôi tổng hợp và dịch lại những nội dung quan trọng từ bài viết gốc, bao gồm kiến trúc giải pháp, quy trình triển khai, nguyên lý hoạt động cũng như những lợi ích mà Amazon Cognito và Vonage mang lại trong việc xây dựng một hệ thống xác thực hiện đại và an toàn hơn.
+
+---
+
+> **Lưu ý:** Bài viết này được dịch và tổng hợp từ bài viết gốc trên **AWS Architecture Blog** nhằm phục vụ mục đích học tập và nghiên cứu. Mọi bản quyền nội dung thuộc về tác giả và Amazon Web Services (AWS).
 
 
-Gần đây mình có đọc một bài viết khá thú vị trên AWS Architecture Blog về cách giảm gian lận liên quan đến SMS OTP bằng cách kết hợp giữa **Amazon Cognito** và các giải pháp xác thực của **Vonage**[cite: 4]. Sau khi tìm hiểu, mình muốn chia sẻ lại theo cách dễ hiểu hơn để mọi người có thể hình dung được vấn đề cũng như giải pháp mà AWS đang đề xuất[cite: 4].
 
 ## SMS OTP là gì và Vấn đề hiện tại?
 

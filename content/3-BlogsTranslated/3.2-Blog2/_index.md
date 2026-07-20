@@ -1,16 +1,41 @@
 ---
-title: "Blog 2: AWS Cognito & Vonage"
+title: "Blog 2: Reducing SMS OTP Fraud with Vonage and Amazon Cognito"
 weight: 2
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-# AWS Article Share: Reducing SMS OTP Fraud with Vonage and Amazon Cognito
+# Reducing SMS OTP Fraud with Vonage and Amazon Cognito
 
-*Original post link: [AWS Study Group Facebook Group](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2195923967839230)*
+## Original Article Information
+
+| Item | Details |
+|------|---------|
+| **Original Title** | Reducing SMS OTP Fraud with Vonage Network Powered Solutions and Amazon Cognito |
+| **Original Author(s)** | Tito Milla, Niv Raz |
+| **Published Date** | June 17, 2026 |
+| **Original Source** | https://aws.amazon.com/blogs/architecture/reducing-sms-otp-fraud-with-vonage-network-powered-solutions-and-amazon-cognito/ |
+| **Translated by** | Lê Thảo Ngân |
+| **Translation Published** | June 24, 2026 |
+| **Translated Blog** | https://www.facebook.com/share/p/1JFcoqp6Cn/ |
+
+---
+
+## Introduction
+
+During my AWS learning journey, I explored an article published on the AWS Architecture Blog that discusses modern approaches to reducing fraud related to SMS One-Time Password (OTP) authentication. The article presents a solution that combines **Amazon Cognito** with **Vonage Network APIs** to enhance authentication security while providing a seamless user experience.
+
+Traditional SMS OTP authentication remains widely used because of its simplicity. However, it has become increasingly vulnerable to attacks such as **SIM swapping**, **SMS pumping**, and **phishing**, which can compromise user accounts and increase operational costs for businesses.
+
+To address these challenges, AWS introduces a more intelligent authentication approach by integrating **Vonage Silent Authentication** with **Amazon Cognito**. Instead of relying solely on SMS verification codes, the solution validates users through mobile carrier network information, reducing fraud risks and improving login success rates.
+
+In this translated blog, I summarize the main concepts, system architecture, implementation process, and benefits presented in the original AWS article to help readers better understand how cloud services can be combined to build a more secure authentication system.
+
+---
+
+*This translated blog is based on the original article published by the AWS Architecture Blog. All copyrights belong to the original authors and Amazon Web Services (AWS). The translation is intended solely for educational and learning purposes.*
 
 
-I recently read a fascinating article on the AWS Architecture Blog about mitigating SMS OTP-related fraud by combining **Amazon Cognito** with **Vonage** authentication solutions[cite: 4]. After studying it, I wanted to break it down into simpler terms so everyone can grasp both the challenges and the solutions proposed by AWS[cite: 4].
 
 ## What is SMS OTP and What are the Current Problems?
 

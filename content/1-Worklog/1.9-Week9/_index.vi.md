@@ -1,58 +1,29 @@
 ---
-title: "Worklog Tuần 9"
-weight: 1
+title: "Tuần 9"
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
 
-### Mục tiêu tuần 9:
+# Tuần 9
 
-* Tối ưu hiệu suất và bảo mật ứng dụng Coffee Cloud
-* Thiết lập monitoring và logging cho ứng dụng
-* Chuẩn bị cho việc triển khai production
+## Mục tiêu
 
-### Nhiệm vụ thực hiện trong tuần:
-| Ngày | Nhiệm vụ                                                                                                                                                                                               | Ngày bắt đầu | Ngày kết thúc | Tài liệu tham khảo                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 1   | - Tối ưu DynamoDB tables để hiệu suất tốt hơn <br> - Thiết lập indexes phù hợp cho các queries thường dùng <br> - Review và tối ưu hiệu suất Lambda function                              | 26/08/2025 | 26/08/2025      | Hướng dẫn tối ưu DynamoDB               |
-| 2   | - Thiết lập CloudWatch monitoring cho tất cả services <br> - Tạo custom metrics cho business KPIs <br> - Cấu hình log groups cho Lambda functions                                                      | 27/08/2025 | 27/08/2025      | Tài liệu CloudWatch                  |
-| 3   | - Triển khai IAM roles và policies phù hợp <br> - Tuân theo nguyên tắc least privilege <br> - Xoá các quyền không cần thiết                                                               | 28/08/2025 | 28/08/2025      | IAM best practices                        |
-| 4   | - Thiết lập CloudWatch dashboards <br> - Monitor application health và performance <br> - Tạo alarms cho các metrics quan trọng                                                          | 29/08/2025 | 29/08/2025      | CloudWatch dashboards                     |
-| 5   | - Tiến hành testing kỹ lưỡng tất cả tính năng <br> - Test các error scenarios và edge cases <br> - Tài liệu hóa các vấn đề đã biết và giới hạn                                                                  | 30/08/2025 | 30/08/2025      | Hướng dẫn Application testing                 |
+- Tiếp tục phát triển các chức năng Backend cho hệ thống Pet Resort & Care.
+- Tích hợp ứng dụng với cơ sở dữ liệu MySQL.
+- Xây dựng và kiểm thử các REST API cho hệ thống.
+- Tối ưu cấu hình ứng dụng và cải thiện chất lượng mã nguồn.
 
+## Công việc thực hiện
 
-### Kết quả đạt được tuần 9:
+| Ngày | Công việc | Ngày bắt đầu | Ngày kết thúc | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 1 | - Phát triển các chức năng Backend cho hệ thống Pet Resort & Care.<br>- Xây dựng các nghiệp vụ xử lý cho chức năng quản lý dịch vụ và đặt lịch.<br>- Refactor mã nguồn để tăng tính dễ đọc và dễ bảo trì. | 12/06/2026 | 12/06/2026 | Tài liệu Spring Boot |
+| 2 | - Tích hợp các module Backend với cơ sở dữ liệu MySQL bằng Spring Data JPA.<br>- Xây dựng mối quan hệ giữa các Entity và Repository.<br>- Kiểm tra các chức năng CRUD của hệ thống. | 13/06/2026 | 13/06/2026 | Tài liệu Spring Data JPA |
+| 3 | - Xây dựng các REST API cho ứng dụng.<br>- Kiểm thử API bằng Postman.<br>- Kiểm tra dữ liệu đầu vào và kết quả trả về của các API. | 14/06/2026 | 14/06/2026 | Tài liệu Postman |
+| 4 | - Tối ưu các tệp cấu hình của ứng dụng.<br>- Cập nhật biến môi trường và cấu hình kết nối cơ sở dữ liệu.<br>- Sắp xếp lại cấu hình dự án để thuận tiện cho việc quản lý và phát triển. | 15/06/2026 | 15/06/2026 | Tài liệu Spring Boot |
+| 5 | - Thực hiện kiểm thử tích hợp giữa các module Backend.<br>- Khắc phục các lỗi phát hiện trong quá trình kiểm thử.<br>- Rà soát các chức năng đã hoàn thành để chuẩn bị cho giai đoạn tích hợp Frontend. | 16/06/2026 | 16/06/2026 | Tài liệu dự án |
 
-* Tối ưu hiệu suất ứng dụng Coffee Cloud:
-  * **Tối ưu DynamoDB**: Thêm Global Secondary Indexes (GSI) để queries hiệu quả theo user ID và order status
-  * **Hiệu suất Lambda**: Tối ưu function code và giảm cold start times
-  * **Chiến lược Caching**: Triển khai caching cơ bản cho product data thường truy cập
+## Tổng kết tuần
 
-* Thiết lập monitoring và logging toàn diện:
-  * **CloudWatch Metrics**: Custom metrics cho orders per hour, user registrations, và error rates
-  * **Log Analysis**: Centralized logging cho tất cả Lambda functions với structured log format
-  * **Performance Monitoring**: Theo dõi API response times và database query performance
-
-* Nâng cao tình bảo mật:
-  * **IAM Optimization**: Tạo roles cụ thể cho từng service với quyền tối thiểu cần thiết
-  * **Security Review**: Xoá các policies quá rộng rãi và cứng cố access controls
-  * **Secrets Management**: Chuyển các cấu hình nhạy cảm sang environment variables
-
-* Tạo operational dashboards:
-  * **Business Metrics Dashboard**: View real-time đơn hàng, doanh thu, và hoạt động người dùng
-  * **Technical Health Dashboard**: Hiệu suất hệ thống, error rates, và service availability
-  * **Cost Monitoring Dashboard**: Theo dõi AWS resource usage và chi phí
-
-* Hoàn thành comprehensive testing:
-  * **Functional Testing**: Xác minh tất cả user flows hoạt động đúng
-  * **Error Handling**: Test hành vi hệ thống dưới các failure scenarios
-  * **Load Testing**: Testing cơ bản hiệu suất hệ thống dưới simulated load
-  * **Security Testing**: Xác minh authentication và authorization hoạt động đúng
-
-* Tài liệu hóa application architecture và deployment process cho việc bảo trì tương lai
-
-* Đánh giá các lựa chọn sao lưu, bao gồm cross-region copy và chi phí liên quan.
-
-* Ghi chú: tiếp tục cấu hình giám sát và cảnh báo cho DB bằng CloudWatch.
-
-
+Trong tuần 9, tôi đã nâng cao kỹ năng phát triển Backend thông qua việc xây dựng các chức năng mới, tích hợp ứng dụng với cơ sở dữ liệu MySQL và phát triển các REST API bằng Spring Boot. Quá trình kiểm thử API bằng Postman giúp tôi hiểu rõ hơn về cách xử lý request, response, kiểm tra dữ liệu và khắc phục lỗi. Tôi cũng học được cách tối ưu cấu hình ứng dụng, tổ chức mã nguồn hợp lý và thực hiện kiểm thử tích hợp để đảm bảo các module hoạt động ổn định với nhau. Những kiến thức và kinh nghiệm tích lũy trong tuần này đã tạo nền tảng cho việc tích hợp Frontend và hoàn thiện hệ thống ở các tuần tiếp theo.
