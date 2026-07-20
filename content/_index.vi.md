@@ -1,10 +1,10 @@
 ---
-title: "Báo cáo thực tập"
+title: "Lê Thảo Ngân - Báo cáo thực tập"
 weight: 1
 chapter: false
 ---
 
-# Báo cáo thực tập
+# Báo cáo thực tập - Lê Thảo Ngân 
 ### Thông tin sinh viên:
 
 &emsp; **Họ và tên:** Lê Thảo Ngân

@@ -21,43 +21,35 @@ pre: " <b> 4. </b> "
 During my internship, I participated in four technical events. Each one was a memorable experience that provided new, interesting, and useful knowledge, along with networking opportunities and valuable insights into AWS cloud technologies.
 
 ### [Event 1](4.1-Event1/)  
-&emsp;**Event Name:** AI-Driven Development Life Cycle: Reimagining Software Engineering  
+&emsp;**Event Name:** FIRST CLOUD AI JOURNEY COMMUNITY SHARING
 
-&emsp;**Date & Time:** 2pm Friday, October 3, 2025  
+&emsp;**Date & Time:** Friday, May 22, 2026
 
-&emsp;**Location:** AWS Event Hall, L26 Bitexco Tower, HCMC  
+&emsp;**Location:** Saigon Campus, Level 26, Bitexco Financial Tower   
 
 &emsp;**Role:** Attendee  
 
 ---
 
 ### [Event 2](4.2-Event2/)  
-&emsp;**Event Name:** AI/ML on AWS Workshop  
+&emsp;**Event Name:** Event CD AWS  
 
-&emsp;**Date & Time:** 8:30 AM - 12:00 PM, Saturday, November 15, 2025  
-
-&emsp;**Location:** AWS Vietnam Office  
+&emsp;**Date & Time:** 9:00 AM - 12:00 PM, Saturday, May 30, 2026
+&emsp;**Location:**Saigon Campus, Level 26, Bitexco Financial Tower   
 
 &emsp;**Role:** Attendee  
 
 ---
 
 ### [Event 3](4.3-Event3/)  
-&emsp;**Event Name:** DevOps on AWS Workshop  
+&emsp;**Event Name:** AWS GameDay  
 
-&emsp;**Date & Time:** 8:30 AM - 5:00 PM, Monday, November 17, 2025  
+&emsp;**Date & Time:** 9:00 AM - 12:00 PM, Saturday, June 20, 2026  
 
-&emsp;**Location:** AWS Vietnam Office  
+&emsp;**Location:** Saigon Campus, Level 26, Bitexco Financial Tower  
 
-&emsp;**Role:** Attendee  
+&emsp;**Role:** Attendee
 
 ---
 
-### [Event 4](4.4-Event4/)  
-&emsp;**Event Name:** AWS Security Workshop - 5 Pillars of AWS Security  
 
-&emsp;**Date & Time:** 8:50 AM - 11:40 AM  
-
-&emsp;**Location:** AWS Training Center  
-
-&emsp;**Role:** Attendee  

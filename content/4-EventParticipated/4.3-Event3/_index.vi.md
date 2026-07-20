@@ -7,6 +7,7 @@ pre: " <b> 4.3. </b> "
 
 # AWS GameDay - 8 Đội Tranh Hùng
 
+
 ## Chi tiết sự kiện
 
 - **Ngày:** Thứ Bảy, ngày 20 tháng 06 năm 2026
