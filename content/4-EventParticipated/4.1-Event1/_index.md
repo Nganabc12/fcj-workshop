@@ -2,120 +2,312 @@
 title: "Event 1"
 weight: 1
 chapter: false
-pre: " <b> 4.1. </b> "
+pre: " <b> 4.1 </b> "
 ---
 
-# Summary Report: "AI-Driven Development Life Cycle: Reimagining Software Engineering"
+# SUMMARY REPORT: “FIRST CLOUD AI JOURNEY COMMUNITY SHARING”
 
-### Event Objectives
+## Event Details
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+- **Date:** Saturday, May 23, 2026
+- **Time:** 9:00 AM – 12:00 PM
+- **Location:** Saigon Campus – Level 26, Bitexco Financial Tower
+- **Event Type:** Technology Sharing and Community Event
+- **Role:** Attendee
 
-### Speakers
+## Event Objectives
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+The event was organized as a knowledge-sharing session for members of the First Cloud AI Journey community. The program included six presentations focusing on artificial intelligence, AWS cloud services, software development, Hackathon experiences, and enterprise-grade AI systems.
 
-### Key Highlights
+The main objectives of the event included:
 
-#### Identifying the drawbacks of legacy application architecture
+- Sharing practical knowledge about artificial intelligence and cloud computing.
+- Introducing useful AI tools and AWS services.
+- Demonstrating how AWS CloudFront supports modern web applications.
+- Sharing practical experience from participating in Hackathon competitions.
+- Exploring the operation and application of Large Language Models.
+- Introducing enterprise-grade multi-agent systems.
+- Helping students improve technical knowledge, presentation skills, and professional networking.
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+## Agenda Highlights
 
-#### Transitioning to modern application architecture – Microservices
+### Welcome and Event Introduction (9:00 AM – 9:10 AM)
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+The event began with a welcome session and an introduction to the speakers, presentation topics, and the main objectives of the program.
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+Participants were introduced to six technical and experience-sharing sessions presented by members of the First Cloud AI Journey community.
 
-#### Domain-Driven Design (DDD)
+---
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+### Build a Second Brain and Use Context Effectively (9:10 AM – 9:35 AM)
 
-#### Event-Driven Architecture
+**Speaker:** Anh Tịnh
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+The first session focused on the idea of building a **second brain**, a personal knowledge system that helps users organize information, store important ideas, and retrieve knowledge when needed.
 
-#### Compute Evolution
+The speaker also emphasized that **context is everything** when working with artificial intelligence. Although modern AI models are already powerful, the quality of their output depends heavily on the information and context provided by users.
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+The main topics included:
 
-#### Amazon Q Developer
+- Understanding the concept of a second brain.
+- Organizing personal knowledge and digital information.
+- Recording and connecting important ideas.
+- Using AI to summarize and retrieve information.
+- Providing clear context when communicating with AI systems.
+- Improving AI responses through better prompts and supporting data.
+- Applying personal knowledge management to study and work.
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+Through this session, I learned that AI tools become more useful when they are connected to well-organized personal information.
 
-### Key Takeaways
+Instead of storing knowledge in separate and disconnected locations, users can create a structured system that helps them search, reuse, and develop ideas more effectively.
 
-#### Design Mindset
+---
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+### Friendly AI Assistant with Amazon Quick (9:35 AM – 10:00 AM)
 
-#### Technical Architecture
+**Speaker:** Phạm Ngọc Hải Anh  
+**Organization:** G-AsiaPacific Vietnam  
+**Role:** AWS Community Builder
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+The second session introduced a friendly AI assistant built with **Amazon Quick**. The presentation demonstrated how artificial intelligence can support users in daily tasks, information retrieval, communication, and work automation.
 
-#### Modernization Strategy
+The speaker explained how a conversational AI assistant can understand user requests, process contextual information, and return relevant responses.
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
+The main topics included:
 
-### Applying to Work
+- Introduction to Amazon Quick.
+- Developing a conversational AI assistant.
+- Processing natural-language requests.
+- Using context to improve AI responses.
+- Supporting users in daily and professional tasks.
+- Integrating AI assistants into business workflows.
+- Improving productivity through AI automation.
 
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+From this session, I learned how AI assistants can reduce repetitive work and help users access information more quickly.
 
-### Event Experience
+I also understood that an effective AI assistant must provide accurate responses, maintain relevant context, and present information in a natural and user-friendly way.
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+---
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+### From Edge to Origin: CloudFront as Your Foundation (10:00 AM – 10:25 AM)
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
+**Speaker:** Nguyễn Tuấn Thịnh  
+**Role:** DevOps Engineer – First Cloud AI Journey
 
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
+The third presentation focused on **Amazon CloudFront** and its role as a foundation for delivering modern web applications.
 
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
+The speaker explained how CloudFront distributes content through edge locations, reduces latency, improves application performance, and protects origin servers from unnecessary traffic.
 
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
+The main topics included:
 
-#### Some event photos
-*Add your event photos here*  
+- Introduction to Amazon CloudFront.
+- The relationship between edge locations and origin servers.
+- Content delivery through a global network.
+- Caching static and dynamic content.
+- Reducing latency for application users.
+- Improving website availability and performance.
+- Protecting the origin infrastructure.
+- Integrating CloudFront with other AWS services.
+- Applying CloudFront to modern web architectures.
 
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+Through this session, I learned that CloudFront is not only a content delivery service but also an important component of a scalable and secure system architecture.
+
+Using CloudFront can help applications respond faster, reduce the load on origin servers, and provide a more consistent experience for users in different locations.
+
+---
+
+### 36 Hours with LotusHacks – Building UTMorpho from Idea to Reality (10:25 AM – 10:50 AM)
+
+**Presenter:** Team VIB  
+**Project:** UTMorpho  
+**Competition:** LotusHacks 2026
+
+This session shared Team VIB’s 36-hour journey at LotusHacks, one of the major Hackathon competitions in Vietnam.
+
+The presenters described the process of transforming an initial idea into a working product within a limited amount of time. They also discussed the difficulties, failures, important turning points, and lessons learned throughout the competition.
+
+The main topics included:
+
+- Reasons for joining LotusHacks.
+- Developing an initial idea for the competition.
+- Identifying the problem and target users.
+- Designing and shaping the UTMorpho product.
+- Dividing responsibilities among team members.
+- Building a product under time pressure.
+- Preparing a product overview and demonstration.
+- Solving technical problems during development.
+- Handling failures and unexpected situations.
+- Presenting the final product to the judges.
+- Lessons learned and future development plans.
+
+Through this session, I learned that participating in a Hackathon requires more than programming knowledge. Team members need to communicate effectively, make quick decisions, manage time carefully, and remain flexible when the original plan does not work.
+
+The session also showed that failures during development can become valuable turning points when the team analyzes problems and adjusts its solution appropriately.
+
+---
+
+### Deep Dive into Large Language Models (10:50 AM – 11:15 AM)
+
+**Speaker:** Đào Đức
+
+The fifth session provided a deeper look into Large Language Models and how they understand, process, and generate human language.
+
+The speaker discussed the basic mechanisms behind LLMs and explained several factors that affect the quality of AI-generated responses.
+
+The main topics included:
+
+- Introduction to Large Language Models.
+- How language models process input data.
+- The role of tokens and context windows.
+- How AI models generate responses.
+- The importance of prompt design.
+- Common limitations of language models.
+- Hallucination and inaccurate AI responses.
+- Using supporting data to improve reliability.
+- Responsible use of generative AI.
+- Practical applications of LLMs in study and work.
+
+From this presentation, I learned that Large Language Models do not understand information in the same way as humans. They generate results based on patterns learned from large amounts of data.
+
+Therefore, users need to provide clear instructions, verify important information, and understand the limitations of AI-generated content.
+
+---
+
+### Enterprise-Grade Multi-Agent System: The Case of Startup Credit Scoring (11:15 AM – 11:50 AM)
+
+**Speaker:** Cát Vy  
+**Role:** Senior Business Systems Analyst – VPBank
+
+The final technical session introduced an enterprise-grade multi-agent system through the case of startup credit scoring.
+
+The speaker explained why traditional credit-scoring systems designed for established businesses may not work effectively with startup data. Startups often have limited financial history, rapidly changing business models, and different types of operational data.
+
+The presentation then introduced how multiple AI agents can work together as a virtual credit committee. Each agent can be responsible for analyzing a particular type of information before the system combines the results to support a final decision.
+
+The main topics included:
+
+- Structural differences between banking data and startup data.
+- Limitations of traditional credit-scoring systems.
+- When to use a single AI agent.
+- When a multi-agent architecture is more appropriate.
+- Designing a virtual credit committee.
+- Assigning responsibilities to specialized agents.
+- Enterprise-grade system architecture.
+- Security, governance, and compliance requirements.
+- Guardrails for AI agents.
+- Evaluating operational costs and business value.
+- Building an implementation roadmap.
+- Applying authentication, MCP, guardrails, and Terraform.
+
+Through this session, I learned that a multi-agent system can divide a complex business problem into smaller responsibilities handled by specialized agents.
+
+However, enterprise AI systems also require strong security controls, clear governance, reliable data, monitoring mechanisms, and compliance with organizational policies.
+
+---
+
+### Closing and Networking (11:50 AM – 12:00 PM)
+
+At the end of the event, the organizers summarized the main contents and thanked the speakers and participants.
+
+Participants also had an opportunity to ask questions, exchange experiences, take photographs, and connect with other members of the First Cloud AI Journey community.
+
+## Key Takeaways
+
+### Artificial Intelligence and Knowledge Management
+
+- A second brain helps users organize, connect, and retrieve knowledge.
+- AI performs better when users provide sufficient and relevant context.
+- Clear prompts and structured information improve the quality of AI responses.
+- AI assistants can support information retrieval and repetitive tasks.
+- Important AI-generated information should always be verified.
+
+### AWS and Cloud Architecture
+
+- Amazon CloudFront distributes content through global edge locations.
+- Caching helps reduce latency and origin-server workload.
+- CloudFront can improve application performance, availability, and security.
+- Cloud services should be selected according to system requirements and user needs.
+
+### Hackathon and Teamwork
+
+- Hackathons provide valuable practical experience.
+- Teams need to divide tasks according to each member’s strengths.
+- Continuous communication is necessary when working under time pressure.
+- Failure is an important part of the product-development process.
+- A successful demonstration requires both technical quality and clear presentation.
+
+### Large Language Models
+
+- LLMs generate responses based on learned data patterns.
+- Context and prompt design strongly affect the final output.
+- Language models may produce inaccurate or unsupported information.
+- Users must understand AI limitations and apply responsible verification.
+
+### Multi-Agent Systems
+
+- Multi-agent architectures are suitable for complex tasks with different responsibilities.
+- Specialized agents can collaborate to support business decisions.
+- Enterprise AI systems require guardrails, security, governance, and compliance.
+- Technical feasibility must be evaluated together with operational cost and business value.
+
+## Event Experience
+
+Attending this event was a valuable opportunity to learn about current applications of artificial intelligence, AWS cloud services, content-delivery architecture, Hackathon development, and enterprise multi-agent systems.
+
+The sessions provided both technical knowledge and real experiences from speakers who had applied these technologies in projects, competitions, and business environments.
+
+### Learning from Experienced Speakers
+
+The speakers presented practical examples instead of focusing only on theoretical concepts.
+
+The session about building a second brain helped me understand how to organize information more effectively. The Amazon Quick session demonstrated how an AI assistant can support users in daily activities.
+
+The CloudFront presentation provided useful knowledge about improving application performance, while the Multi-Agent System session introduced a more advanced enterprise AI architecture.
+
+### Practical Project Experience
+
+The Team VIB sharing session was particularly useful because it described the complete process of developing a product during a 36-hour Hackathon.
+
+I learned how a team could move from identifying a problem to designing, building, testing, and presenting a working solution within a short period.
+
+### Technical Development
+
+The event helped me gain more knowledge about:
+
+- Personal knowledge-management systems.
+- AI assistants and contextual information.
+- Amazon CloudFront and content-delivery networks.
+- Large Language Models.
+- Multi-agent architectures.
+- AI security, governance, and compliance.
+- Rapid product development in Hackathon environments.
+
+### Networking Opportunities
+
+The event also allowed me to meet members of the First Cloud AI Journey community and listen to experiences from students and technology professionals.
+
+These interactions encouraged me to continue learning AWS, artificial intelligence, DevOps, and software-development skills.
+
+## Lessons Learned
+
+After attending the event, I learned several important lessons:
+
+- Well-organized data and context help AI systems provide better results.
+- AI assistants can improve productivity but should be used responsibly.
+- Amazon CloudFront is an important service for scalable web applications.
+- Practical competitions help improve teamwork and problem-solving skills.
+- A good product begins with a clear understanding of the problem.
+- Large Language Models have useful capabilities as well as important limitations.
+- Multi-agent systems require careful architectural and governance decisions.
+- Security and compliance must be considered when deploying AI in enterprises.
+- Community events provide valuable opportunities for technical learning and professional networking.
+
+## Some Event Photos
+
+![First Cloud AI Journey Event](/images/4-EventParticipated/event1-1.jng)
+
+![First Cloud AI Journey Event](/images/4-EventParticipated/event1-2.jng)
+
+![First Cloud AI Journey Event](/images/4-EventParticipated/event1-3.jng)
+
+> Overall, the event provided valuable knowledge about artificial intelligence, AWS cloud architecture, Hackathon development, and enterprise AI systems. It also motivated me to continue improving my technical knowledge, teamwork, communication, and practical project-development skills.

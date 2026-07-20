@@ -5,31 +5,32 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-**Trong trang này** bạn sẽ cần giới thiệu worklog của bạn **như thế nào**? Bạn hoàn thành chương trình trong vòng **bao nhiêu tuần**? Bạn **đã làm gì** trong các tuần đó?
+# NHẬT KÝ CÔNG VIỆC
 
+Nhật ký này ghi lại **12 tuần thực tập** tại chương trình **AWS First Cloud Journey**, từ ngày **17/04/2026** đến **20/07/2026**.
 
-Thông thường và cũng là tiêu chuẩn, một worklog được thực hiện trong khoảng 3 tháng (trong suốt thời gian thực tập) với nội dung các tuần như sau:
+Trong suốt quá trình thực tập, tôi từng bước tiếp cận các kiến thức về điện toán đám mây, đồng thời tham gia xây dựng và triển khai dự án **Pet Resort & Care System**. Công việc bao gồm thiết lập môi trường phát triển, tìm hiểu các dịch vụ AWS, thiết kế kiến trúc hệ thống, phát triển và triển khai ứng dụng, tích hợp các thành phần của dự án, kiểm thử, xử lý lỗi và hoàn thiện tài liệu báo cáo.
 
-**Tuần 1:** [Làm quen với AWS và các dịch vụ cơ bản trong AWS](1.1-week1/)
+**Tuần 1:** [Thiết lập môi trường phát triển với Git, GitHub, Hugo, Visual Studio Code; tạo tài khoản AWS và làm quen với Markdown](1.1-week1/)
 
-**Tuần 2:** [Làm công việc A...](1.2-week2/)
+**Tuần 2:** [Tìm hiểu AWS Global Infrastructure, IAM, MFA, AWS CLI và thực hành cơ bản với Amazon EC2](1.2-week2/)
 
-**Tuần 3:** [Làm công việc B...](1.3-week3/)
+**Tuần 3:** [Nghiên cứu Amazon VPC, Internet Gateway, Route Table, Public/Private Subnet và thiết kế kiến trúc mạng](1.3-week3/)
 
-**Tuần 4:** [Làm công việc C...](1.4-week4/)
+**Tuần 4:** [Triển khai Amazon EC2, cấu hình môi trường Linux, kết nối SSH và thiết lập Security Group](1.4-week4/)
 
-**Tuần 5:** [Làm công việc D...](1.5-week5/)
+**Tuần 5:** [Làm việc với Amazon S3, Static Website Hosting, Object Versioning, Lifecycle Rules và quản lý lưu trữ dữ liệu](1.5-week5/)
 
-**Tuần 6:** [Làm công việc E...](1.6-week6/)
+**Tuần 6:** [Thiết kế cơ sở dữ liệu với Amazon RDS MySQL, kết nối Spring Boot với cơ sở dữ liệu, Backup và Snapshot](1.6-week6/)
 
-**Tuần 7:** [Làm công việc G...](1.7-week7/)
+**Tuần 7:** [Phân tích yêu cầu dự án, xây dựng kiến trúc AWS, thiết kế sơ đồ hệ thống và lập kế hoạch triển khai](1.7-week7/)
 
-**Tuần 8:** [Làm công việc H...](1.8-week8/)
+**Tuần 8:** [Xây dựng cấu trúc dự án Spring Boot, phát triển REST API, quản lý Maven và kiểm thử bằng Postman](1.8-week8/)
 
-**Tuần 9:** [Làm công việc I...](1.9-week9/)
+**Tuần 9:** [Triển khai Backend lên Amazon EC2, cấu hình Application Load Balancer, Target Group, Health Check và tích hợp các thành phần của dự án](1.9-week9/)
 
-**Tuần 10:** [Làm công việc L...](1.10-week10/)
+**Tuần 10:** [Tích hợp Frontend và Backend, sử dụng Amazon CloudFront, kiểm thử API, phân tích Log và xử lý lỗi](1.10-week10/)
 
-**Tuần 11:** [Làm công việc M...](1.11-week11/)
+**Tuần 11:** [Giám sát hệ thống bằng Amazon CloudWatch, theo dõi chi phí với AWS Budgets, kiểm thử, tối ưu hiệu năng và sửa lỗi](1.11-week11/)
 
-**Tuần 12:** [Làm công việc N...](1.12-week12/)
+**Tuần 12:** [Kiểm tra lần cuối quá trình triển khai, hoàn thiện tài liệu dự án, chuẩn bị báo cáo thực tập và trình bày kết quả](1.12-week12/)

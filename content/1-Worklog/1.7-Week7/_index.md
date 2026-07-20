@@ -1,55 +1,32 @@
 ---
 title: "Week 7 Worklog"
-weight: 1
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
 
-### Week 7 Objectives:
 
-* Integrate React frontend with Lambda backend APIs
-* Implement user authentication flow with Cognito
-* Test core Coffee Cloud functionalities
+## Week Objectives
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 1   | - Connect React frontend to API Gateway endpoints <br> - Install and configure AWS SDK for JavaScript <br> - Set up API service layer in React                                                      | 12/08/2025 | 12/08/2025      | AWS SDK documentation                     |
-| 2   | - Implement user login/registration flow <br> - Integrate Cognito authentication with React <br> - Test user session management                                                                      | 13/08/2025 | 13/08/2025      | Cognito JavaScript SDK                    |
-| 3   | - Connect product listing to DynamoDB <br> - Implement shopping cart functionality <br> - Test add/remove items from cart                                                                           | 14/08/2025 | 14/08/2025      | React state management                    |
-| 4   | - Implement order creation flow <br> - Connect order processing to Lambda functions <br> - Test order placement and data storage                                                                      | 15/08/2025 | 15/08/2025      | Lambda integration                        |
-| 5   | - Test points system functionality <br> - Implement order history display <br> - Test complete user journey from registration to order                                                              | 16/08/2025 | 16/08/2025      | End-to-end testing                        |
+- Analyze the requirements of the Pet Resort & Care System.
+- Design the AWS deployment architecture.
+- Create system flow diagrams and deployment models.
+- Prepare technical documentation for backend development.
 
+## Weekly Tasks
 
-### Week 7 Achievements:
+| Day | Tasks | Start Date | End Date | References |
+|-----|-------|------------|----------|------------|
+| 1 | Analyzed the requirements of the Pet Resort & Care System, identified core features, system components and deployment requirements on AWS. | 01/06/2026 | 01/06/2026 | Project Requirement |
+| 2 | Studied web application architecture on AWS and reviewed the roles of Amazon EC2, Amazon RDS, Amazon S3 and Amazon VPC. | 02/06/2026 | 02/06/2026 | AWS Architecture Center |
+| 3 | Designed the initial AWS architecture diagram using Draw.io, illustrating the connections between the Frontend, Backend, Database and AWS services. | 03/06/2026 | 03/06/2026 | Draw.io, AWS Architecture Icons |
+| 4 | Created system workflow and data flow diagrams, then reviewed the architecture against the project requirements. | 04/06/2026 | 04/06/2026 | Project Documentation |
+| 5 | Discussed the deployment plan with mentors and teammates; refined the architecture diagram and updated the technical documentation based on feedback. | 05/06/2026 | 06/06/2026 | AWS Well-Architected Framework |
 
-* Successfully integrated React frontend with AWS backend services:
-  * Configured AWS SDK for JavaScript in React application
-  * Set up API service layer for clean separation of concerns
-  * Implemented proper error handling for API calls
+## Weekly Achievements
 
-* Completed user authentication integration:
-  * Users can register new accounts through Cognito
-  * Login/logout functionality working properly
-  * Session management with JWT tokens
-  * Role-based access control (Customer, Shipper, Admin)
-
-* Implemented core Coffee Cloud features:
-  * **Product Display**: Coffee menu loaded from DynamoDB
-  * **Shopping Cart**: Add/remove items with quantity management
-  * **Order Processing**: Complete order flow from cart to database
-  * **Points System**: Automatic points calculation and display
-
-* Completed end-to-end testing of user journey:
-  * New user registration → Email verification → Login → Browse menu → Add to cart → Place order → Earn points
-
-* Fixed integration issues and improved user experience:
-  * Loading states for better user feedback
-  * Input validation on both frontend and backend
-  * Proper error messages for failed operations
-
-* Deployed a simple static website to an S3 bucket and verified public access settings and bucket policy.
-
-* Documented IAM and S3 commands and common troubleshooting steps for permissions and public access.
-
-* Next steps: study VPC fundamentals and network security groups.
+- Completed the requirement analysis for the Pet Resort & Care System.
+- Designed the initial AWS deployment architecture.
+- Created system workflow and data flow diagrams.
+- Prepared technical documentation for backend development.
+- Finalized the deployment approach with mentors and teammates.

@@ -1,63 +1,44 @@
 ---
 title: "Week 8 Worklog"
-weight: 1
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
 
-### Week 8 Objectives:
 
-* Set up notification services (SNS and SES) for Coffee Cloud
-* Implement email notifications for orders and promotions
-* Add push notifications for order status updates
+## Week Objectives
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 1   | - Learn AWS SNS (Simple Notification Service) basics <br> - Understand topics, subscriptions, and message formats <br> - Create SNS topic for order notifications                                   | 19/08/2025 | 19/08/2025      | SNS documentation                         |
-| 2   | - Set up AWS SES (Simple Email Service) <br> - Verify email domain/address <br> - Create email templates for order confirmations                                                                     | 20/08/2025 | 20/08/2025      | SES documentation                         |
-| 3   | - Integrate SNS with Lambda functions <br> - Send notifications when orders are created/updated <br> - Test notification delivery                                                                    | 21/08/2025 | 21/08/2025      | Lambda + SNS integration                  |
-| 4   | - Implement email notifications with SES <br> - Send order confirmation emails <br> - Create promotional email templates                                                                             | 22/08/2025 | 22/08/2025      | SES email templates                       |
-| 5   | - Test complete notification flow <br> - Verify email delivery and formatting <br> - Test SMS notifications (optional)                                                                              | 23/08/2025 | 23/08/2025      | End-to-end notification testing           |
+- Build the backend structure for the Pet Resort & Care System using Spring Boot.
+- Learn Maven and dependency management.
+- Develop basic REST APIs.
+- Test APIs locally using Postman.
+- Prepare the application for deployment on AWS.
 
+## Weekly Tasks
 
-### Week 8 Achievements:
+| Day | Task Details | Start Date | End Date | References |
+|-----|--------------|------------|----------|------------|
+| 1 | Initialize the Spring Boot project, configure Maven, and organize the project structure using the Controller – Service – Repository architecture. | 08/06/2026 | 08/06/2026 | Spring Boot Documentation |
+| 2 | Design entities, configure Spring Data JPA, and connect the application to the MySQL database for the Pet Resort & Care System. | 09/06/2026 | 09/06/2026 | Spring Data JPA Documentation |
+| 3 | Develop REST APIs for the Pet, Service, and Booking management modules, and verify the returned data. | 10/06/2026 | 10/06/2026 | Spring Boot REST Guide |
+| 4 | Test the APIs using Postman and resolve issues related to communication between the application and the database. | 11/06/2026 | 11/06/2026 | Postman Learning Center |
+| 5 | Build the project using Maven, generate the executable `.jar` file, and verify that the application runs correctly in the local environment in preparation for deployment. | 12/06/2026 | 12/06/2026 | Apache Maven Documentation |
 
-* Successfully configured AWS SNS for Coffee Cloud notifications:
-  * Created SNS topics for different notification types (orders, promotions, alerts)
-  * Set up email subscriptions for admin notifications
-  * Configured topic policies for secure access from Lambda functions
+## Week 8 Achievements
 
-* Implemented AWS SES for email communications:
-  * Verified sender email address for development
-  * Created professional email templates for:
-    - Order confirmation emails
-    - Welcome emails for new users
-    - Promotional newsletters
-    - Password reset emails
+- **Backend development for the Pet Resort & Care System:**
+  - Built the Spring Boot project structure using the Controller – Service – Repository architecture.
+  - Configured Maven and integrated the required dependencies.
+  - Successfully connected the application to the MySQL database using Spring Data JPA.
 
-* Integrated notification services with Lambda functions:
-  * Order creation triggers automatic email confirmation
-  * Order status updates send real-time notifications
-  * Admin receives alerts for new orders and system issues
+- **Development of backend features:**
+  - Developed REST APIs for Pet management.
+  - Developed REST APIs for Service management.
+  - Developed REST APIs for Booking management.
+  - Verified data exchange between the APIs and the database using Postman.
 
-* Enhanced Coffee Cloud user experience:
-  * Customers receive immediate order confirmations
-  * Real-time updates on order preparation and delivery status
-  * Professional-looking email templates with Coffee Cloud branding
-
-* Tested notification reliability:
-  * Email delivery working within SES sandbox limits
-  * Proper error handling for failed notifications
-  * Monitoring notification logs via CloudWatch
-
-* Learned AWS communication services best practices:
-  * Understanding SES sandbox vs production mode
-  * SNS pricing and message limits
-  * Proper IAM permissions for notification services
-
-* Implemented a NAT gateway pattern to allow private instances to access the internet for updates.
-
-* Documented VPC diagrams, CIDR choices, and common troubleshooting commands (e.g., traceroute, curl, iptables checks).
-
-* Next steps: explore managed database services and backups.
+- **Testing and deployment preparation:**
+  - Tested the APIs in the local environment.
+  - Fixed several issues encountered during development.
+  - Successfully built the project into an executable `.jar` file.
+  - Prepared the backend application for deployment to Amazon EC2.

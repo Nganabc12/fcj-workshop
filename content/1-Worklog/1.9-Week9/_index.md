@@ -1,56 +1,45 @@
 ---
 title: "Week 9 Worklog"
-weight: 1
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
 
-### Week 9 Objectives:
 
-* Optimize Coffee Cloud application performance and security
-* Set up monitoring and logging for the application
-* Prepare for production deployment
+## Week 9 Objectives
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 1   | - Optimize DynamoDB tables for better performance <br> - Set up proper indexes for common queries <br> - Review and optimize Lambda function performance                                              | 26/08/2025 | 26/08/2025      | DynamoDB optimization guide               |
-| 2   | - Set up CloudWatch monitoring for all services <br> - Create custom metrics for business KPIs <br> - Configure log groups for Lambda functions                                                      | 27/08/2025 | 27/08/2025      | CloudWatch documentation                  |
-| 3   | - Implement proper IAM roles and policies <br> - Follow least privilege principle <br> - Remove unnecessary permissions                                                                               | 28/08/2025 | 28/08/2025      | IAM best practices                        |
-| 4   | - Set up CloudWatch dashboards <br> - Monitor application health and performance <br> - Create alarms for critical metrics                                                                          | 29/08/2025 | 29/08/2025      | CloudWatch dashboards                     |
-| 5   | - Conduct thorough testing of all features <br> - Test error scenarios and edge cases <br> - Document known issues and limitations                                                                  | 30/08/2025 | 30/08/2025      | Application testing guide                 |
+- Deploy the backend of the Pet Resort & Care System to Amazon EC2.
+- Configure the Java environment and run the Spring Boot application on a Linux server.
+- Configure appropriate Security Groups for the backend and Application Load Balancer.
+- Create a Target Group, configure Health Checks, and connect it to an Application Load Balancer.
+- Verify backend accessibility after deployment on AWS.
 
+## Weekly Tasks
 
-### Week 9 Achievements:
+| Day | Task Details | Start Date | End Date | References |
+|-----|--------------|------------|----------|------------|
+| 1 | Launch an Amazon EC2 instance for the backend, select a suitable Amazon Machine Image and instance type, and configure Security Groups for SSH and application access. | 15/06/2026 | 15/06/2026 | Amazon EC2 Documentation |
+| 2 | Connect to the EC2 instance using SSH, install the Java Runtime, and verify the Linux environment before deploying the Spring Boot application. | 16/06/2026 | 16/06/2026 | Amazon EC2 User Guide |
+| 3 | Upload the Pet Resort & Care System `.jar` file to EC2, configure environment variables, and run the backend application on the server. | 17/06/2026 | 17/06/2026 | AWS EC2 Deployment Guide |
+| 4 | Create a Target Group, register the EC2 instance as a Target, and configure Health Checks to monitor backend availability. | 18/06/2026 | 18/06/2026 | Elastic Load Balancing Documentation |
+| 5 | Create an Application Load Balancer, configure its Listener and Security Group, and test the APIs through the Load Balancer DNS using a browser and Postman. | 19/06/2026 | 19/06/2026 | Application Load Balancer Documentation |
 
-* Optimized Coffee Cloud application performance:
-  * **DynamoDB Optimization**: Added Global Secondary Indexes (GSI) for efficient queries by user ID and order status
-  * **Lambda Performance**: Optimized function code and reduced cold start times
-  * **Caching Strategy**: Implemented basic caching for frequently accessed product data
+## Week 9 Achievements
 
-* Set up comprehensive monitoring and logging:
-  * **CloudWatch Metrics**: Custom metrics for orders per hour, user registrations, and error rates
-  * **Log Analysis**: Centralized logging for all Lambda functions with structured log format
-  * **Performance Monitoring**: Track API response times and database query performance
+- **Backend deployment on Amazon EC2:**
+  - Launched and configured an EC2 instance for the Spring Boot application.
+  - Successfully connected to the EC2 instance using SSH.
+  - Installed Java and ran the executable `.jar` file on the Linux server.
+  - Configured the required environment variables for the application.
 
-* Enhanced security posture:
-  * **IAM Optimization**: Created specific roles for each service with minimal required permissions
-  * **Security Review**: Removed overly permissive policies and hardened access controls
-  * **Secrets Management**: Moved sensitive configuration to environment variables
+- **Load balancing configuration:**
+  - Created a Target Group and registered the EC2 instance as a Target.
+  - Configured Health Checks to monitor backend availability.
+  - Created an Application Load Balancer and configured a Listener to forward requests to the Target Group.
+  - Updated Security Groups to allow communication between the Load Balancer and the backend server.
 
-* Created operational dashboards:
-  * **Business Metrics Dashboard**: Real-time view of orders, revenue, and user activity
-  * **Technical Health Dashboard**: System performance, error rates, and service availability
-  * **Cost Monitoring Dashboard**: Track AWS resource usage and costs
-
-* Completed comprehensive testing:
-  * **Functional Testing**: Verified all user flows work correctly
-  * **Error Handling**: Tested system behavior under various failure scenarios
-  * **Load Testing**: Basic testing of system performance under simulated load
-  * **Security Testing**: Verified authentication and authorization work properly
-
-* Documented application architecture and deployment process for future maintenance
-
-* Reviewed backup retention and cross-region copy options; documented cost/benefit trade-offs.
-
-* Next steps: monitoring and logging (CloudWatch & CloudTrail) and implementing alerting.
+- **Post-deployment testing:**
+  - Verified the Target status in the AWS Management Console.
+  - Tested API access through the Application Load Balancer DNS.
+  - Tested the APIs using Postman and resolved several configuration issues.
+  - Documented the deployment steps for frontend integration in the following week.

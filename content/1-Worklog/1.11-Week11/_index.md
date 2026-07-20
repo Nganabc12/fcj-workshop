@@ -5,7 +5,6 @@ chapter: false
 pre: "<b>11. </b>"
 ---
 
-# WEEK 11 WORKLOG
 
 ## Week 11 Objectives
 

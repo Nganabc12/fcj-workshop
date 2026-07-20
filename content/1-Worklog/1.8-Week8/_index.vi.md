@@ -1,63 +1,44 @@
 ---
 title: "Worklog Tuần 8"
-weight: 1
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
 
-### Mục tiêu tuần 8:
 
-* Thiết lập dịch vụ notification (SNS và SES) cho Coffee Cloud
-* Triển khai email notifications cho đơn hàng và khuyến mãi
-* Thêm push notifications cho cập nhật trạng thái đơn hàng
+## Mục tiêu tuần 8
 
-### Nhiệm vụ thực hiện trong tuần:
-| Ngày | Nhiệm vụ                                                                                                                                                                                               | Ngày bắt đầu | Ngày kết thúc | Tài liệu tham khảo                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 1   | - Tìm hiểu AWS SNS (Simple Notification Service) cơ bản <br> - Hiểu topics, subscriptions, và message formats <br> - Tạo SNS topic cho order notifications                                   | 19/08/2025 | 19/08/2025      | Tài liệu SNS                         |
-| 2   | - Thiết lập AWS SES (Simple Email Service) <br> - Xác minh email domain/address <br> - Tạo email templates cho order confirmations                                                                     | 20/08/2025 | 20/08/2025      | Tài liệu SES                         |
-| 3   | - Tích hợp SNS với Lambda functions <br> - Gửi notifications khi orders được tạo/cập nhật <br> - Test notification delivery                                                                    | 21/08/2025 | 21/08/2025      | Lambda + SNS integration                  |
-| 4   | - Triển khai email notifications với SES <br> - Gửi order confirmation emails <br> - Tạo promotional email templates                                                                             | 22/08/2025 | 22/08/2025      | SES email templates                       |
-| 5   | - Test toàn bộ notification flow <br> - Xác minh email delivery và formatting <br> - Test SMS notifications (tùy chọn)                                                                              | 23/08/2025 | 23/08/2025      | End-to-end notification testing           |
+- Xây dựng cấu trúc Backend cho dự án Pet Resort & Care System bằng Spring Boot.
+- Tìm hiểu Maven và quy trình quản lý thư viện.
+- Phát triển các REST API cơ bản.
+- Kiểm thử API trên môi trường Local bằng Postman.
+- Chuẩn bị ứng dụng cho giai đoạn triển khai trên AWS.
 
+## Nhiệm vụ thực hiện trong tuần
 
-### Kết quả đạt được tuần 8:
+| Ngày | Nhiệm vụ chi tiết | Ngày bắt đầu | Ngày kết thúc | Tài liệu tham khảo |
+|------|-------------------|--------------|---------------|--------------------|
+| 1 | Khởi tạo dự án Spring Boot, cấu hình Maven và tổ chức cấu trúc thư mục theo mô hình Controller – Service – Repository. | 08/06/2026 | 08/06/2026 | Spring Boot Documentation |
+| 2 | Thiết kế Entity, cấu hình Spring Data JPA và kết nối cơ sở dữ liệu MySQL cho dự án Pet Resort & Care System. | 09/06/2026 | 09/06/2026 | Spring Data JPA Documentation |
+| 3 | Xây dựng REST API cho các chức năng quản lý Pet, Service và Booking; kiểm tra dữ liệu trả về từ API. | 10/06/2026 | 10/06/2026 | Spring Boot REST Guide |
+| 4 | Kiểm thử API bằng Postman, xử lý các lỗi phát sinh trong quá trình trao đổi dữ liệu giữa ứng dụng và cơ sở dữ liệu. | 11/06/2026 | 11/06/2026 | Postman Learning Center |
+| 5 | Build dự án bằng Maven, tạo file thực thi `.jar` và kiểm tra ứng dụng hoạt động trên môi trường Local để chuẩn bị triển khai. | 12/06/2026 | 12/06/2026 | Apache Maven Documentation |
 
-* Thành công cấu hình AWS SNS cho Coffee Cloud notifications:
-  * Tạo SNS topics cho các loại notification khác nhau (orders, promotions, alerts)
-  * Thiết lập email subscriptions cho admin notifications
-  * Cấu hình topic policies để truy cập an toàn từ Lambda functions
+## Kết quả đạt được tuần 8
 
-* Triển khai AWS SES cho email communications:
-  * Xác minh sender email address cho development
-  * Tạo professional email templates cho:
-    - Email xác nhận đơn hàng
-    - Email chào mừng người dùng mới
-    - Newsletter khuyến mãi
-    - Email reset mật khẩu
+- **Xây dựng Backend cho dự án Pet Resort & Care System:**
+  - Xây dựng cấu trúc dự án Spring Boot theo mô hình Controller – Service – Repository.
+  - Cấu hình Maven và tích hợp các thư viện cần thiết.
+  - Kết nối thành công ứng dụng với cơ sở dữ liệu MySQL bằng Spring Data JPA.
 
-* Tích hợp notification services với Lambda functions:
-  * Tạo đơn hàng trigger email xác nhận tự động
-  * Cập nhật trạng thái đơn hàng gửi notifications real-time
-  * Admin nhận alerts cho đơn hàng mới và system issues
+- **Phát triển các chức năng Backend cơ bản:**
+  - Xây dựng REST API cho chức năng quản lý Pet.
+  - Xây dựng REST API cho chức năng quản lý Service.
+  - Xây dựng REST API cho chức năng quản lý Booking.
+  - Kiểm tra dữ liệu giữa API và cơ sở dữ liệu bằng Postman.
 
-* Nâng cao trải nghiệm người dùng Coffee Cloud:
-  * Khách hàng nhận xác nhận đơn hàng ngay lập tức
-  * Cập nhật real-time về chuẩn bị và giao hàng
-  * Email templates chuyên nghiệp với branding Coffee Cloud
-
-* Test độ tin cậy notification:
-  * Email delivery hoạt động trong giới hạn SES sandbox
-  * Xử lý lỗi phù hợp cho failed notifications
-  * Monitor notification logs qua CloudWatch
-
-* Học AWS communication services best practices:
-  * Hiểu SES sandbox vs production mode
-  * SNS pricing và message limits
-  * IAM permissions phù hợp cho notification services
-
-* Áp dụng NAT gateway để cho phép instances trong private subnet truy cập internet khi cần.
-
-* Lưu lại sơ đồ VPC và các lệnh kiểm tra mạng (traceroute, curl) phục vụ việc debug.
-
-
+- **Kiểm thử và chuẩn bị triển khai:**
+  - Kiểm thử các API trên môi trường Local.
+  - Khắc phục một số lỗi phát sinh trong quá trình phát triển.
+  - Build thành công ứng dụng thành file thực thi `.jar`.
+  - Chuẩn bị Backend cho quá trình triển khai lên Amazon EC2.

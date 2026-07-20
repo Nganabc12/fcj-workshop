@@ -1,52 +1,33 @@
 ---
 title: "Week 2 Worklog"
-weight: 1
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
 
-### Week 2 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+## Week Objectives
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+- Gain a deeper understanding of AWS Global Infrastructure.
+- Become familiar with AWS Identity and Access Management.
+- Improve account security by using MFA and practicing user permission management.
+- Install and configure AWS CLI for basic command-line operations.
+- Explore Amazon EC2 through introductory hands-on practice.
 
+| Day | Tasks | Start Date | End Date | References |
+|-----|-------|------------|----------|------------|
+| 1 | Studied AWS Global Infrastructure, including Regions, Availability Zones and Edge Locations; reviewed how latency, cost and service availability affect Region selection. | 24/04/2026 | 24/04/2026 | AWS Global Infrastructure |
+| 2 | Researched AWS Identity and Access Management, including IAM Users, IAM Groups, IAM Roles and the principle of least privilege. | 25/04/2026 | 26/04/2026 | AWS IAM Documentation |
+| 3 | Created an IAM User for practice, added the user to an IAM Group, attached an appropriate Policy and verified access through the AWS Management Console. | 27/04/2026 | 27/04/2026 | AWS IAM User Guide |
+| 4 | Reviewed and completed MFA configuration; studied basic security recommendations such as limiting Root User usage and protecting access keys. | 28/04/2026 | 28/04/2026 | AWS Security Best Practices |
+| 5 | Installed AWS CLI, configured credentials using `aws configure`, verified the default Region and practiced several basic AWS CLI commands. | 29/04/2026 | 30/04/2026 | AWS CLI Documentation |
+| 6 | Explored Amazon EC2 concepts, including AMIs, Instance Types, Key Pairs and Security Groups; launched a basic EC2 Instance and verified its running status. | 01/05/2026 | 01/05/2026 | Amazon EC2 Documentation |
 
-### Week 2 Achievements:
+## Weekly Achievements
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Understood the structure of AWS Global Infrastructure and the main factors involved in Region selection.
+- Distinguished between IAM Users, Groups, Roles and Policies.
+- Successfully created an IAM User and IAM Group with appropriate access permissions.
+- Completed basic AWS account security configuration using MFA.
+- Installed and configured AWS CLI on the local computer.
+- Performed introductory Amazon EC2 operations and successfully launched a practice EC2 Instance.

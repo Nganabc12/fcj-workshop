@@ -1,50 +1,31 @@
 ---
 title: "Week 4 Worklog"
-weight: 1
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
 
-### Week 4 Objectives:
 
-* Set up DynamoDB database for Coffee Cloud project
-* Learn DynamoDB basics and create tables for user and order data
-* Set up AWS Cognito for user authentication
+## Week Objectives
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 1   | - Learn DynamoDB fundamentals <br> - Understand NoSQL concepts, primary keys, and indexes                                                                                                             | 22/07/2025 | 22/07/2025      | DynamoDB documentation                    |
-| 2   | - Create DynamoDB tables for Coffee Cloud: <br>&emsp; + Users table <br>&emsp; + Products table <br>&emsp; + Orders table <br>&emsp; + Points table                                                 | 23/07/2025 | 23/07/2025      | DynamoDB console guide                    |
-| 3   | - Configure table schemas and indexes <br> - Add sample data for testing <br> - Practice basic CRUD operations                                                                                        | 24/07/2025 | 24/07/2025      | DynamoDB SDK documentation                |
-| 4   | - Learn AWS Cognito for user authentication <br> - Understand User Pools and Identity Pools                                                                                                           | 25/07/2025 | 25/07/2025      | Cognito documentation                     |
-| 5   | - Create Cognito User Pool for Coffee Cloud <br> - Configure sign-up/sign-in settings <br> - Set up user groups (Customer, Shipper, Admin)                                                          | 26/07/2025 | 26/07/2025      | Cognito console guide                     |
+- Learn the fundamentals of Amazon EC2 and its role in cloud infrastructure.
+- Become familiar with Linux server administration and SSH access.
+- Practice configuring Security Groups for Amazon EC2.
+- Prepare the server environment for deploying the Pet Resort & Care System.
 
+| Day | Tasks | Start Date | End Date | References |
+|-----|-------|------------|----------|------------|
+| 1 | Studied Amazon EC2 fundamentals, including AMIs, Instance Types, Key Pairs, EBS and the EC2 provisioning process. | 11/05/2026 | 11/05/2026 | Amazon EC2 Documentation |
+| 2 | Created an Amazon EC2 Instance using the AWS Management Console, selected an AMI, Instance Type and configured a Key Pair for remote access. | 12/05/2026 | 12/05/2026 | AWS Skill Builder |
+| 3 | Configured Security Groups by allowing SSH and HTTP traffic; verified connectivity from the local computer. | 13/05/2026 | 13/05/2026 | AWS Security Best Practices |
+| 4 | Connected to the EC2 Instance via SSH, explored the Linux environment, directory structure and basic administration commands. | 14/05/2026 | 14/05/2026 | Amazon Linux Documentation |
+| 5 | Installed Java, Git and the required development tools on the EC2 Instance to prepare the deployment environment for the Pet Resort & Care System. | 15/05/2026 | 16/05/2026 | AWS EC2 User Guide |
+| 6 | Reviewed the concepts learned during the week, documented the EC2 deployment process and verified the server configuration before moving on to Amazon S3. | 17/05/2026 | 17/05/2026 | AWS Documentation |
 
-### Week 4 Achievements:
+## Weekly Achievements
 
-* Successfully created DynamoDB tables for Coffee Cloud project:
-  * **Users table**: Stores customer, shipper, and admin information
-  * **Products table**: Coffee menu items with prices and descriptions  
-  * **Orders table**: Order details and status tracking
-  * **Points table**: Customer loyalty points system
-
-* Configured proper primary keys and secondary indexes for efficient queries
-
-* Added sample data to all tables for testing purposes
-
-* Successfully set up AWS Cognito User Pool with the following configuration:
-  * Email-based sign-in
-  * Password policies for security
-  * Three user groups: Customer, Shipper, Admin
-  * Email verification for new accounts
-
-* Tested basic DynamoDB operations using AWS console:
-  * Create, read, update, delete operations
-  * Query and scan operations
-  * Understanding of capacity units and billing
-
-* Learned DynamoDB best practices for cost optimization within Free Tier limits
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Understood the fundamental concepts of Amazon EC2.
+- Successfully launched an EC2 Instance for hands-on practice.
+- Connected to the server through SSH and performed basic Linux administration tasks.
+- Configured Security Groups to provide secure access to the EC2 Instance.
+- Prepared the server environment for application deployment in the following weeks.

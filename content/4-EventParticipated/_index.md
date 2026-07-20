@@ -23,7 +23,7 @@ During my internship, I participated in four technical events. Each one was a me
 ### [Event 1](4.1-Event1/)  
 &emsp;**Event Name:** FIRST CLOUD AI JOURNEY COMMUNITY SHARING
 
-&emsp;**Date & Time:** Friday, May 22, 2026
+&emsp;**Date & Time:** 9:00 AM - 12:00 PM, Saturday, May 23, 2026
 
 &emsp;**Location:** Saigon Campus, Level 26, Bitexco Financial Tower   
 

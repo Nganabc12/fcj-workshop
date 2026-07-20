@@ -22,33 +22,34 @@ pre: " <b> 4. </b> "
 Trong quá trình thực tập, em đã tham gia 4 events kỹ thuật, với mỗi event là một trải nghiệm đáng nhớ với những kiến thức mới, hay và bổ ích, cùng với cơ hội networking và hiểu biết sâu sắc về công nghệ AWS cloud.
 
 ### [Event 1](4.1-Event1/)
-&emsp;**Tên sự kiện:** AI-Driven Development Life Cycle: Reimagining Software Engineering
+### [Sự kiện 1](4.1-Event1/)  
+&emsp;**Tên sự kiện:** FIRST CLOUD AI JOURNEY COMMUNITY SHARING
 
-&emsp;**Thời gian:** 2pm Thứ Sáu, 3 tháng 10, 2025
+&emsp;**Thời gian:** 9:00 AM - 12:00 PM, Thứ Bảy, ngày 23 tháng 05 năm 2026
 
-&emsp;**Địa điểm:** AWS Event Hall, L26 Bitexco Tower, TP.HCM
+&emsp;**Địa điểm:** Saigon Campus, Tầng 26, Tòa nhà Bitexco Financial Tower
 
-&emsp;**Vai trò trong sự kiện:** Người tham dự
+&emsp;**Vai trò:** Người tham dự  
 
 ---
 
-### [Event 2](4.2-Event2/)
-&emsp;**Tên sự kiện:** Hội thảo AI/ML trên AWS
+### [Sự kiện 2](4.2-Event2/)  
+&emsp;**Tên sự kiện:** Event CD AWS  
 
-&emsp;**Thời gian:** 8:30 AM - 12:00 PM, Thứ Bảy, 15 tháng 11, 2025
+&emsp;**Thời gian:** 9:00 AM - 12:00 PM, Thứ Bảy, ngày 30 tháng 05 năm 2026
 
-&emsp;**Địa điểm:** Văn phòng AWS Việt Nam
+&emsp;**Địa điểm:** Saigon Campus, Tầng 26, Tòa nhà Bitexco Financial Tower
 
-&emsp;**Vai trò trong sự kiện:** Người tham dự
+&emsp;**Vai trò:** Người tham dự  
 
 ---
 
 ### [Sự kiện 3](4.3-Event3/)  
 &emsp;**Tên sự kiện:** AWS GameDay  
 
-&emsp;**Thời gian:** 9:00 - 12:00, Thứ Bảy, ngày 20 tháng 06 năm 2026  
+&emsp;**Thời gian:** 9:00 AM - 12:00 PM, Thứ Bảy, ngày 20 tháng 06 năm 2026  
 
-&emsp;**Địa điểm:** Saigon Campus, Tầng 26, Bitexco Financial Tower  
+&emsp;**Địa điểm:** Saigon Campus, Tầng 26, Tòa nhà Bitexco Financial Tower  
 
 &emsp;**Vai trò:** Người tham dự
 
