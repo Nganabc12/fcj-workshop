@@ -249,10 +249,10 @@ After attending the event, I learned several important lessons:
 
 ## Some Event Photos
 
-![CD AWS Event](/images/4-EventParticipated/event2-1.jng)
+![CD AWS Event](/images/4-EventParticipated/event2-1.jpg)
 
-![CD AWS Event](/images/4-EventParticipated/event2-2.jng)
+![CD AWS Event](/images/4-EventParticipated/event2-2.jpg)
 
-![CD AWS Event](/images/4-EventParticipated/event2-3.jng)
+![CD AWS Event](/images/4-EventParticipated/event2-3.jpg)
 
 > Overall, the CD AWS event provided valuable technical knowledge, practical experiences, and personal development lessons. It also helped me become more motivated to improve my AWS skills, communication abilities, teamwork, confidence, and productivity.

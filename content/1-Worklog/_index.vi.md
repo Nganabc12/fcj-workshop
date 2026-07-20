@@ -7,7 +7,7 @@ pre: " <b> 1. </b> "
 
 # NHẬT KÝ CÔNG VIỆC
 
-Nhật ký này ghi lại **12 tuần thực tập** tại chương trình **AWS First Cloud Journey**, từ ngày **17/04/2026** đến **20/07/2026**.
+Nhật ký này ghi lại **12 tuần thực tập** tại chương trình **AWS First Cloud Journey**, từ ngày **17/04/2026** đến **30/07/2026**.
 
 Trong suốt quá trình thực tập, tôi từng bước tiếp cận các kiến thức về điện toán đám mây, đồng thời tham gia xây dựng và triển khai dự án **Pet Resort & Care System**. Công việc bao gồm thiết lập môi trường phát triển, tìm hiểu các dịch vụ AWS, thiết kế kiến trúc hệ thống, phát triển và triển khai ứng dụng, tích hợp các thành phần của dự án, kiểm thử, xử lý lỗi và hoàn thiện tài liệu báo cáo.
 

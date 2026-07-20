@@ -304,10 +304,10 @@ Sau khi tham dự sự kiện, tôi đã rút ra những bài học quan trọng
 
 ## Một số hình ảnh sự kiện
 
-![Sự kiện First Cloud AI Journey](/images/4-EventParticipated/event1-1.jng)
+![Sự kiện First Cloud AI Journey](/images/4-EventParticipated/event1-1.jpg)
 
-![Sự kiện First Cloud AI Journey](/images/4-EventParticipated/event1-2.jng)
+![Sự kiện First Cloud AI Journey](/images/4-EventParticipated/event1-2.jpg)
 
-![Sự kiện First Cloud AI Journey](/images/4-EventParticipated/event1-3.jng)
+![Sự kiện First Cloud AI Journey](/images/4-EventParticipated/event1-3.jpg)
 
 > Nhìn chung, sự kiện đã mang lại nhiều kiến thức có giá trị về trí tuệ nhân tạo, kiến trúc AWS Cloud, quá trình phát triển sản phẩm tại Hackathon và hệ thống AI dành cho doanh nghiệp. Sự kiện cũng tạo thêm động lực để tôi tiếp tục cải thiện kiến thức kỹ thuật, kỹ năng làm việc nhóm, giao tiếp và phát triển dự án thực tế.

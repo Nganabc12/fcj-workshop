@@ -7,7 +7,7 @@ pre: " <b> 1. </b> "
 
 # WORKLOG
 
-This worklog summarizes my **12-week internship journey** at **AWS First Cloud Journey**, from **April 17, 2026 to July 20, 2026**.
+This worklog summarizes my **12-week internship journey** at **AWS First Cloud Journey**, from **April 17, 2026 to July 30, 2026**.
 
 Throughout the internship, I gradually built my cloud computing knowledge while participating in the development of the **Pet Resort & Care System**. My responsibilities included setting up the development environment, learning core AWS services, designing cloud architecture, developing and deploying applications, integrating system components, testing, troubleshooting, and preparing the final project documentation.
 

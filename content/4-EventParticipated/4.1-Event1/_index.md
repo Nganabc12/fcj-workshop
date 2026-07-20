@@ -304,10 +304,10 @@ After attending the event, I learned several important lessons:
 
 ## Some Event Photos
 
-![First Cloud AI Journey Event](/images/4-EventParticipated/event1-1.jng)
+![First Cloud AI Journey Event](/images/4-EventParticipated/event1-1.jpg)
 
-![First Cloud AI Journey Event](/images/4-EventParticipated/event1-2.jng)
+![First Cloud AI Journey Event](/images/4-EventParticipated/event1-2.jpg)
 
-![First Cloud AI Journey Event](/images/4-EventParticipated/event1-3.jng)
+![First Cloud AI Journey Event](/images/4-EventParticipated/event1-3.jpg)
 
 > Overall, the event provided valuable knowledge about artificial intelligence, AWS cloud architecture, Hackathon development, and enterprise AI systems. It also motivated me to continue improving my technical knowledge, teamwork, communication, and practical project-development skills.
