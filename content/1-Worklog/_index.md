@@ -5,7 +5,6 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-# WORKLOG
 
 This section summarizes the activities and progress completed during my **12-week internship** at **AWS First Cloud Journey**, from **April 17, 2026 to July 30, 2026**.
 

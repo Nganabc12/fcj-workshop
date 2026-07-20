@@ -1,6 +1,6 @@
 ---
 title: "Nhật ký công việc Tuần 10"
-weight: 1
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---

@@ -5,7 +5,6 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-# NHẬT KÝ CÔNG VIỆC
 
 Phần này tóm tắt quá trình **12 tuần thực tập** của tôi tại **AWS First Cloud Journey**, từ **17/04/2026 đến 30/07/2026**.
 

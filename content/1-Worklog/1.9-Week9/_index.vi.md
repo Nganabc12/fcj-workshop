@@ -1,11 +1,10 @@
 ---
-title: "Tuần 9"
+title: "Worklog Tuần 9"
 weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
 
-# Tuần 9
 
 ## Mục tiêu
 
