@@ -1,34 +1,43 @@
 ---
-title: "Worklog Tuần 12"
-weight: 2
+title: "Tuần 12"
+weight: 12
 chapter: false
-pre: " <b> 1.12 </b> "
+pre: "<b>12. </b>"
 ---
-### Mục tiêu tuần 12:
 
-* Hoàn thành mini-project: tích hợp các dịch vụ cốt lõi thành một kiến trúc nhỏ có tài liệu.
-* Thực hiện dọn dẹp tài nguyên, tổng kết kiến thức đã học và chuẩn bị báo cáo/giới thiệu.
+# WORKLOG TUẦN 12
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Hoàn thiện sơ đồ kiến trúc mini-project và checklist triển khai; chuẩn bị phân công IaC.                                                                                                 | 24/11/2025   | 24/11/2025      | Project notes                              |
-| 3   | - Viết template IaC (Terraform/CloudFormation) cho các thành phần: VPC, subnet, EC2, RDS, S3; tham số hoá để tái sử dụng.                                                                 | 25/11/2025   | 25/11/2025      | IaC templates                              |
-| 4   | - Triển khai stack thử nghiệm; chạy smoke tests để kiểm tra kết nối giữa các thành phần và luồng dữ liệu.                                                                                  | 26/11/2025   | 26/11/2025      | Deployment logs                             |
-| 5   | - Thiết lập giám sát và cảnh báo cho các thành phần chính; viết README hướng dẫn deploy/rollback; nếu cần seed DB thì thực hiện.                                                            | 27/11/2025   | 27/11/2025      | README, CloudWatch config                   |
-| 6   | - Dọn dẹp tài nguyên tạm (buckets thử nghiệm, instances, access key tạm); hoàn thiện deliverables: IaC templates, sơ đồ kiến trúc, ghi chú demo.                                         | 28/11/2025   | 28/11/2025      | Project deliverables                        |
+## Mục tiêu tuần 12
 
+- Kiểm thử và hoàn thiện Pet Resort & Care System trên môi trường AWS.
+- Khắc phục các lỗi phát sinh sau khi triển khai.
+- Hoàn thiện tài liệu và báo cáo thực tập.
 
-### Kết quả đạt được tuần 12:
+---
 
-* Hoàn thành mini-project: tích hợp S3 (static content), EC2 (ứng dụng) và RDS (database) trong private subnet.
+## Các công việc cần triển khai trong tuần này
 
-* Viết script và template IaC (Terraform/CloudFormation) để tự động hóa triển khai; thêm README hướng dẫn.
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+|------|-----------|--------------|-----------------|----------------|
+| **2** | - Kiểm tra toàn bộ hệ thống sau khi triển khai lên AWS.<br>- Rà soát các lỗi liên quan đến CORS, kết nối API, truy cập cơ sở dữ liệu và đường dẫn hình ảnh. | 13/07/2026 | 13/07/2026 | EC2 Logs, ALB Logs, RDS Logs |
+| **3** | - Kiểm tra hoạt động của Amazon CloudFront và tối ưu cấu hình phân phối nội dung.<br>- Kiểm tra chứng chỉ HTTPS và xác nhận người dùng có thể truy cập hệ thống ổn định từ Internet. | 14/07/2026 | 14/07/2026 | AWS Documentation (CloudFront, ACM) |
+| **4** | - Kiểm thử các chức năng chính của hệ thống gồm đăng nhập, quản lý thú cưng, quản lý dịch vụ và đặt lịch chăm sóc.<br>- Đối chiếu dữ liệu giữa Frontend, Backend và Amazon RDS để đảm bảo tính chính xác. | 15/07/2026 | 15/07/2026 | Test Case, Project Documentation |
+| **5** | - Rà soát giao diện người dùng, tối ưu một số chức năng và xử lý các lỗi hiển thị phát hiện trong quá trình kiểm thử.<br>- Kiểm tra lại toàn bộ luồng hoạt động của hệ thống trước khi hoàn thiện dự án. | 16/07/2026 | 16/07/2026 | Project Documentation |
+| **6** | - Tổng hợp tài liệu kỹ thuật, cập nhật hình ảnh minh họa và hoàn thiện báo cáo thực tập.<br>- Chuẩn bị nội dung trình bày và rà soát lại toàn bộ quá trình triển khai dự án. | 17/07/2026 | 17/07/2026 | Internship Report |
+| **2** | - Kiểm tra lần cuối tài nguyên AWS đang sử dụng.<br>- Dọn dẹp các tài nguyên không cần thiết, cập nhật phiên bản cuối của báo cáo và chuẩn bị nộp hồ sơ thực tập. | 20/07/2026 | 20/07/2026 | AWS Billing Console |
 
-* Thực hiện cleanup tài nguyên: xóa bucket thử nghiệm, instance tạm, thu hồi access key và xóa snapshot không cần thiết.
+---
 
-* Soạn phần tổng kết: bài học chính, khó khăn gặp phải và hướng học tiếp (containerization, CI/CD, hardening).
+## Kết quả đạt được tuần 12
 
-* Bản giao nộp: IaC templates, sơ đồ kiến trúc và ghi chú demo (link lưu trong tài liệu dự án).
+- Hoàn thành kiểm thử toàn bộ Pet Resort & Care System trên môi trường AWS, xác nhận các chức năng chính hoạt động ổn định sau khi triển khai.
 
+- Khắc phục các lỗi phát sinh liên quan đến kết nối API, CORS, đường dẫn hình ảnh, cấu hình CloudFront và quá trình giao tiếp giữa Frontend và Backend.
 
+- Kiểm tra và xác nhận dữ liệu được đồng bộ chính xác giữa Frontend ReactJS, Backend Spring Boot và Amazon RDS MySQL.
+
+- Rà soát lại giao diện người dùng, điều chỉnh một số chức năng và cải thiện trải nghiệm sử dụng trước khi hoàn thiện dự án.
+
+- Hoàn thiện tài liệu triển khai, cập nhật báo cáo thực tập và tổng hợp toàn bộ kết quả đạt được trong quá trình thực hiện Pet Resort & Care System.
+
+- Kiểm tra và dọn dẹp các tài nguyên AWS không còn sử dụng nhằm tránh phát sinh chi phí ngoài kế hoạch, đồng thời chuẩn bị đầy đủ hồ sơ cho buổi báo cáo và nghiệm thu thực tập.

@@ -1,33 +1,43 @@
 ---
-title: "Week 12 Worklog"
-weight: 2
+title: "Week 12"
+weight: 12
 chapter: false
-pre: " <b> 1.12. </b> "
+pre: "<b>12. </b>"
 ---
 
-### Week 12 Objectives:
+# WEEK 12 WORKLOG
 
-* Deliver the final mini-project: integrate core services into a small, documented architecture.
-* Perform cleanup, document learned skills, and reflect on improvements and next learning steps.
+## Week 12 Objectives
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Finalize mini-project architecture and create a deployment checklist; draw architecture diagram and list IaC responsibilities.                                                                      | 24/11/2025 | 24/11/2025      | Project notes                              |
-| 3   | - Implement IaC templates (Terraform or CloudFormation) for final stack components: VPC, subnets, EC2, RDS, S3; parameterize inputs for reuse.                                                       | 25/11/2025 | 25/11/2025      | IaC templates                              |
-| 4   | - Deploy the final stack in a test account/environment; run smoke tests for application connectivity and data flow.                                                                                    | 26/11/2025 | 26/11/2025      | Deployment logs                             |
-| 5   | - Add monitoring and alarms for core components; prepare README with deployment and rollback steps; seed database with sample data if needed.                                                           | 27/11/2025 | 27/11/2025      | README, CloudWatch config                   |
-| 6   | - Cleanup temporary resources (test buckets, instances, temporary IAM keys); finalize deliverables: IaC templates, architecture diagram, and demo notes.                                              | 28/11/2025 | 28/11/2025      | Project deliverables                        |
+- Test and finalize the Pet Resort & Care System in the AWS environment.
+- Resolve issues identified after deployment.
+- Complete the project documentation and internship report.
 
+---
 
-### Week 12 Achievements:
+## Tasks Performed During the Week
 
-* Completed a final mini-project that combined S3 (static content), an EC2 application host, and an RDS database behind a private subnet.
+| Day | Tasks | Start Date | Completion Date | Reference |
+|-----|-------|------------|-----------------|-----------|
+| **Mon** | - Perform a full system review after deployment.<br>- Check issues related to CORS, API connectivity, database access and image resource paths. | 13/07/2026 | 13/07/2026 | EC2 Logs, ALB Logs, RDS Logs |
+| **Tue** | - Review the Amazon CloudFront distribution and optimize content delivery settings.<br>- Verify HTTPS certificates and confirm stable access to the application over the Internet. | 14/07/2026 | 14/07/2026 | AWS Documentation (CloudFront, ACM) |
+| **Wed** | - Test the main system functions, including user authentication, pet management, service management and appointment booking.<br>- Verify data consistency between the ReactJS Frontend, Spring Boot Backend and Amazon RDS. | 15/07/2026 | 15/07/2026 | Test Cases, Project Documentation |
+| **Thu** | - Review the user interface and improve several features based on testing results.<br>- Perform a final verification of the complete application workflow before project completion. | 16/07/2026 | 16/07/2026 | Project Documentation |
+| **Fri** | - Complete the technical documentation, update project screenshots and finalize the internship report.<br>- Prepare presentation materials and review the deployment process for the final evaluation. | 17/07/2026 | 17/07/2026 | Internship Report |
+| **Mon** | - Perform a final review of AWS resources.<br>- Remove unused cloud resources, finalize the report and prepare the required internship submission documents. | 20/07/2026 | 20/07/2026 | AWS Billing Console |
 
-* Automated deployment steps with Terraform/CloudFormation scripts and included a README with usage instructions.
+---
 
-* Performed resource cleanup: deleted test buckets/instances, revoked temporary IAM keys, and removed unused snapshots.
+## Week 12 Achievements
 
-* Prepared a short reflection on lessons learned, challenges faced, and next steps (e.g., containerization, CI/CD, security hardening).
+- Completed end-to-end testing of the Pet Resort & Care System and confirmed that all major features operated correctly in the AWS environment.
 
-* Final deliverables: IaC templates, architecture diagram, and a short demo recording (links saved to project notes).
+- Resolved issues related to API communication, CORS configuration, CloudFront distribution and image resource access after deployment.
+
+- Verified data consistency between the ReactJS Frontend, Spring Boot Backend and Amazon RDS MySQL.
+
+- Improved the user interface and refined several system functions based on testing results before finalizing the project.
+
+- Completed the deployment documentation, internship report and supporting project materials for the final presentation.
+
+- Reviewed and cleaned up unused AWS resources to avoid unnecessary costs and completed all required preparations for the internship evaluation.
